@@ -1,14 +1,139 @@
 ---
-title: Home
+title: SignalCloud
+
 ---
 
-:markdown
-  A Brand New nanoc Site
-  ======================
+%body{'data-spy'=>"scroll", 'data-target'=>".navbar"}
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        / Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
+        %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand{:href => "#"}
+          %i.icon-cloud
+          SignalCloud
+  
+        / Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+        .nav-collapse.collapse
+          %ul.nav
+            %li
+              %a{href:'#ideas'}
+                %i.icon-lightbulb.icon-large
+                Ideas
+            %li
+              %a{href:'#howitworks'}
+                %i.icon-wrench.icon-large
+                How it works
+            %li
+              %a{href:'#getstarted'}
+                %i.icon-road.icon-large
+                Get started
+            %li
+              %a{href:'#contact'}
+                %i.icon-envelope-alt.icon-large
+                Get ahold of us
 
-  You’ve just created a new nanoc site. The page you are looking at right now is the home page for your site. To get started, consider replacing this default homepage with your own customized homepage. Some pointers on how to do so:
+  / Carousel
+  .container.header
+    / .hero-unit
+    %h1.glow
+      %i.icon-cloud
+      SignalCloud
+    %p.lead Introducing a new way to check in and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
+    %a.btn.btn-large.btn-primary{:href => "#"}
+      %i.icon-plus.icon-large
+      Sign up today
+    %a.btn.btn-large.btn-info{:href => "#ideas"}
+      %i.icon-lightbulb.icon-large
+      Get some ideas
 
-  + **Change this page's content** by editing the "index.html" file in the "content" directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
-  + **Change the layout**, which is the "default.html" file in the "layouts" directory, and create something unique (and hopefully less bland).
+  / Marketing messaging and featurettes
+  / Wrap the rest of the page in another container to center all the content.
+  .container.marketing
 
-  If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+    %hr#ideas.featurette-divider/
+    .featurette
+      %h2.featurette-heading
+        %i.icon-lightbulb.icon-3x.pull-left
+        Need inspiration?
+        %span.muted Here's an idea.
+      %p.lead We've been busy thinking up some ideas for using Signal Cloud.
+
+    / Ideas
+    .row
+      .span4
+        %h2.idea<
+          %i.icon-credit-card.icon-2x
+        %h2 Card fraud
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p
+          %a.btn{:href => "ideas/creditcards.html"}
+            See how it would work
+            %i.icon-arrow-right
+
+      .span4
+        %h2.idea<
+          %i.icon-gift.icon-2x
+        %h2 Package delivery
+        %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn{:href => "ideas/packagedelivery.html"}
+            See how it would work
+            %i.icon-arrow-right
+
+      .span4
+        %h2.idea<
+          %i.icon-stethoscope.icon-2x
+        %h2 Doctor's visit
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-info{:href => "ideas/doctorsvisit.html"}
+            See how it would work
+            %i.icon-arrow-right
+
+    / START THE FEATURETTES
+    %hr#howitworks.featurette-divider/
+    .featurette
+      %h2.featurette-heading
+        %i.icon-wrench.icon-3x.pull-left
+        How does it work?
+        %span.muted It's elementary.
+      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+
+    %hr#getstarted.featurette-divider/
+    .featurette
+      %h2.featurette-heading
+        %i.icon-road.icon-3x.pull-left
+        Ready?
+        %span.muted Get started.
+      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+
+    %hr#contact.featurette-divider/
+    .featurette
+      %h2.featurette-heading
+        %i.icon-envelope-alt.icon-3x.pull-left
+        Have questions?
+        %span.muted We're here.
+      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+
+    %hr.featurette-divider/
+    %footer
+      %p.pull-right
+        %a{:href => "#"} Back to top
+      %p
+        &copy; 2013 Signal Cloud, llc. ·
+        %a{:href => "privacy.html"} Privacy
+        \·
+        %a{:href => "terms.html"} Terms
+
+  :javascript
+    !function ($) {
+      $(function(){
+        // carousel demo
+        // $('#myCarousel').carousel()
+        // $('#tools').affix($('#tools').position)
+      })
+    }(window.jQuery)

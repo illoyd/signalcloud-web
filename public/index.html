@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Home</title>
+    <title>SignalCloud</title>
     <link href='/css/bootstrap.min.css' rel='stylesheet'>
     <link href='/css/font-awesome.min.css' rel='stylesheet'>
     <link href='/css/style.css' rel='stylesheet'>
@@ -16,90 +16,66 @@
   <body data-spy='scroll' data-target='.navbar'>
     <div class='navbar navbar-fixed-top'>
       <div class='navbar-inner'>
-        <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-        <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-        </button>
-        <a class='brand' href='#'>
-          <i class='icon-cloud'></i>
-          SignalCloud
-        </a>
-        <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-        <div class='nav-collapse collapse'>
-          <ul class='nav'>
-            <li>
-              <a href='#ideas'>
-                <i class='icon-lightbulb icon-large'></i>
-                Ideas
-              </a>
-            </li>
-            <li>
-              <a href='#howitworks'>
-                <i class='icon-wrench icon-large'></i>
-                How it works
-              </a>
-            </li>
-            <li>
-              <a href='#getstarted'>
-                <i class='icon-road icon-large'></i>
-                Get started
-              </a>
-            </li>
-            <li>
-              <a href='#contact'>
-                <i class='icon-envelope-alt icon-large'></i>
-                Get ahold of us
-              </a>
-            </li>
-          </ul>
+        <div class='container'>
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='brand' href='#'>
+            <i class='icon-cloud'></i>
+            SignalCloud
+          </a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li>
+                <a href='#ideas'>
+                  <i class='icon-lightbulb icon-large'></i>
+                  Ideas
+                </a>
+              </li>
+              <li>
+                <a href='#howitworks'>
+                  <i class='icon-wrench icon-large'></i>
+                  How it works
+                </a>
+              </li>
+              <li>
+                <a href='#getstarted'>
+                  <i class='icon-road icon-large'></i>
+                  Get started
+                </a>
+              </li>
+              <li>
+                <a href='#contact'>
+                  <i class='icon-envelope-alt icon-large'></i>
+                  Get ahold of us
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <!-- Carousel -->
-    <!-- %img.banner{ alt: '', src: '/images/clouds.jpg' } -->
-    <div class='hero-unit'>
-      <h1>Hello!</h1>
+    <div class='container header'>
+      <!-- .hero-unit -->
+      <h1 class='glow'>
+        <i class='icon-cloud'></i>
+        SignalCloud
+      </h1>
+      <p class='lead'>Introducing a new way to check in and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.</p>
+      <a class='btn btn-large btn-primary' href='#'>
+        <i class='icon-plus icon-large'></i>
+        Sign up today
+      </a>
+      <a class='btn btn-large btn-info' href='#ideas'>
+        <i class='icon-lightbulb icon-large'></i>
+        Get some ideas
+      </a>
     </div>
-    <!--
-      <div class='carousel slide' id='myCarousel'>
-        <div class='carousel-inner'>
-          <div class='item active'>
-            <img alt='' src='/images/examples/slide-01.jpg'>
-            <div class='container'>
-              <div class='carousel-caption'>
-                <h1>Example headline.</h1>
-                <p class='lead'>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <a class='btn btn-large btn-primary' href='#'>Sign up today</a>
-              </div>
-            </div>
-          </div>
-          <div class='item'>
-            <img alt='' src='/images/examples/slide-02.jpg'>
-            <div class='container'>
-              <div class='carousel-caption'>
-                <h1>Another example headline.</h1>
-                <p class='lead'>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <a class='btn btn-large btn-primary' href='#'>Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class='item'>
-            <img alt='' src='/images/examples/slide-03.jpg'>
-            <div class='container'>
-              <div class='carousel-caption'>
-                <h1>One more for good measure.</h1>
-                <p class='lead'>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <a class='btn btn-large btn-primary' href='#'>Browse gallery</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class='left carousel-control' data-slide='prev' href='#myCarousel'>‹</a>
-        <a class='right carousel-control' data-slide='next' href='#myCarousel'>›</a>
-      </div>
-    -->
     <!-- Marketing messaging and featurettes -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <div class='container marketing'>
@@ -107,8 +83,8 @@
       <div class='featurette'>
         <h2 class='featurette-heading'>
           <i class='icon-lightbulb icon-3x pull-left'></i>
-          Using Signal Cloud.
-          <span class='muted'>Some ideas to get you started.</span>
+          Need inspiration?
+          <span class='muted'>Here's an idea.</span>
         </h2>
         <p class='lead'>We've been busy thinking up some ideas for using Signal Cloud.</p>
       </div>
@@ -116,7 +92,7 @@
       <div class='row'>
         <div class='span4'>
           <h2 class='idea'><i class='icon-credit-card icon-2x'></i></h2>
-          <h2>Credit card fraud</h2>
+          <h2>Card fraud</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
           <p>
             <a class='btn' href='ideas/creditcards.html'>
@@ -141,7 +117,7 @@
           <h2>Doctor's visit</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p>
-            <a class='btn' href='ideas/doctorsvisit.html'>
+            <a class='btn btn-info' href='ideas/doctorsvisit.html'>
               See how it would work
               <i class='icon-arrow-right'></i>
             </a>
@@ -153,7 +129,7 @@
       <div class='featurette'>
         <h2 class='featurette-heading'>
           <i class='icon-wrench icon-3x pull-left'></i>
-          How it works.
+          How does it work?
           <span class='muted'>It's elementary.</span>
         </h2>
         <p class='lead'>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -182,7 +158,7 @@
           <a href='#'>Back to top</a>
         </p>
         <p>
-          © 2013 Signal Cloud, llc. ·
+          &copy; 2013 Signal Cloud, llc. ·
           <a href='privacy.html'>Privacy</a>
           ·
           <a href='terms.html'>Terms</a>

@@ -4,7 +4,10 @@
 
 body {
   padding-bottom: 40px;
-  background-image: url(/images/background.png)
+  background-image: url(/images/hero5.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+/*   background-image: url(/images/background.png) */
 }
 
 
@@ -27,17 +30,48 @@ body {
 }
 
 .navbar a.brand {
-  margin-left: 25px;
+/*   margin-left: 25px; */
 }
 
 
 /* CUSTOMIZE THE HERO UNIT
 -------------------------------------------------- */
 .hero-unit {
-  background-image: url(/images/clouds.jpg);
-  background-position: center bottom;
+/*
+  background-image: url(/images/hero5.png);
+  background-position: left bottom;
   background-repeat: no-repeat;
+*/
   height: 400px;
+}
+
+.header h1 {
+  margin-top: 115px;
+  color: #fff;
+  font-size: 80px;
+}
+
+.header .lead {
+  line-height: 1.25;
+  margin-top: 85px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 5px;
+  padding: 8px;
+  
+/*   color: #fff; */
+/*   text-shadow: 0 1px 1px rgba(0,0,0,.4); */
+}
+
+.header .btn {
+  margin-top: 10px;
+}
+
+.glow {
+  text-shadow: 0px 0px 15px #3057ab;
+}
+
+.threed {
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 }
 
 
