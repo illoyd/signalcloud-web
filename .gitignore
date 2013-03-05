@@ -16,3 +16,10 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Nanoc files
+crash.log
+
+# Mac files
+.DS_Store
+
