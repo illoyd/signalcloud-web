@@ -4,7 +4,7 @@
 
 body {
   padding-bottom: 40px;
-  background-image: url(/imgs/background.png)
+  background-image: url(/images/background.png)
 }
 
 
@@ -34,7 +34,7 @@ body {
 /* CUSTOMIZE THE HERO UNIT
 -------------------------------------------------- */
 .hero-unit {
-  background-image: url(/imgs/clouds.jpg);
+  background-image: url(/images/clouds.jpg);
   background-position: center bottom;
   background-repeat: no-repeat;
   height: 400px;
