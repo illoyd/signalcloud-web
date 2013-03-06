@@ -1,7 +1,7 @@
 ##
 # To use, comment out one of the blocks below!
 require 'rack/rewrite'
-require 'newrelic_rpm' if ENV['RACK_ENV'] = 'production'
+require 'newrelic_rpm' #if ENV['RACK_ENV'] = 'production'
 
 use Rack::Static, 
   :urls => ["/images", "/js", "/css", "/fonts"],
