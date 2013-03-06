@@ -18,7 +18,7 @@ _yardoc
 doc/
 
 # Nanoc files
-crash.log
+*.log
 
 # Mac files
 .DS_Store
