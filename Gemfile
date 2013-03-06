@@ -2,6 +2,7 @@ source :rubygems
 gem 'rack'
 gem 'rack-rewrite'
 gem 'unicorn'
+gem 'newrelic_rpm', group: :production
 
 group :development do
   gem 'nanoc'
