@@ -1,6 +1,7 @@
 source :rubygems
 gem 'rack'
 gem 'rack-rewrite'
+gem 'unicorn'
 
 group :development do
   gem 'nanoc'
