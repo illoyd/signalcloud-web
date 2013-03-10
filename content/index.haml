@@ -1,5 +1,6 @@
 ---
 title: SignalCloud
+description: Introducing a new way to check in and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
 
 ---
 
@@ -12,6 +13,8 @@ title: SignalCloud
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
+        
+        / Brand
         %a.brand{:href => "#"}
           %i.icon-cloud
           SignalCloud
@@ -20,9 +23,13 @@ title: SignalCloud
         .nav-collapse.collapse
           %ul.nav
             %li
-              %a{href:'#ideas'}
+              %a{href:'#whatwedo'}
+                %i.icon-question-sign.icon-large
+                What we do
+            %li
+              %a{href:'#inspiration'}
                 %i.icon-lightbulb.icon-large
-                Ideas
+                Inspiration
             %li
               %a{href:'#howitworks'}
                 %i.icon-wrench.icon-large
@@ -36,9 +43,8 @@ title: SignalCloud
                 %i.icon-envelope-alt.icon-large
                 Get ahold of us
 
-  / Carousel
+  / Header area
   .container.header
-    / .hero-unit
     %h1.glow
       %i.icon-cloud
       SignalCloud
@@ -50,74 +56,148 @@ title: SignalCloud
       %i.icon-lightbulb.icon-large
       Get some ideas
 
-  / Marketing messaging and featurettes
-  / Wrap the rest of the page in another container to center all the content.
-  .container.marketing
+  / Featurettes
+  .container
 
-    %hr#ideas.featurette-divider/
+    / What we do
+    %hr#whatwedo.featurette-divider/
     .featurette
-      %h2.featurette-heading
-        %i.icon-lightbulb.icon-3x.pull-left
-        Need inspiration?
-        %span.muted Here's an idea.
-      %p.lead We've been busy thinking up some ideas for using Signal Cloud.
+      .row
+        .span3.featurette-icon
+          %i.icon-question-sign.icon-3x
+        .span9
+          %h2.featurette-heading
+            What do we do?
+            %span.muted We connect.
+          %p.lead SignalCloud is a way to connect with just about anyone using their mobile phones to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so you can take action.
 
-    / Ideas
-    .row
-      .span4
-        %h2.idea<
-          %i.icon-credit-card.icon-2x
-        %h2 Card fraud
-        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        %p
-          %a.btn{:href => "ideas/creditcards.html"}
-            See how it would work
-            %i.icon-arrow-right
+      .row
+        .span3
+          %h3 Ask a question.
+          %p Ask a question with an answer both you and the customer should know, and tell us their mobile number so we can reach out to them.
+        
+        .span3
+          %h3 We connect.
+          %p We'll contact them on your behalf and ask the question. We can connect with 100s of mobile phone numbers around the world. We'll use a phone number dedicated to you - no number sharing here!
+        
+        .span3
+          %h3 We listen.
+          %p We'll wait for your customer to respond. Once we hear from them, we'll understand their response to your question.
+        
+        .span3
+          %h3 We respond.
+          %p We'll contact you right away to let you know how your customer responded. We'll let you know how they responded in one of four ways:
+          %ul.icons
+            %li
+              %i.icon-ok-circle
+              Confirmed
+            %li
+              %i.icon-ban-circle
+              Denied
+            %li
+              %i.icon-remove-circle
+              Unrecognised
+            %li
+              %i.icon-time
+              No response
 
-      .span4
-        %h2.idea<
-          %i.icon-gift.icon-2x
-        %h2 Package delivery
-        %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn{:href => "ideas/packagedelivery.html"}
-            See how it would work
-            %i.icon-arrow-right
+      .row{style:'text-align:center'}
+        .span3
+          %i.icon-arrow-right.icon-4x
+        .span3
+          %i.icon-arrow-right.icon-4x
+        .span3
+          %i.icon-arrow-right.icon-4x
+        .span3
+          %i.icon-ok.icon-4x
 
-      .span4
-        %h2.idea<
-          %i.icon-stethoscope.icon-2x
-        %h2 Doctor's visit
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-info{:href => "ideas/doctorsvisit.html"}
-            See how it would work
-            %i.icon-arrow-right
+    / Inspiration
+    %hr#inspiration.featurette-divider/
+    .featurette
+      .row
+        .span3.featurette-icon
+          %i.icon-lightbulb.icon-3x
+        .span9
+          %h2.featurette-heading
+            Need inspiration?
+            %span.muted Here's a few.
+          %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, patients, staff, or just about anyone to ask a question, understand their response, and take intelligent action.
 
-    / START THE FEATURETTES
+      / Ideas
+      .row
+        .span4.idea
+          %h3<
+            %i.icon-credit-card.icon-3x
+            %br
+            Card fraud
+          %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
+          %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
+          %p
+            %a.btn{:href => "ideas/creditcards.html"}
+              See how SignalCloud could help
+              %i.icon-arrow-right
+  
+        .span4.idea
+          %h3<
+            %i.icon-gift.icon-3x
+            %br
+            Package delivery
+          %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
+          %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
+          %p
+            %a.btn{:href => "ideas/packagedelivery.html"}
+              See how SignalCloud could help
+              %i.icon-arrow-right
+  
+        .span4.idea
+          %h3<
+            %i.icon-stethoscope.icon-3x
+            %br
+            Doctor's visit
+          %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
+          %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+          %p
+            %a.btn.btn-info{:href => "ideas/doctorsvisit.html"}
+              See how SignalCloud could help
+              %i.icon-arrow-right
+
+    / How it works
     %hr#howitworks.featurette-divider/
     .featurette
-      %h2.featurette-heading
-        %i.icon-wrench.icon-3x.pull-left
-        How does it work?
-        %span.muted It's elementary.
-      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .row
+        .span3.featurette-icon
+          %i.icon-wrench.icon-3x.pull-left
+        .span9
+          %h2.featurette-heading
+            How does it work?
+            %span.muted It's easy.
+          %p.lead Our tools are built on world-class services to connect with 100s of mobile phone providers around the world. We manage the connection, letting you focus on asking the questions.
 
+    / Getting started
     %hr#getstarted.featurette-divider/
     .featurette
-      %h2.featurette-heading
-        %i.icon-road.icon-3x.pull-left
-        Ready?
-        %span.muted Get started.
-      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .row
+        .span3.featurette-icon
+          %i.icon-road.icon-3x.pull-left
+        .span9
+          %h2.featurette-heading
+            Ready?
+            %span.muted Get started.
+          %p.lead We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration.
 
+    / Questions
     %hr#contact.featurette-divider/
     .featurette
-      %h2.featurette-heading
-        %i.icon-envelope-alt.icon-3x.pull-left
-        Have questions?
-        %span.muted We're here.
-      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .row
+        .span3.featurette-icon
+          %i.icon-envelope-alt.icon-3x.pull-left
+        .span9
+          %h2.featurette-heading
+            Have questions?
+            %span.muted We're here.
+          %p.lead
+            Let us know your thoughts. We're always listening!
+            = link_to 'contact@signalcloudapp.com', 'mailto:contact@signalcloudapp.com'
 
     %hr.featurette-divider/
     %footer
