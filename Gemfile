@@ -11,5 +11,7 @@ group :development do
   gem 'haml'
   gem 'maruku'
 #  gem 'asdf'
+  gem 'rainpress'
+  gem 'less'
 end
 

@@ -13,6 +13,14 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+# compile '/less/*/' do
+#   filter :less
+# end
+# 
+# route '/less/*/' do
+#   item.identifier.chop + '.css'
+# end
+
 passthrough '/js/*/'
 passthrough '/css/*/'
 
