@@ -3,11 +3,19 @@
   %head
     %meta{:charset => "utf-8"}/
     %title #{@item[:title]}
-    %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css", :rel => "stylesheet"}/
     %link{:href => "/css/style.css", :rel => "stylesheet"}/
-    %script{:type => "text/javascript", :src  => "/js/jquery.js"}
-    %script{:type => "text/javascript", :src  => "/js/bootstrap.js"}
+    %script{:type => "text/javascript", :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+    %script{:type => "text/javascript", :src  => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"}
+
+    /
+      %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}/
+      %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
+      %link{:href => "/css/style.css", :rel => "stylesheet"}/
+      %script{:type => "text/javascript", :src  => "/js/jquery.js"}
+      %script{:type => "text/javascript", :src  => "/js/bootstrap.js"}
+
     %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}/
     %meta{:content => "viewport", :name => "width=device-width, initial-scale=1.0"}/
     %meta{:content => "description", :name => "#{@item[:description]}"}/
