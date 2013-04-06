@@ -1,6 +1,6 @@
 ---
 title: SignalCloud
-description: Introducing a new way to check in and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
+description: Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
 
 ---
 
@@ -8,48 +8,46 @@ description: Introducing a new way to check in and engage with your customers, y
   .navbar.navbar-fixed-top
     .navbar-inner
       .container
-        / Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
+        / Responsive Navbar Part 1: Button for triggering responsive navbar
         %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
+          %i.icon-reorder
         
         / Brand
         %a.brand{:href => "#"}
           %i.icon-cloud
           SignalCloud
   
-        / Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+        / Responsive Navbar Part 2: Collapsable navbar contents
         .nav-collapse.collapse
           %ul.nav
             %li
               %a{href:'#whatwedo'}
                 %i.icon-question-sign.icon-large
-                What we do
+                What?
             %li
               %a{href:'#inspiration'}
                 %i.icon-lightbulb.icon-large
-                Inspiration
+                Inspiration?
             %li
               %a{href:'#howitworks'}
                 %i.icon-wrench.icon-large
-                How it works
+                How?
             %li
               %a{href:'#getstarted'}
                 %i.icon-road.icon-large
-                Get started
+                Ready?
             %li
               %a{href:'#contact'}
                 %i.icon-envelope-alt.icon-large
-                Get ahold of us
+                Questions?
 
   / Header area
   .container.header
     %h1.glow
       %i.icon-cloud
       SignalCloud
-    %p.lead Introducing a new way to check in and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
-    %a.btn.btn-large.btn-primary{:href => "#"}
+    %p.lead Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
+    %a.btn.btn-large.btn-primary{:href => "http://app.signalcloud.com"}
       %i.icon-plus.icon-large
       Sign up today
     %a.btn.btn-large.btn-info{:href => "#ideas"}
@@ -70,46 +68,76 @@ description: Introducing a new way to check in and engage with your customers, y
             What do we do?
             %span.muted We connect.
           %p.lead SignalCloud is a way to connect with just about anyone using their mobile phones to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so you can take action.
+          %p.lead Think of it as a way to authorise a one-time action or event.
+
+
+      .row{style:'font-size:150%; margin-top: 10px;'}
+        .span3
+          %span.muted Step
+          1
+        .span3
+          %span.muted Step
+          2
+        .span3
+          %span.muted Step
+          3
+        .span3
+          %span.muted Step
+          4
 
       .row
         .span3
-          %h3 Ask a question.
+          %h3{style:'margin-top:0px;'} Ask a question.
           %p Ask a question with an answer both you and the customer should know, and tell us their mobile number so we can reach out to them.
         
         .span3
-          %h3 We connect.
-          %p We'll contact them on your behalf and ask the question. We can connect with 100s of mobile phone numbers around the world. We'll use a phone number dedicated to you - no number sharing here!
+          %h3{style:'margin-top:0px;'} Connect.
+          %p We'll contact them on your behalf and ask the question. We can connect with mobile phone numbers around the world, and we'll use a phone number dedicated to you - no number sharing here!
         
         .span3
-          %h3 We listen.
+          %h3{style:'margin-top:0px;'} Listen.
           %p We'll wait for your customer to respond. Once we hear from them, we'll understand their response to your question.
         
         .span3
-          %h3 We respond.
-          %p We'll contact you right away to let you know how your customer responded. We'll let you know how they responded in one of four ways:
-          %ul.icons
-            %li
-              %i.icon-ok-circle
-              Confirmed
-            %li
-              %i.icon-ban-circle
-              Denied
-            %li
-              %i.icon-remove-circle
-              Unrecognised
-            %li
-              %i.icon-time
-              No response
+          %h3{style:'margin-top:0px;'} Respond.
+          %p We'll contact you right away to let you know how your customer responded. We'll let you know how they responded in one of four ways so you can take action right away.
+          %div{style:'text-align:center'}
+            %i.icon-circle-arrow-down{style:'font-size:300%'}
 
-      .row{style:'text-align:center'}
-        .span3
-          %i.icon-arrow-right.icon-4x
-        .span3
-          %i.icon-arrow-right.icon-4x
-        .span3
-          %i.icon-arrow-right.icon-4x
-        .span3
-          %i.icon-ok.icon-4x
+      .row.row-fluid.well
+        .span12
+          %p{style:'text-align:center'} We process their responses and get back to you with one of four possible answers.
+        .span12
+          .row.row-fluid
+            .span3
+              %h3
+                %i.icon-ok-circle.confirmed.solid
+                Confirmed
+              %p Congratulations! They gave a definite "yes" answer to your question, so you can take action right away.
+            .span3
+              %h3
+                %i.icon-ban-circle.denied.solid
+                Denied
+              %p They gave a definite "no" answer to your question, so you can take action to resolve right away.
+            .span3
+              %h3
+                %i.icon-remove-circle.failed.solid
+                Unrecognised
+              %p They didn't give a definite "yes" or "no" answer, so you might need to follow up to clarify.
+            .span3
+              %h3
+                %i.icon-time.timedout.solid
+                No response
+              %p They didn't respond in the time limit you specified, so a follow up might be necessary.
+
+      .row
+        .span12
+          %p.lead.jump-to-next
+            Need some real world examples of how it works?
+            %a{href:'#inspiration'}
+              Find some inspiration.
+              %i.icon-circle-arrow-right
+
 
     / Inspiration
     %hr#inspiration.featurette-divider/
@@ -121,7 +149,7 @@ description: Introducing a new way to check in and engage with your customers, y
           %h2.featurette-heading
             Need inspiration?
             %span.muted Here's a few.
-          %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, patients, staff, or just about anyone to ask a question, understand their response, and take intelligent action.
+          %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, staff, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
 
       / Ideas
       .row
@@ -161,6 +189,15 @@ description: Introducing a new way to check in and engage with your customers, y
               See how SignalCloud could help
               %i.icon-arrow-right
 
+      .row
+        .span12
+          %p.lead.jump-to-next
+            How does the plumbing work?
+            %a{href:'#howitworks'}
+              Check it out.
+              %i.icon-circle-arrow-right
+
+
     / How it works
     %hr#howitworks.featurette-divider/
     .featurette
@@ -171,7 +208,16 @@ description: Introducing a new way to check in and engage with your customers, y
           %h2.featurette-heading
             How does it work?
             %span.muted It's easy.
-          %p.lead Our tools are built on world-class services to connect with 100s of mobile phone providers around the world. We manage the connection, letting you focus on asking the questions.
+          %p.lead Our tools are built on world-class services to connect with mobile phone providers around the world. We manage the connection, letting you focus on asking the questions.
+
+      .row
+        .span12
+          %p.lead.jump-to-next
+            Ready to get started?
+            %a{href:'#getstarted'}
+              Sign up now.
+              %i.icon-circle-arrow-right
+
 
     / Getting started
     %hr#getstarted.featurette-divider/
@@ -185,6 +231,14 @@ description: Introducing a new way to check in and engage with your customers, y
             %span.muted Get started.
           %p.lead We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration.
 
+      .row
+        .span12
+          %p.lead.jump-to-next
+            Have a few more questions?
+            %a{href:'#contact'}
+              Get in touch.
+              %i.icon-circle-arrow-right
+
     / Questions
     %hr#contact.featurette-divider/
     .featurette
@@ -196,8 +250,18 @@ description: Introducing a new way to check in and engage with your customers, y
             Have questions?
             %span.muted We're here.
           %p.lead
-            Let us know your thoughts. We're always listening!
-            = link_to 'contact@signalcloudapp.com', 'mailto:contact@signalcloudapp.com'
+            Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to let us know your thoughts? We're listening!
+            :javascript
+              document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'%'+
+              '&'+'#'+'5'+'4'+';'+'8'+'e'+'l'+'&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'1'+'1'+'5'+
+              ';'+'%'+'6'+'9'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'3'+'7'+';'+'6'+'E'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+
+              '0'+'8'+';'+'c'+'l'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'0'+';'+'a'+'p'+
+              'p'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'3'+'7'+';'+'6'+'3'+'o'+'m'+"'"+'>'+'h'+'e'+'&'+'#'+'1'+'0'+'8'+';'+
+              '&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'s'+'&'+'#'+'1'+'0'+'5'+';'+'g'+'&'+'#'+'1'+'1'+'0'+
+              ';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'9'+';'+'l'+'o'+'u'+'&'+'#'+'1'+'0'+'0'+
+              ';'+'a'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'m'+'<'+'/'+'a'+
+              '>');
+            %noscript [Turn on JavaScript to see our contact address]
 
     %hr.featurette-divider/
     %footer

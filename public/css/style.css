@@ -9,6 +9,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.confirmed { color: #6DAE81 }
+.denied { color: #FC2847 }
+.failed { color: #FF6E4A }
+.timedout { color: #D68A59 }
+i.solid { opacity: 1.0 }
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -150,6 +156,16 @@ body {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.response-types {
+  background-color: #cec7fa;
+  border-radius: 5px;
+}
+
+.featurette p.jump-to-next {
+  text-align: right;
+  margin-top: 20px;
 }
 
 
