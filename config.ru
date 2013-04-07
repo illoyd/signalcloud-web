@@ -5,6 +5,7 @@ require 'rack/rewrite'
 use Rack::Static, 
   :urls => ["/images", "/js", "/css", "/fonts"],
   :root => "public"
+#  :index => 'index.html'
 
 # To always serve one kind of file...
 #run lambda { |env|
@@ -21,6 +22,12 @@ use Rack::Static,
 # To use the public directory as a basis
 use Rack::Rewrite do
   rewrite '/', '/index.html'
+  
+  %w{ api security platforms iap cards packages appointments }.each do |key|
+    rewrite "/#{key}", "/#{key}/index.html"
+    rewrite "/#{key}/", "/#{key}/index.html"
+  end
+  
 end
 
 run Rack::Directory.new('public')
