@@ -1,5 +1,4 @@
 GEM
-  remote: http://rubygems.org/
   specs:
     colored (1.2)
     commonjs (0.2.6)
