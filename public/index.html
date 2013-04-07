@@ -23,7 +23,11 @@
           </button>
           <!-- Brand -->
           <a class='brand' href='#'>
-            <i class='icon-cloud'></i>
+            <span class='logo'>
+              <i class='icon-cloud'></i>
+              <i class='icon-bolt'></i>
+            </span>
+            <!-- %img{src:'signalcloud2.png'} -->
             SignalCloud
           </a>
           <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
@@ -60,6 +64,20 @@
                 </a>
               </li>
             </ul>
+            <ul class='nav pull-right'>
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  <i class='icon-bolt icon-large'></i>
+                  Developers
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li><a href="/api">API</a></li>
+                  <li><a href="/security">Security & Privacy</a></li>
+                  <li><a href="/platforms">Platform</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -67,7 +85,11 @@
     <!-- Header area -->
     <div class='container header'>
       <h1 class='glow'>
-        <i class='icon-cloud'></i>
+        <span class='logo'>
+          <i class='icon-cloud'></i>
+          <i class='icon-bolt'></i>
+        </span>
+        <!-- %img{src:'/images/signalcloud2.png'} -->
         SignalCloud
       </h1>
       <p class='lead'>Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.</p>
@@ -75,7 +97,7 @@
         <i class='icon-plus icon-large'></i>
         Sign up today
       </a>
-      <a class='btn btn-large btn-info' href='#ideas'>
+      <a class='btn btn-large btn-info' href='#inspiration'>
         <i class='icon-lightbulb icon-large'></i>
         Get some ideas
       </a>
@@ -95,10 +117,10 @@
               <span class='muted'>We connect.</span>
             </h2>
             <p class='lead'>SignalCloud is a way to connect with just about anyone using their mobile phones to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so you can take action.</p>
-            <p class='lead'>Think of it as a way to authorise a one-time action or event.</p>
+            <p class='lead'>Think of it as a quick way to authorise a one-time action or event.</p>
           </div>
         </div>
-        <div class='row' style='font-size:150%; margin-top: 10px;'>
+        <div class='row' style='font-size:150%; margin-top: 40px;'>
           <div class='span3'>
             <span class='muted'>Step</span>
             1
@@ -137,7 +159,7 @@
             </div>
           </div>
         </div>
-        <div class='row row-fluid well'>
+        <div class='row row-fluid well' style='margin-top: 20px;'>
           <div class='span12'>
             <p style='text-align:center'>We process their responses and get back to you with one of four possible answers.</p>
           </div>
@@ -201,6 +223,33 @@
             <p class='lead'>Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, staff, patients, or just about anyone to ask a question, understand their response, and take intelligent action.</p>
           </div>
         </div>
+        <!-- Big Ideas -->
+        <div class='row'>
+          <div class='span3 idea'>
+            <h3 style='text-align:right'>
+              <i class='icon-mobile-phone icon-3x'></i>
+              <i class='icon-tablet icon-3x'></i>
+            </h3>
+          </div>
+          <div class='span9'>
+            <h3>In-app purchases</h3>
+            <p>
+              In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
+              <a href="http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video">recent</a>
+              <a href="http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html">news</a>
+              <a href="http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html">articles</a>
+              all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
+            </p>
+            <p>
+              SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
+              <br>
+              <a href='ideas/iap.html'>
+                See how SignalCloud could help
+                <i class='icon-circle-arrow-right'></i>
+              </a>
+            </p>
+          </div>
+        </div>
         <!-- Ideas -->
         <div class='row'>
           <div class='span4 idea'>
@@ -209,12 +258,6 @@
             Card fraud</h3>
             <p>Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.</p>
             <p>SignalCloud can help seperate fraud from legit with our easy-to-use tools.</p>
-            <p>
-              <a class='btn' href='ideas/creditcards.html'>
-                See how SignalCloud could help
-                <i class='icon-arrow-right'></i>
-              </a>
-            </p>
           </div>
           <div class='span4 idea'>
             <h3><i class='icon-gift icon-3x'></i>
@@ -222,12 +265,6 @@
             Package delivery</h3>
             <p>Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.</p>
             <p>SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.</p>
-            <p>
-              <a class='btn' href='ideas/packagedelivery.html'>
-                See how SignalCloud could help
-                <i class='icon-arrow-right'></i>
-              </a>
-            </p>
           </div>
           <div class='span4 idea'>
             <h3><i class='icon-stethoscope icon-3x'></i>
@@ -235,12 +272,26 @@
             Doctor's visit</h3>
             <p>Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.</p>
             <p>SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.</p>
-            <p>
-              <a class='btn btn-info' href='ideas/doctorsvisit.html'>
-                See how SignalCloud could help
-                <i class='icon-arrow-right'></i>
-              </a>
-            </p>
+          </div>
+        </div>
+        <div class='row' style='text-align:center'>
+          <div class='span4'>
+            <a href='ideas/cards.html'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
+          </div>
+          <div class='span4'>
+            <a href='ideas/packages.html'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
+          </div>
+          <div class='span4'>
+            <a href='ideas/appointments.html'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
           </div>
         </div>
         <div class='row'>
@@ -271,6 +322,46 @@
           </div>
         </div>
         <div class='row'>
+          <div class='span1 offset2' style='text-align:center'>
+            <i class='icon-dashboard icon-4x'></i>
+          </div>
+          <div class='span9'>
+            <p>
+              <strong><a href="/platforms">Scalable platforms.</a></strong>
+              We use best-in-class platforms to provide a seamless technical solution.
+              Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
+              Our providers average 99.98% uptime.
+              <a href="/platforms">Read more.</a>
+            </p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='span1 offset2' style='text-align:center'>
+            <i class='icon-lock icon-4x'></i>
+          </div>
+          <div class='span9'>
+            <p>
+              <strong><a href="/security">Secure solutions.</a></strong>
+              Every layer of our solution is protected with industry-grade encryption, from initial API requests through to the database itself.
+              We use SSL to protect all communication between you and our servers, while all customer data is securely encrypted and stored in our database.
+              We offer periodic purging of customer data as well, ensuring that your valuable customer information cannot fall into the wrong hands.
+              <a href="/security">Read more.</a>
+            </p>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='span1 offset2' style='text-align:center'>
+            <i class='icon-bolt icon-4x'></i>
+          </div>
+          <div class='span9'>
+            <p>
+              <strong><a href="/api">Accessible API.</a></strong>
+              Our automated Application Program Interface is simple and easy to use, allowing you to rapidly integrate our solution into your business processes.
+              <a href="/api">Read more.</a>
+            </p>
+          </div>
+        </div>
+        <div class='row'>
           <div class='span12'>
             <p class='lead jump-to-next'>
               Ready to get started?
@@ -294,7 +385,10 @@
               Ready?
               <span class='muted'>Get started.</span>
             </h2>
-            <p class='lead'>We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration.</p>
+            <p class='lead'>
+              We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration. In the meantime, register your interest by
+              <a href="#contact">getting in touch.</a>
+            </p>
           </div>
         </div>
         <div class='row'>
@@ -323,6 +417,7 @@
             </h2>
             <p class='lead'>
               Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to let us know your thoughts? We're listening!
+              <br>
               <script>
                 document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'%'+
                 '&'+'#'+'5'+'4'+';'+'8'+'e'+'l'+'&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'1'+'1'+'5'+
@@ -336,6 +431,35 @@
               </script>
               <noscript>[Turn on JavaScript to see our contact address]</noscript>
             </p>
+            <p>Or connect with us on Twitter at <a href='https://twitter.com/signalcloud'>@SignalCloud</a>.</p>
+            <h3 style='margin-top:50px'>Wondering who is behind SignalCloud?</h3>
+            <div class='row'>
+              <div class='span2'>
+                <img class='img-circle' src='/images/ian.jpg'>
+              </div>
+              <div class='span7'>
+                <p>
+                  SignalCloud is the brainchild of <strong>Ian Lloyd</strong>, who realised there was no easy way for a business to get in touch with their customers to authorise an action, such as confirming a package delivery or doctor's appointment.
+                  Ian is passionate about providing real solutions to real world problems, whether that is through cloud software-as-a-service or public-private partnerships.
+                </p>
+                <p>
+                  <ul class='inline'>
+                    <li>
+                      <i class='icon-linkedin-sign'></i>
+                      <a href="http://uk.linkedin.com/in/ianwyattlloyd">Linkedin</a>
+                    </li>
+                    <li>
+                      <i class='icon-twitter-sign'></i>
+                      <a href="https://twitter.com/ianwlloyd">Twitter</a>
+                    </li>
+                    <li>
+                      <i class='icon-github-sign'></i>
+                      <a href="https://github.com/illoyd">GitHub</a>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

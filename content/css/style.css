@@ -15,6 +15,11 @@ body {
 .timedout { color: #D68A59 }
 i.solid { opacity: 1.0 }
 
+span.logo { position: relative; opacity: 1.0 }
+span.logo i.icon-cloud { opacity: 0.8 }
+span.logo i.icon-bolt { position: absolute; top: 0px; left: 25%; color: yellow; opacity: 1.0 }
+.header span.logo i.icon-bolt { text-shadow: 1px 1px 2px rgba(165,165,165,0.75); }
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
