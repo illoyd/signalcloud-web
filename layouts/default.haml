@@ -21,4 +21,4 @@
     %meta{:content => "description", :name => "#{@item[:description]}"}/
     %meta{:content => "author", :name => "Ian Lloyd"}/
 
-  = yield
+  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target]}= yield

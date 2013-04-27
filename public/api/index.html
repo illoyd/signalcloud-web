@@ -8,17 +8,133 @@
     <link href='/css/style.css' rel='stylesheet'>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
     <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js' type='text/javascript'></script>
-    <meta content='nanoc 3.6.1' name='generator'>
+    <meta content='nanoc 3.6.2' name='generator'>
     <meta content='viewport' name='width=device-width, initial-scale=1.0'>
     <meta content='description' name="SignalCloud's Application Program Interface (API)">
     <meta content='author' name='Ian Lloyd'>
   </head>
-  <body>
-    <p class='failed' style='text-align:center; font-size:400px;'>
-      <i class='icon-warning-sign'></i>
-    </p>
-    <p style='text-align:center; font-size:100px;'>
-      Coming Soon
-    </p>
+  <body data-spy='scroll'>
+    <div class='container affix' style='z-index:100'>
+      <div class='navbar'>
+        <div class='navbar-inner'>
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <i class='icon-reorder'></i>
+          </button>
+          <!-- Brand -->
+          <a class='brand' href='/'>
+            <!-- = render 'logo' -->
+            <!-- SignalCloud -->
+            <img class='logo' src='images/logo-big.png'>
+          </a>
+          <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li>
+                <a href='/'>
+                  <i class='icon-home icon-large'></i>
+                  Home
+                </a>
+              </li>
+            </ul>
+            <ul class='nav pull-right'>
+              <li>
+                <p class='navbar-text'>For Developers</p>
+              </li>
+              <li class='active'>
+                <a href='/api'>
+                  <i class='icon-book icon-large'></i>
+                  API
+                </a>
+              </li>
+              <li>
+                <a href='/platforms'>
+                  <i class='icon-dashboard icon-large'></i>
+                  Platforms
+                </a>
+              </li>
+              <li>
+                <a href='/security'>
+                  <i class='icon-lock icon-large'></i>
+                  Security
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header area -->
+    <div class='container header'>
+      <h1 class='glow'>
+        <span class='logo'>
+          <i class='icon-cloud'></i>
+          <i class='icon-bolt'></i>
+        </span>
+        SignalCloud API
+      </h1>
+      <p class='lead'>The SignalCloud API provides a simple to use, secure, and robust toolkit for interacting with the service.</p>
+    </div>
+    <!-- Main content -->
+    <div class='container'>
+      <div class='row'>
+        <!-- Navigation bar -->
+        <div class='span2'>
+          <ul class='nav nav-tabs nav-stacked' data-offset-top='445' data-spy='affix' id='toc'>
+            <li><a href="#basics">Basics</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#phone_numbers">Phone Numbers</a></li>
+            <li><a href="#phone_books">Phone Books</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+          </ul>
+        </div>
+        <!-- Body -->
+        <div class='span10 booklet'>
+          <h2 id='basics'>Basics</h2>
+          <p>The SignalCloud REST API allows you to query meta-data about your account, phone numbers, phone books, templates, and tickets. You can also open new tickets as well as manage existing tickets.</p>
+          
+          <p>Since the API is based on REST principles, it&#8217;s very easy to write and test applications. You can use your browser to access URLs, and you can use pretty much any HTTP client in any programming language to interact with the API.</p>
+          
+          <h3 id='rest_api_endpoint'>REST API end-point</h3>
+          
+          <p>SignalCloud&#8217;s main REST API end-point can be found at the following location: <pre>https://app.signalcloudapp.com</pre></p>
+          
+          <p>If you have a dedicated instance, replace <code>app</code> with your instance name. For instance, if your instance was <code>sushi</code>, your REST API end-point would be the following: <pre>https://sushi.signalcloudapp.com</pre></p>
+          
+          <p>For simplicity, all our examples will assume you are using the standard REST API end-point, but everything described here applies to both standard accounts as well as dedicated instances.</p>
+          <h2 id='security'>Security</h2>
+          <p>SignalCloud takes great pains to protect your data.</p>
+          
+          <h3 id='authenticating'>Authenticating</h3>
+          
+          <p>To authenticate with the SignalCloud REST API, you must specify either HTTP Basic or Digest Authentication, using your account&#8217;s username and password. Don&#8217;t worry - since we use SSL, your username and password are protected. <pre>https://username:password@app.signalcloudapp.com</pre></p>
+          
+          <h3 id='managing_users'>Managing users</h3>
+          
+          <p>You can manage your user accounts using the SignalCloud website.</p>
+          <h2 id='templates'>Templates</h2>
+          <p>Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.</p>
+          <p>Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.</p>
+          <p>Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.</p>
+          <p>Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.</p>
+          <h2 id='phone_numbers'>Phone Numbers</h2>
+          <p>Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.</p>
+          <p>Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.</p>
+          <p>Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.</p>
+          <p>Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.</p>
+          <h2 id='phone_books'>Phone Books</h2>
+          <p>Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.</p>
+          <p>Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.</p>
+          <p>Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.</p>
+          <p>Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.</p>
+          <h2 id='tickets'>Tickets</h2>
+          <p>Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.</p>
+          <p>Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.</p>
+          <p>Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.</p>
+          <p>Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

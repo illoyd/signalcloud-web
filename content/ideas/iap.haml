@@ -1,0 +1,66 @@
+---
+title: API - SignalCloud
+description: SignalCloud's Application Program Interface (API)
+
+---
+
+%body
+
+- render 'navbar' do
+  %ul.nav
+    %li
+      %a{href:'/'}
+        %i.icon-home.icon-large
+        Home
+  %ul.nav.pull-right
+    %li
+      %p.navbar-text For Developers
+    %li.active
+      %a{href:'/api'}
+        %i.icon-book.icon-large
+        API
+    %li
+      %a{href:'/platforms'}
+        %i.icon-dashboard.icon-large
+        Platforms
+    %li
+      %a{href:'/security'}
+        %i.icon-lock.icon-large
+        Security
+
+/ Header area
+.container.header
+  %h1.glow
+    = render 'logo'
+    SignalCloud API
+  %p.lead
+    In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. With
+    = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
+    = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
+    = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
+    all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to reign in these costly mistakes.
+
+/ Main content
+.container
+  .row
+    .span2.offset2
+      %img{src: '/images/iap_bad_1.png'}
+    .span8 Step 1
+  .row
+    .span4 Step 2
+    .span2
+      %img{src: '/images/iap_bad_2.png'}
+    .span2
+      %img{src: '/images/iap_good_2.png'}
+    .span4 Step 2
+  .row
+    .span4 Step 3
+    .span2
+      %img{src: '/images/iap_bad_3.png'}
+    .span2
+      %img{src: '/images/iap_good_3.png'}
+    .span4 Step 3
+  .row
+    .span2.offset6
+      %img{src: '/images/iap_good_4.png'}
+    .span4 Step 4

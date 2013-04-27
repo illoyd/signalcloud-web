@@ -1,13 +1,102 @@
 ---
 title: API - SignalCloud
 description: SignalCloud's Application Program Interface (API)
+data_spy_target: #toc
 
 ---
 
-%body
+- render 'navbar' do
+  %ul.nav
+    %li
+      %a{href:'/'}
+        %i.icon-home.icon-large
+        Home
+  %ul.nav.pull-right
+    %li
+      %p.navbar-text For Developers
+    %li.active
+      %a{href:'/api'}
+        %i.icon-book.icon-large
+        API
+    %li
+      %a{href:'/platforms'}
+        %i.icon-dashboard.icon-large
+        Platforms
+    %li
+      %a{href:'/security'}
+        %i.icon-lock.icon-large
+        Security
 
-  %p.failed{style:'text-align:center; font-size:400px;'}
-    %i.icon-warning-sign
+/ Header area
+.container.header
+  %h1.glow
+    = render 'logo'
+    SignalCloud API
+  %p.lead The SignalCloud API provides a simple to use, secure, and robust toolkit for interacting with the service.
 
-  %p{style:'text-align:center; font-size:100px;'}
-    Coming Soon
+/ Main content
+.container
+  .row
+
+    / Navigation bar
+    .span2
+      %ul#toc.nav.nav-tabs.nav-stacked{'data-spy'=>'affix', 'data-offset-top'=>445}
+        %li= link_to 'Basics', '#basics'
+        %li= link_to 'Security', '#security'
+        %li= link_to 'Templates', '#templates'
+        %li= link_to 'Phone Numbers', '#phone_numbers'
+        %li= link_to 'Phone Books', '#phone_books'
+        %li= link_to 'Tickets', '#tickets'
+  
+    / Body
+    .span10.booklet
+      
+      %h2#basics Basics
+      :maruku
+        The SignalCloud REST API allows you to query meta-data about your account, phone numbers, phone books, templates, and tickets. You can also open new tickets as well as manage existing tickets.
+        
+        Since the API is based on REST principles, it's very easy to write and test applications. You can use your browser to access URLs, and you can use pretty much any HTTP client in any programming language to interact with the API.
+        
+        ### REST API end-point
+        SignalCloud's main REST API end-point can be found at the following location:
+        <pre>https://app.signalcloudapp.com</pre>
+        
+        If you have a dedicated instance, replace `app` with your instance name. For instance, if your instance was `sushi`, your REST API end-point would be the following:
+        <pre>https://sushi.signalcloudapp.com</pre>
+        
+        For simplicity, all our examples will assume you are using the standard REST API end-point, but everything described here applies to both standard accounts as well as dedicated instances.
+
+      %h2#security Security
+      :maruku
+        SignalCloud takes great pains to protect your data.
+      
+        ### Authenticating
+        To authenticate with the SignalCloud REST API, you must specify either HTTP Basic or Digest Authentication, using your account's username and password. Don't worry - since we use SSL, your username and password are protected.
+        <pre>https://username:password@app.signalcloudapp.com</pre>
+
+        ### Managing users
+        You can manage your user accounts using the SignalCloud website.
+  
+      %h2#templates Templates
+      %p Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.
+      %p Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.
+      %p Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.
+      %p Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.
+  
+      %h2#phone_numbers Phone Numbers
+      %p Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.
+      %p Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.
+      %p Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.
+      %p Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.
+  
+      %h2#phone_books Phone Books
+      %p Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.
+      %p Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.
+      %p Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.
+      %p Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.
+  
+      %h2#tickets Tickets
+      %p Laborum tempor before they sold out proident bushwick sunt. Est craft beer forage kogi biodiesel. Do occaecat food truck, nesciunt disrupt quis umami veniam plaid next level minim qui velit. Polaroid craft beer beard, sed banksy occupy quinoa pinterest high life chillwave culpa nesciunt raw denim. Sapiente helvetica lo-fi, polaroid consectetur ut mollit vegan. Aute blue bottle cred vegan, fingerstache tempor cillum craft beer umami. Bespoke iphone bicycle rights, minim raw denim veniam american apparel swag VHS.
+      %p Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.
+      %p Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.
+      %p Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.

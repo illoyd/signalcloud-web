@@ -4,376 +4,351 @@ description: Introducing a new way to connect and engage with your customers, yo
 
 ---
 
-%body{'data-spy'=>"scroll", 'data-target'=>".navbar"}
-  .navbar.navbar-fixed-top
-    .navbar-inner
-      .container
-        / Responsive Navbar Part 1: Button for triggering responsive navbar
-        %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-          %i.icon-reorder
-        
-        / Brand
-        %a.brand{:href => "#"}
-          %span.logo
-            %i.icon-cloud
-            %i.icon-bolt
-          / %img{src:'signalcloud2.png'}
-          SignalCloud
-  
-        / Responsive Navbar Part 2: Collapsable navbar contents
-        .nav-collapse.collapse
-          %ul.nav
-            %li
-              %a{href:'#whatwedo'}
-                %i.icon-question-sign.icon-large
-                What?
-            %li
-              %a{href:'#inspiration'}
-                %i.icon-lightbulb.icon-large
-                Inspiration?
-            %li
-              %a{href:'#howitworks'}
-                %i.icon-wrench.icon-large
-                How?
-            %li
-              %a{href:'#getstarted'}
-                %i.icon-road.icon-large
-                Ready?
-            %li
-              %a{href:'#contact'}
-                %i.icon-envelope-alt.icon-large
-                Questions?
-          %ul.nav.pull-right
-            %li.dropdown
-              %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-                %i.icon-bolt.icon-large
-                Developers
-                %b.caret
-              %ul.dropdown-menu
-                %li= link_to 'API', '/api'
-                %li= link_to 'Security & Privacy', '/security'
-                %li= link_to 'Platform', '/platforms'
+.container
+  - render 'navbar' do
+    %ul.nav
+      %li
+        %a{href:'#whatwedo'}
+          %i.icon-question-sign.icon-large
+          What?
+      %li
+        %a{href:'#inspiration'}
+          %i.icon-lightbulb.icon-large
+          Inspiration?
+      %li
+        %a{href:'#howitworks'}
+          %i.icon-wrench.icon-large
+          How?
+      %li
+        %a{href:'#getstarted'}
+          %i.icon-road.icon-large
+          Ready?
+      %li
+        %a{href:'#contact'}
+          %i.icon-envelope-alt.icon-large
+          Questions?
+    %ul.nav.pull-right
+      %li.dropdown
+        %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
+          %i.icon-bolt.icon-large
+          Developers
+          %b.caret
+        %ul.dropdown-menu
+          %li= link_to 'API', '/api'
+          %li= link_to 'Security & Privacy', '/security'
+          %li= link_to 'Platform', '/platforms'
 
 
-  / Header area
-  .container.header
-    %h1.glow
-      %span.logo
-        %i.icon-cloud
-        %i.icon-bolt
-      / %img{src:'/images/signalcloud2.png'}
-      SignalCloud
-    %p.lead Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
-    %a.btn.btn-large.btn-primary{:href => "#getstarted"}
-      %i.icon-plus.icon-large
-      Sign up today
-    %a.btn.btn-large.btn-info{:href => "#inspiration"}
-      %i.icon-lightbulb.icon-large
-      Get some ideas
-
-  / Featurettes
+/ Header Area
+.header
   .container
-
-    / What we do
-    %hr#whatwedo.featurette-divider/
-    .featurette
-      .row
-        .span3.featurette-icon
-          %i.icon-question-sign.icon-3x
-        .span9
-          %h2.featurette-heading
-            What do we do?
-            %span.muted We connect.
-          %p.lead SignalCloud is a way to connect with just about anyone using their mobile phones to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so you can take action.
-          %p.lead Think of it as a quick way to authorise a one-time action or event.
+    .row
+      .span3= render 'logo-emblem'
+      .span9
+        %h1 SignalCloud
+        %p.lead Introducing <strong>SignalCloud</strong>, a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
+        %a.btn.btn-large.btn-primary{:href => "#getstarted"}
+          %i.icon-plus.icon-large
+          Sign up today
+        %a.btn.btn-large.btn-info{:href => "#inspiration"}
+          %i.icon-lightbulb.icon-large
+          Get some ideas
 
 
-      .row{style:'font-size:150%; margin-top: 40px;'}
-        .span3
-          %span.muted Step
-          1
-        .span3
-          %span.muted Step
-          2
-        .span3
-          %span.muted Step
-          3
-        .span3
-          %span.muted Step
-          4
+/ Featurettes
+.container
 
-      .row
-        .span3
-          %h3{style:'margin-top:0px;'} Ask a question.
-          %p Ask a question with an answer both you and the customer should know, and tell us their mobile number so we can reach out to them.
-        
-        .span3
-          %h3{style:'margin-top:0px;'} Connect.
-          %p We'll contact them on your behalf and ask the question. We can connect with mobile phone numbers around the world, and we'll use a phone number dedicated to you - no number sharing here!
-        
-        .span3
-          %h3{style:'margin-top:0px;'} Listen.
-          %p We'll wait for your customer to respond. Once we hear from them, we'll understand their response to your question.
-        
-        .span3
-          %h3{style:'margin-top:0px;'} Respond.
-          %p We'll contact you right away to let you know how your customer responded. We'll let you know how they responded in one of four ways so you can take action right away.
-          %div{style:'text-align:center'}
-            %i.icon-circle-arrow-down{style:'font-size:300%'}
-
-      .row.row-fluid.well{style:'margin-top: 20px;'}
-        .span12
-          %p{style:'text-align:center'} We process their responses and get back to you with one of four possible answers.
-        .span12
-          .row.row-fluid
-            .span3
-              %h3
-                %i.icon-ok-circle.confirmed.solid
-                Confirmed
-              %p Congratulations! They gave a definite "yes" answer to your question, so you can take action right away.
-            .span3
-              %h3
-                %i.icon-ban-circle.denied.solid
-                Denied
-              %p They gave a definite "no" answer to your question, so you can take action to resolve right away.
-            .span3
-              %h3
-                %i.icon-remove-circle.failed.solid
-                Unrecognised
-              %p They didn't give a definite "yes" or "no" answer, so you might need to follow up to clarify.
-            .span3
-              %h3
-                %i.icon-time.timedout.solid
-                No response
-              %p They didn't respond in the time limit you specified, so a follow up might be necessary.
-
-      .row
-        .span12
-          %p.lead.jump-to-next
-            Need some real world examples of how it works?
-            %a{href:'#inspiration'}
-              Find some inspiration.
-              %i.icon-circle-arrow-right
+  / What we do
+  %hr#whatwedo.featurette-divider/
+  .featurette
+    .row
+      .span3.featurette-icon
+        %i.icon-question-sign.icon-3x
+      .span9
+        %h2.featurette-heading
+          What do we do?
+          %span.muted We connect.
+        %p.lead SignalCloud is a way to connect with just about anyone using their mobile phones to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so you can take action.
+        %p.lead Think of it as a quick way to authorise a one-time action or event.
 
 
-    / Inspiration
-    %hr#inspiration.featurette-divider/
-    .featurette
-      .row
-        .span3.featurette-icon
-          %i.icon-lightbulb.icon-3x
-        .span9
-          %h2.featurette-heading
-            Need inspiration?
-            %span.muted Here's a few.
-          %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, staff, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+    .row{style:'font-size:150%; margin-top: 40px;'}
+      .span3
+        %span.muted Step
+        1
+      .span3
+        %span.muted Step
+        2
+      .span3
+        %span.muted Step
+        3
+      .span3
+        %span.muted Step
+        4
 
-      / Big Ideas
-      .row
-        .span3.idea
-          %h3{style:'text-align:right'}
-            %i.icon-mobile-phone.icon-3x
-            %i.icon-tablet.icon-3x
-        .span9 
-          %h3 In-app purchases
-          %p
-            In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
-            = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
-            = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
-            = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
-            all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
-          %p
-            SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
-            %br
-            %a{:href => "ideas/iap.html"}
-              See how SignalCloud could help
-              %i.icon-circle-arrow-right
+    .row
+      .span3
+        %h3{style:'margin-top:0px;'} Ask a question.
+        %p Ask a question with an answer both you and the customer should know, and tell us their mobile number so we can reach out to them.
+      
+      .span3
+        %h3{style:'margin-top:0px;'} Connect.
+        %p We'll contact them on your behalf and ask the question. We can connect with mobile phone numbers around the world, and we'll use a phone number dedicated to you - no number sharing here!
+      
+      .span3
+        %h3{style:'margin-top:0px;'} Listen.
+        %p We'll wait for your customer to respond. Once we hear from them, we'll understand their response to your question.
+      
+      .span3
+        %h3{style:'margin-top:0px;'} Respond.
+        %p We'll contact you right away to let you know how your customer responded. We'll let you know how they responded in one of four ways so you can take action right away.
+        %div{style:'text-align:center'}
+          %i.icon-circle-arrow-down{style:'font-size:300%'}
 
-      / Ideas
-      .row
-        .span4.idea
-          %h3<
-            %i.icon-credit-card.icon-3x
-            %br
-            Card fraud
-          %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
-          %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
-  
-        .span4.idea
-          %h3<
-            %i.icon-gift.icon-3x
-            %br
-            Package delivery
-          %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
-          %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
-  
-        .span4.idea
-          %h3<
-            %i.icon-stethoscope.icon-3x
-            %br
-            Doctor's visit
-          %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
-          %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+    .row.row-fluid.well{style:'margin-top: 20px;'}
+      .span12
+        %p{style:'text-align:center'} We process their responses and get back to you with one of four possible answers.
+      .span12
+        .row.row-fluid
+          .span3
+            %h3
+              %i.icon-ok-circle.confirmed.solid
+              Confirmed
+            %p Congratulations! They gave a definite "yes" answer to your question, so you can take action right away.
+          .span3
+            %h3
+              %i.icon-ban-circle.denied.solid
+              Denied
+            %p They gave a definite "no" answer to your question, so you can take action to resolve right away.
+          .span3
+            %h3
+              %i.icon-remove-circle.failed.solid
+              Unrecognised
+            %p They didn't give a definite "yes" or "no" answer, so you might need to follow up to clarify.
+          .span3
+            %h3
+              %i.icon-time.timedout.solid
+              No response
+            %p They didn't respond in the time limit you specified, so a follow up might be necessary.
 
-      .row{style:'text-align:center'}
-        .span4
-          %a{:href => "ideas/cards.html"}
-            See how SignalCloud could help
+    .row
+      .span12
+        %p.lead.jump-to-next
+          Need some real world examples of how it works?
+          %a{href:'#inspiration'}
+            Find some inspiration.
             %i.icon-circle-arrow-right
-        .span4
-          %a{:href => "ideas/packages.html"}
-            See how SignalCloud could help
-            %i.icon-circle-arrow-right
-        .span4
-          %a{:href => "ideas/appointments.html"}
+
+
+  / Inspiration
+  %hr#inspiration.featurette-divider/
+  .featurette
+    .row
+      .span3.featurette-icon
+        %i.icon-lightbulb.icon-3x
+      .span9
+        %h2.featurette-heading
+          Need inspiration?
+          %span.muted Here's a few.
+        %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, staff, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+
+    / Big Ideas
+    .row
+      .span3.idea
+        %h3{style:'text-align:right'}
+          %i.icon-mobile-phone.icon-3x
+          %i.icon-tablet.icon-3x
+      .span9 
+        %h3 In-app purchases
+        %p
+          In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
+          = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
+          = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
+          = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
+          all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
+        %p
+          SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
+          %br
+          %a{:href => "ideas/iap"}
             See how SignalCloud could help
             %i.icon-circle-arrow-right
 
-      .row
-        .span12
-          %p.lead.jump-to-next
-            How does the plumbing work?
-            %a{href:'#howitworks'}
-              Check it out.
-              %i.icon-circle-arrow-right
+    / Ideas
+    .row
+      .span4.idea
+        %h3<
+          %i.icon-credit-card.icon-3x
+          %br
+          Card fraud
+        %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
+        %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
+
+      .span4.idea
+        %h3<
+          %i.icon-gift.icon-3x
+          %br
+          Package delivery
+        %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
+        %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
+
+      .span4.idea
+        %h3<
+          %i.icon-stethoscope.icon-3x
+          %br
+          Doctor's visit
+        %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
+        %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+
+    .row{style:'text-align:center'}
+      .span4
+        %a{:href => "ideas/cards"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+      .span4
+        %a{:href => "ideas/packages"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+      .span4
+        %a{:href => "ideas/appointments"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+
+    .row
+      .span12
+        %p.lead.jump-to-next
+          How does the plumbing work?
+          %a{href:'#howitworks'}
+            Check it out.
+            %i.icon-circle-arrow-right
 
 
-    / How it works
-    %hr#howitworks.featurette-divider/
-    .featurette
-      .row
-        .span3.featurette-icon
-          %i.icon-wrench.icon-3x.pull-left
-        .span9
-          %h2.featurette-heading
-            How does it work?
-            %span.muted It's easy.
-          %p.lead Our tools are built on world-class services to connect with mobile phone providers around the world. We manage the connection, letting you focus on asking the questions.
+  / How it works
+  %hr#howitworks.featurette-divider/
+  .featurette
+    .row
+      .span3.featurette-icon
+        %i.icon-wrench.icon-3x.pull-left
+      .span9
+        %h2.featurette-heading
+          How does it work?
+          %span.muted It's easy.
+        %p.lead Our tools are built on world-class services to connect with mobile phone providers around the world. We manage the connection, letting you focus on asking the questions.
 
-      .row
-        .span1.offset2{style:'text-align:center'}
-          %i.icon-dashboard.icon-4x
-        .span9
-          %p
-            %strong= link_to 'Scalable platforms.', '/platforms'
-            We use best-in-class platforms to provide a seamless technical solution.
-            Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
-            Our providers average 99.98% uptime.
-            = link_to 'Read more.', '/platforms'
-            
-      .row
-        .span1.offset2{style:'text-align:center'}
-          %i.icon-lock.icon-4x
-        .span9
-          %p
-            %strong= link_to 'Secure solutions.', '/security'
-            Every layer of our solution is protected with industry-grade encryption, from initial API requests through to the database itself.
-            We use SSL to protect all communication between you and our servers, while all customer data is securely encrypted and stored in our database.
-            We offer periodic purging of customer data as well, ensuring that your valuable customer information cannot fall into the wrong hands.
-            = link_to 'Read more.', '/security'
-            
-      .row
-        .span1.offset2{style:'text-align:center'}
-          %i.icon-bolt.icon-4x
-        .span9
-          %p
-            %strong= link_to 'Accessible API.', '/api'
-            Our automated Application Program Interface is simple and easy to use, allowing you to rapidly integrate our solution into your business processes.
-            = link_to 'Read more.', '/api'
-            
-      .row
-        .span12
-          %p.lead.jump-to-next
-            Ready to get started?
-            %a{href:'#getstarted'}
-              Sign up now.
-              %i.icon-circle-arrow-right
-
-
-    / Getting started
-    %hr#getstarted.featurette-divider/
-    .featurette
-      .row
-        .span3.featurette-icon
-          %i.icon-road.icon-3x.pull-left
-        .span9
-          %h2.featurette-heading
-            Ready?
-            %span.muted Get started.
-          %p.lead
-            We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration. In the meantime, register your interest by
-            = link_to 'getting in touch.', '#contact'
-
-      .row
-        .span12
-          %p.lead.jump-to-next
-            Have a few more questions?
-            %a{href:'#contact'}
-              Get in touch.
-              %i.icon-circle-arrow-right
-
-    / Questions
-    %hr#contact.featurette-divider/
-    .featurette
-      .row
-        .span3.featurette-icon
-          %i.icon-envelope-alt.icon-3x.pull-left
-        .span9
-          %h2.featurette-heading
-            Have questions?
-            %span.muted We're here.
-          %p.lead
-            Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to let us know your thoughts? We're listening!
-            %br
-            :javascript
-              document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'%'+
-              '&'+'#'+'5'+'4'+';'+'8'+'e'+'l'+'&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'1'+'1'+'5'+
-              ';'+'%'+'6'+'9'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'3'+'7'+';'+'6'+'E'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+
-              '0'+'8'+';'+'c'+'l'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'0'+';'+'a'+'p'+
-              'p'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'3'+'7'+';'+'6'+'3'+'o'+'m'+"'"+'>'+'h'+'e'+'&'+'#'+'1'+'0'+'8'+';'+
-              '&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'s'+'&'+'#'+'1'+'0'+'5'+';'+'g'+'&'+'#'+'1'+'1'+'0'+
-              ';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'9'+';'+'l'+'o'+'u'+'&'+'#'+'1'+'0'+'0'+
-              ';'+'a'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'m'+'<'+'/'+'a'+
-              '>');
-            %noscript [Turn on JavaScript to see our contact address]
-          %p Or connect with us on Twitter at <a href='https://twitter.com/signalcloud'>@SignalCloud</a>.
+    .row
+      .span1.offset2{style:'text-align:center'}
+        %i.icon-dashboard.icon-4x
+      .span9
+        %p
+          %strong= link_to 'Scalable platforms.', '/platforms'
+          We use best-in-class platforms to provide a seamless technical solution.
+          Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
+          Our providers average 99.98% uptime.
+          = link_to 'Read more.', '/platforms'
           
-          %h3{style:'margin-top:50px'} Wondering who is behind SignalCloud?
-          .row
-            .span2
-              %img.img-circle{src:'/images/ian.jpg'}
-            .span7
-              %p
-                SignalCloud is the brainchild of <strong>Ian Lloyd</strong>, who realised there was no easy way for a business to get in touch with their customers to authorise an action, such as confirming a package delivery or doctor's appointment.
-                Ian is passionate about providing real solutions to real world problems, whether that is through cloud software-as-a-service or public-private partnerships.
-              %p
-                %ul.inline
-                  %li
-                    %i.icon-linkedin-sign
-                    =link_to 'Linkedin', 'http://uk.linkedin.com/in/ianwyattlloyd'
-                  %li
-                    %i.icon-twitter-sign
-                    =link_to 'Twitter', 'https://twitter.com/ianwlloyd'
-                  %li
-                    %i.icon-github-sign
-                    =link_to 'GitHub', 'https://github.com/illoyd'
+    .row
+      .span1.offset2{style:'text-align:center'}
+        %i.icon-lock.icon-4x
+      .span9
+        %p
+          %strong= link_to 'Secure solutions.', '/security'
+          Every layer of our solution is protected with industry-grade encryption, from initial API requests through to the database itself.
+          We use SSL to protect all communication between you and our servers, while all customer data is securely encrypted and stored in our database.
+          We offer periodic purging of customer data as well, ensuring that your valuable customer information cannot fall into the wrong hands.
+          = link_to 'Read more.', '/security'
+          
+    .row
+      .span1.offset2{style:'text-align:center'}
+        %i.icon-bolt.icon-4x
+      .span9
+        %p
+          %strong= link_to 'Accessible API.', '/api'
+          Our automated Application Program Interface is simple and easy to use, allowing you to rapidly integrate our solution into your business processes.
+          = link_to 'Read more.', '/api'
+          
+    .row
+      .span12
+        %p.lead.jump-to-next
+          Ready to get started?
+          %a{href:'#getstarted'}
+            Sign up now.
+            %i.icon-circle-arrow-right
 
 
-    %hr.featurette-divider/
-    %footer
-      %p.pull-right
-        %a{:href => "#"} Back to top
-      %p
-        &copy; 2013 Signal Cloud, llc. ·
-        %a{:href => "privacy.html"} Privacy
-        \·
-        %a{:href => "terms.html"} Terms
+  / Getting started
+  %hr#getstarted.featurette-divider/
+  .featurette
+    .row
+      .span3.featurette-icon
+        %i.icon-road.icon-3x.pull-left
+      .span9
+        %h2.featurette-heading
+          Ready?
+          %span.muted Get started.
+        %p.lead
+          We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration. In the meantime, register your interest by
+          = link_to 'getting in touch.', '#contact'
 
-  :javascript
-    !function ($) {
-      $(function(){
-        // carousel demo
-        // $('#myCarousel').carousel()
-        // $('#tools').affix($('#tools').position)
-      })
-    }(window.jQuery)
+    .row
+      .span12
+        %p.lead.jump-to-next
+          Have a few more questions?
+          %a{href:'#contact'}
+            Get in touch.
+            %i.icon-circle-arrow-right
+
+  / Questions
+  %hr#contact.featurette-divider/
+  .featurette
+    .row
+      .span3.featurette-icon
+        %i.icon-envelope-alt.icon-3x.pull-left
+      .span9
+        %h2.featurette-heading
+          Have questions?
+          %span.muted We're here.
+        %p.lead
+          Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to tell us something? We're listening!
+          %br
+          :javascript
+            document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'%'+
+            '&'+'#'+'5'+'4'+';'+'8'+'e'+'l'+'&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'1'+'1'+'5'+
+            ';'+'%'+'6'+'9'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'3'+'7'+';'+'6'+'E'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+
+            '0'+'8'+';'+'c'+'l'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'1'+'1'+'7'+';'+'&'+'#'+'1'+'0'+'0'+';'+'a'+'p'+
+            'p'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'3'+'7'+';'+'6'+'3'+'o'+'m'+"'"+'>'+'h'+'e'+'&'+'#'+'1'+'0'+'8'+';'+
+            '&'+'#'+'1'+'0'+'8'+';'+'o'+'&'+'#'+'6'+'4'+';'+'s'+'&'+'#'+'1'+'0'+'5'+';'+'g'+'&'+'#'+'1'+'1'+'0'+
+            ';'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'0'+'8'+';'+'&'+'#'+'9'+'9'+';'+'l'+'o'+'u'+'&'+'#'+'1'+'0'+'0'+
+            ';'+'a'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'1'+'1'+'2'+';'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'m'+'<'+'/'+'a'+
+            '>');
+          %noscript [Turn on JavaScript to see our contact address]
+        %p Or connect with us on Twitter at <a href='https://twitter.com/signalcloud'>@SignalCloud</a>.
+        
+        %h3{style:'margin-top:50px'} Wondering who is behind SignalCloud?
+        .row
+          .span2
+            %img.img-circle{src:'/images/ian.jpg'}
+          .span7
+            %p
+              SignalCloud is the brainchild of <strong>Ian Lloyd</strong>, who realised there was no easy way for a business to get in touch with their customers to authorise an action, such as confirming a package delivery or doctor's appointment.
+              Ian is passionate about providing real solutions to real world problems, whether that is through cloud software-as-a-service or public-private partnerships.
+            %p
+              %ul.inline
+                %li
+                  %i.icon-linkedin-sign
+                  =link_to 'Linkedin', 'http://uk.linkedin.com/in/ianwyattlloyd'
+                %li
+                  %i.icon-twitter-sign
+                  =link_to 'Twitter', 'https://twitter.com/ianwlloyd'
+                %li
+                  %i.icon-github-sign
+                  =link_to 'GitHub', 'https://github.com/illoyd'
+
+- render 'footer'
+
+:javascript
+  !function ($) {
+    $(function(){
+      // carousel demo
+      // $('#myCarousel').carousel()
+      // $('#tools').affix($('#tools').position)
+    })
+  }(window.jQuery)
