@@ -2,7 +2,12 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
-    %title #{@item[:title]}
+    %title
+      - unless @item[:title].nil? || @item[:title] == 'SignalCloud'
+        #{@item[:title]}
+        \-
+      SignalCloud
+      
     %link{:href => "//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css", :rel => "stylesheet"}/
     %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css", :rel => "stylesheet"}/
     %link{:href => "/css/style.css", :rel => "stylesheet"}/

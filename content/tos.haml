@@ -1,0 +1,40 @@
+---
+title: Privacy & Terms
+description: SignalCloud's Privacy and Terms of Service
+lead: Coming Soon!
+
+---
+
+- render 'navbar' do
+  %ul.nav
+    %li
+      %a{href:'/'}
+        %i.icon-home.icon-large
+        Home
+  %ul.nav.pull-right
+    %li
+      %p.navbar-text For Developers
+    %li
+      %a{href:'/api'}
+        %i.icon-book.icon-large
+        API
+    %li.active
+      %a{href:'/platforms'}
+        %i.icon-dashboard.icon-large
+        Platforms
+    %li
+      %a{href:'/security'}
+        %i.icon-lock.icon-large
+        Security
+
+/ Header
+= render 'header'
+
+%p.failed{style:'text-align:center; font-size:400px;'}
+  %i.icon-warning-sign
+
+%p{style:'text-align:center; font-size:100px;'}
+  Coming Soon
+
+/ Footer
+= render 'footer'

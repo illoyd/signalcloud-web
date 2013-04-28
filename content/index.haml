@@ -1,58 +1,54 @@
 ---
 title: SignalCloud
 description: Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
+head_icon: '/images/logo-big.png'
+lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
 
 ---
 
-.container
-  - render 'navbar' do
-    %ul.nav
-      %li
-        %a{href:'#whatwedo'}
-          %i.icon-question-sign.icon-large
-          What?
-      %li
-        %a{href:'#inspiration'}
-          %i.icon-lightbulb.icon-large
-          Inspiration?
-      %li
-        %a{href:'#howitworks'}
-          %i.icon-wrench.icon-large
-          How?
-      %li
-        %a{href:'#getstarted'}
-          %i.icon-road.icon-large
-          Ready?
-      %li
-        %a{href:'#contact'}
-          %i.icon-envelope-alt.icon-large
-          Questions?
-    %ul.nav.pull-right
-      %li.dropdown
-        %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-          %i.icon-bolt.icon-large
-          Developers
-          %b.caret
-        %ul.dropdown-menu
-          %li= link_to 'API', '/api'
-          %li= link_to 'Security & Privacy', '/security'
-          %li= link_to 'Platform', '/platforms'
+/ Navigation
+- render 'navbar' do
+  %ul.nav
+    %li
+      %a{href:'#whatwedo'}
+        %i.icon-question-sign.icon-large
+        What?
+    %li
+      %a{href:'#inspiration'}
+        %i.icon-lightbulb.icon-large
+        Inspiration?
+    %li
+      %a{href:'#howitworks'}
+        %i.icon-wrench.icon-large
+        How?
+    %li
+      %a{href:'#getstarted'}
+        %i.icon-road.icon-large
+        Ready?
+    %li
+      %a{href:'#contact'}
+        %i.icon-envelope-alt.icon-large
+        Questions?
+  %ul.nav.pull-right
+    %li.dropdown
+      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
+        %i.icon-bolt.icon-large
+        For Devs
+        %b.caret
+      %ul.dropdown-menu
+        %li= link_to 'API', '/api'
+        %li= link_to 'Security & Privacy', '/security'
+        %li= link_to 'Platform', '/platforms'
 
 
-/ Header Area
-.header
-  .container
-    .row
-      .span3= render 'logo-emblem'
-      .span9
-        %h1 SignalCloud
-        %p.lead Introducing <strong>SignalCloud</strong>, a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.
-        %a.btn.btn-large.btn-primary{:href => "#getstarted"}
-          %i.icon-plus.icon-large
-          Sign up today
-        %a.btn.btn-large.btn-info{:href => "#inspiration"}
-          %i.icon-lightbulb.icon-large
-          Get some ideas
+/ Header
+- render 'header' do
+  %a.btn.btn-large.btn-warning{:href => "#getstarted"}
+    %i.icon-plus.icon-large
+    Sign up today
+  %a.btn.btn-large.btn-success{:href => "#inspiration"}
+    %i.icon-lightbulb.icon-large
+    Get some ideas
 
 
 / Featurettes
@@ -63,7 +59,7 @@ description: Introducing a new way to connect and engage with your customers, yo
   .featurette
     .row
       .span3.featurette-icon
-        %i.icon-question-sign.icon-3x
+        %img{src: '/images/icon-whatwedo.png'}
       .span9
         %h2.featurette-heading
           What do we do?
@@ -145,7 +141,7 @@ description: Introducing a new way to connect and engage with your customers, yo
   .featurette
     .row
       .span3.featurette-icon
-        %i.icon-lightbulb.icon-3x
+        %img{src: '/images/icon-inspiration.png'}
       .span9
         %h2.featurette-heading
           Need inspiration?
@@ -169,7 +165,7 @@ description: Introducing a new way to connect and engage with your customers, yo
         %p
           SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
           %br
-          %a{:href => "ideas/iap"}
+          %a{:href => "/ideas/iap"}
             See how SignalCloud could help
             %i.icon-circle-arrow-right
 
@@ -201,15 +197,15 @@ description: Introducing a new way to connect and engage with your customers, yo
 
     .row{style:'text-align:center'}
       .span4
-        %a{:href => "ideas/cards"}
+        %a{:href => "/ideas/cards"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
       .span4
-        %a{:href => "ideas/packages"}
+        %a{:href => "/ideas/packages"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
       .span4
-        %a{:href => "ideas/appointments"}
+        %a{:href => "/ideas/appointments"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
 
@@ -227,7 +223,7 @@ description: Introducing a new way to connect and engage with your customers, yo
   .featurette
     .row
       .span3.featurette-icon
-        %i.icon-wrench.icon-3x.pull-left
+        %img{src: '/images/icon-howitworks.png'}
       .span9
         %h2.featurette-heading
           How does it work?
@@ -279,13 +275,13 @@ description: Introducing a new way to connect and engage with your customers, yo
   .featurette
     .row
       .span3.featurette-icon
-        %i.icon-road.icon-3x.pull-left
+        %img{src: '/images/icon-getstarted.png'}
       .span9
         %h2.featurette-heading
           Ready?
           %span.muted Get started.
         %p.lead
-          We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration. In the meantime, register your interest by
+          We're still building the service, making certain it is rock-solid for everyone. Once it's ready we'll open up registration. In the meantime, register your interest by
           = link_to 'getting in touch.', '#contact'
 
     .row
@@ -301,7 +297,7 @@ description: Introducing a new way to connect and engage with your customers, yo
   .featurette
     .row
       .span3.featurette-icon
-        %i.icon-envelope-alt.icon-3x.pull-left
+        %img{src: '/images/icon-contactus.png'}
       .span9
         %h2.featurette-heading
           Have questions?
@@ -342,13 +338,15 @@ description: Introducing a new way to connect and engage with your customers, yo
                   %i.icon-github-sign
                   =link_to 'GitHub', 'https://github.com/illoyd'
 
-- render 'footer'
+
+/ Footer
+= render 'footer'
 
 :javascript
   !function ($) {
     $(function(){
       // carousel demo
       // $('#myCarousel').carousel()
-      // $('#tools').affix($('#tools').position)
+      // $('#tools').affix($('#tools').position) 
     })
   }(window.jQuery)

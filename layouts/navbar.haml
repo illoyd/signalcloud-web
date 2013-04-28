@@ -1,15 +1,16 @@
-.container.affix{ style: 'z-index:100'}
-  .navbar
-    .navbar-inner
-      / Responsive Navbar Part 1: Button for triggering responsive navbar
-      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-        %i.icon-reorder
+.container
+  .container.affix{ style: 'z-index:100'}
+    .navbar
+      .navbar-inner
+        / Responsive Navbar Part 1: Button for triggering responsive navbar
+        %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %i.icon-reorder
+        
+        / Brand
+        %a.brand{:href => "/"}
+          %img.logo{src: '/images/logo-navbar.png'}
       
-      / Brand
-      %a.brand{:href => "/"}
-        / = render 'logo'
-        / SignalCloud
-        %img.logo{src: 'images/logo-big.png'}
-    
-      / Responsive Navbar Part 2: Collapsable navbar contents
-      .nav-collapse.collapse= yield
+        / Responsive Navbar Part 2: Collapsable navbar contents
+        .nav-collapse.collapse
+          - if block_given?
+            = yield

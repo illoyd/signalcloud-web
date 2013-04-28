@@ -1,0 +1,11 @@
+/ Header Area
+.header
+  .container
+    .row
+      .span3
+        %img{src: @item[:head_icon] || '/images/logo-big.png', alt: @item[:title]}
+      .span9
+        %h1 #{@item[:title]}
+        %p.lead #{@item[:lead]}
+        - if block_given?
+          = yield

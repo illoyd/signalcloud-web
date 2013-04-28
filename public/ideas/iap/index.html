@@ -2,7 +2,11 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>API - SignalCloud</title>
+    <title>
+      In-App Purchases
+      -
+      SignalCloud
+    </title>
     <link href='//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css' rel='stylesheet'>
     <link href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css' rel='stylesheet'>
     <link href='/css/style.css' rel='stylesheet'>
@@ -10,111 +14,280 @@
     <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js' type='text/javascript'></script>
     <meta content='nanoc 3.6.2' name='generator'>
     <meta content='viewport' name='width=device-width, initial-scale=1.0'>
-    <meta content='description' name="SignalCloud's Application Program Interface (API)">
+    <meta content='description' name="In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. SignalCloud can help your customer's manage their in-app purchases.">
     <meta content='author' name='Ian Lloyd'>
   </head>
   <body data-spy='scroll'>
-    <body></body>
-    <div class='container affix' style='z-index:100'>
-      <div class='navbar'>
-        <div class='navbar-inner'>
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
-          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
-            <i class='icon-reorder'></i>
-          </button>
-          <!-- Brand -->
-          <a class='brand' href='/'>
-            <!-- = render 'logo' -->
-            <!-- SignalCloud -->
-            <img class='logo' src='images/logo-big.png'>
-          </a>
-          <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
-          <div class='nav-collapse collapse'>
-            <ul class='nav'>
-              <li>
-                <a href='/'>
-                  <i class='icon-home icon-large'></i>
-                  Home
-                </a>
-              </li>
-            </ul>
-            <ul class='nav pull-right'>
-              <li>
-                <p class='navbar-text'>For Developers</p>
-              </li>
-              <li class='active'>
-                <a href='/api'>
-                  <i class='icon-book icon-large'></i>
-                  API
-                </a>
-              </li>
-              <li>
-                <a href='/platforms'>
-                  <i class='icon-dashboard icon-large'></i>
-                  Platforms
-                </a>
-              </li>
-              <li>
-                <a href='/security'>
-                  <i class='icon-lock icon-large'></i>
-                  Security
-                </a>
-              </li>
-            </ul>
+    <div class='container'>
+      <div class='container affix' style='z-index:100'>
+        <div class='navbar'>
+          <div class='navbar-inner'>
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
+            <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+              <i class='icon-reorder'></i>
+            </button>
+            <!-- Brand -->
+            <a class='brand' href='/'>
+              <img class='logo' src='/images/logo-navbar.png'>
+            </a>
+            <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
+            <div class='nav-collapse collapse'>
+              <ul class='nav'>
+                <li>
+                  <a href='/#whatwedo'>
+                    <i class='icon-question-sign icon-large'></i>
+                    What?
+                  </a>
+                </li>
+                <li>
+                  <a href='/#inspiration'>
+                    <i class='icon-lightbulb icon-large'></i>
+                    Inspiration?
+                  </a>
+                </li>
+                <li>
+                  <a href='/#howitworks'>
+                    <i class='icon-wrench icon-large'></i>
+                    How?
+                  </a>
+                </li>
+                <li>
+                  <a href='/#getstarted'>
+                    <i class='icon-road icon-large'></i>
+                    Ready?
+                  </a>
+                </li>
+                <li>
+                  <a href='/#contact'>
+                    <i class='icon-envelope-alt icon-large'></i>
+                    Questions?
+                  </a>
+                </li>
+              </ul>
+              <ul class='nav pull-right'>
+                <li class='dropdown'>
+                  <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                    <i class='icon-bolt icon-large'></i>
+                    For Devs
+                    <b class='caret'></b>
+                  </a>
+                  <ul class='dropdown-menu'>
+                    <li><a href="/api">API</a></li>
+                    <li><a href="/tos">Security & Privacy</a></li>
+                    <li><a href="/platforms">Platform</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Header area -->
-    <div class='container header'>
-      <h1 class='glow'>
-        <span class='logo'>
-          <i class='icon-cloud'></i>
-          <i class='icon-bolt'></i>
-        </span>
-        SignalCloud API
-      </h1>
-      <p class='lead'>
-        In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. With
-        <a href="http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video">recent</a>
-        <a href="http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html">news</a>
-        <a href="http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html">articles</a>
-        all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to reign in these costly mistakes.
-      </p>
+    <!-- Header Area -->
+    <div class='header'>
+      <div class='container'>
+        <div class='row'>
+          <div class='span3'>
+            <img alt='In-App Purchases' src='/images/icon-inspiration.png'>
+          </div>
+          <div class='span9'>
+            <h1>In-App Purchases</h1>
+            <p class='lead'>In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. <strong>SignalCloud</strong> can help your customer's manage their in-app purchases.</p>
+            <div class='btn-toolbar'>
+              <a class='btn btn-success' href='/ideas/iap'>
+                <i class='icon-mobile-phone'></i>
+                <i class='icon-tablet'></i>
+                In-app purchases
+              </a>
+              <a class='btn btn-info' href='/ideas/cards'>
+                <i class='icon-credit-card'></i>
+                Card fraud
+              </a>
+              <a class='btn btn-info' href='/ideas/packages'>
+                <i class='icon-gift'></i>
+                Package delivery
+              </a>
+              <a class='btn btn-info' href='/ideas/appointments'>
+                <i class='icon-stethoscope'></i>
+                Doctor's visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Main content -->
     <div class='container'>
-      <div class='row'>
-        <div class='span2 offset2'>
-          <img src='/images/iap_bad_1.png'>
+      <div class='featurette'>
+        <!-- %h2 How does it work for in-app purchases? -->
+        <p class='lead'>In-App Purchasing has driven the growth of free-to-try applications while...</p>
+        <p class='lead'>However, IAP can result in surprise bills at the end of the month as each small transaction adds up.</p>
+        <div class='steps'>
+          <div class='step-strip'></div>
+          <!-- Shared steps -->
+          <div class='row'>
+            <div class='span2 offset5'>
+              <img height='100' src='/images/idea-iap.png' width='100'>
+            </div>
+            <div class='span5'>Children can learn a lot through tablet devices. Textbooks, interactive encyclopaedias, video tutorials, and so much more can be found with just a few taps. And of course a few simple games can help many kids pass the time. Letting a young person use a tablet is the new normal.</div>
+          </div>
+          <!-- Divergent steps -->
+          <div class='row'>
+            <!-- 'Bad' steps -->
+            <div class='span6 bad-steps'>
+              <div class='row'>
+                <div class='span4'>Of course, the IAP virtual store is also just a few taps away. It can be scarily easy how quickly a few taps can lead to purchased virtual goods. Without SignalCloud, there is usually no immediate notice to the device owner that a purchase has been made.</div>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-bad-stuff.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='span4'>Each of those purchases can add up, leading to huge bills at the end of the month for unsuspecting users.  Sometimes thousands of dollars in a matter of minutes.</div>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-bad-money.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='span4'>This leads to irate customers who blame the tablet maker, creating harmful publicity and tarnishing the brand.</div>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-thumbs-down.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+              </div>
+            </div>
+            <!-- 'Good' steps -->
+            <div class='span6 good-steps'>
+              <div class='row'>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-good-conversation-ask.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+                <div class='span4'>With SignalCloud, attempts to purchase something from a virtual store triggers an immediate alert to the tablet's owner, asking for confirmation before authorising the purchase. In this case, SignalCloud might ask the owner to respond with the amount of the purchase, as a second reminder that this was a real purchase with real money.</div>
+              </div>
+              <div class='row'>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-good-conversation-yes.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+                <div class='span4'>The tablet owner has a few minutes to respond with a 'yes' or 'no' answer. With a 'yes' the purchase is completed and unlocked on the device. With a 'no' answer, the purchase is cancelled - giving the tablet owner peace of mind that they won't be charged.</div>
+              </div>
+              <div class='row'>
+                <div class='span2'>
+                  <img height='100' src='/images/idea-thumbs-up.png' width='100'>
+                  <div class='step-tab'></div>
+                </div>
+                <div class='span4'>This helps prevent huge surprise bills, and helps protect the brand from potentially ridiculous accusations and lawsuits. All thanks to SignalCloud's simple two-factor authorisation!</div>
+              </div>
+            </div>
+          </div>
+          <!-- Closing steps -->
+          <div class='row'>
+            <div class='span2 offset5'>
+              <img height='100' src='/images/logo-small.png' width='100'>
+            </div>
+          </div>
         </div>
-        <div class='span8'>Step 1</div>
       </div>
-      <div class='row'>
-        <div class='span4'>Step 2</div>
-        <div class='span2'>
-          <img src='/images/iap_bad_2.png'>
+      <hr class='featurette-divider' id='more'>
+      <div class='featurette'>
+        <h3>Need some more inspiration?</h3>
+        <p>Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.</p>
+        <!-- Ideas -->
+        <div class='row'>
+          <div class='span4 idea'>
+            <h3><i class='icon-credit-card icon-3x'></i>
+            <br>
+            Card fraud</h3>
+            <p>Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.</p>
+            <p>SignalCloud can help seperate fraud from legit with our easy-to-use tools.</p>
+          </div>
+          <div class='span4 idea'>
+            <h3><i class='icon-gift icon-3x'></i>
+            <br>
+            Package delivery</h3>
+            <p>Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.</p>
+            <p>SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.</p>
+          </div>
+          <div class='span4 idea'>
+            <h3><i class='icon-stethoscope icon-3x'></i>
+            <br>
+            Doctor's visit</h3>
+            <p>Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.</p>
+            <p>SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.</p>
+          </div>
         </div>
-        <div class='span2'>
-          <img src='/images/iap_good_2.png'>
+        <div class='row' style='text-align:center'>
+          <div class='span4'>
+            <a href='/ideas/cards'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
+          </div>
+          <div class='span4'>
+            <a href='/ideas/packages'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
+          </div>
+          <div class='span4'>
+            <a href='/ideas/appointments'>
+              See how SignalCloud could help
+              <i class='icon-circle-arrow-right'></i>
+            </a>
+          </div>
         </div>
-        <div class='span4'>Step 2</div>
       </div>
-      <div class='row'>
-        <div class='span4'>Step 3</div>
-        <div class='span2'>
-          <img src='/images/iap_bad_3.png'>
+    </div>
+    <!-- Footer -->
+    <div class='footer'>
+      <div class='container'>
+        <div class='row'>
+          <div class='span3'>
+            <h2>About Us</h2>
+            <p><strong>SignalCloud</strong> is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.</p>
+            <p>
+              &copy; 2013 SignalCloud, llc.
+            </p>
+            <p>
+              <a href='/tos'>Privacy & Terms</a>
+            </p>
+          </div>
+          <div class='span9'>
+            <h2>More Info</h2>
+            <div class='row'>
+              <div class='span3'>
+                <ul>
+                  <li><a href="/">Hello</a></li>
+                  <li><a href="/#whatwedo">What we do</a></li>
+                  <li><a href="/#inspiration">Inspiration</a></li>
+                  <li><a href="/#howitworks">How it works</a></li>
+                  <li><a href="/#getstarted">Get started</a></li>
+                  <li><a href="/#contact">Contact us</a></li>
+                </ul>
+              </div>
+              <div class='span3'>
+                <p>Inspiration</p>
+                <ul>
+                  <li><a href="/ideas/iap">In-app purchases</a></li>
+                  <li><a href="/ideas/cards">Fraud prevention</a></li>
+                  <li><a href="/ideas/packages">Package delivery</a></li>
+                  <li><a href="/ideas/appointments">Doctor's visit</a></li>
+                </ul>
+              </div>
+              <div class='span3'>
+                <p>For Developers</p>
+                <ul>
+                  <li><a href="/api">API</a></li>
+                  <li><a href="/security">Security & Privacy</a></li>
+                  <li><a href="/platforms">Platform</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class='span2'>
-          <img src='/images/iap_good_3.png'>
-        </div>
-        <div class='span4'>Step 3</div>
-      </div>
-      <div class='row'>
-        <div class='span2 offset6'>
-          <img src='/images/iap_good_4.png'>
-        </div>
-        <div class='span4'>Step 4</div>
       </div>
     </div>
   </body>

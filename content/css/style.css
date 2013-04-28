@@ -50,9 +50,10 @@ a.brand img.logo {
   min-height: 350px;
   margin-top: -15px;
   padding-top: 130px;
-  background-image: url(/images/hero5.png);
-  background-position: center top;
-  background-repeat: no-repeat;
+  background-image: url(/images/hero.png);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-color: #A9E3FF;
 }
 
 .header h1 {
@@ -86,7 +87,11 @@ a.brand img.logo {
 -------------------------------------------------- */
 
 .footer {
+  padding-top: 87px;
   padding-bottom: 40px;
+  background-image: url(/images/tail.png);
+  background-position: center top;
+  background-repeat: repeat-x;
   background-color: #033C73;
   color: white;
 }
@@ -153,6 +158,52 @@ a.brand img.logo {
 .featurette p.jump-to-next {
   text-align: right;
   margin-top: 20px;
+}
+
+
+/* Inspiration Steps
+-------------------------------------------------- */
+
+.steps {
+  position: relative;
+  margin-top: 25px;
+}
+
+div.step-strip {
+  width: 20px;
+/*   height: 100%; */
+  background-color: #2FA4E7;
+  position: absolute;
+  left: 460px;
+  top: 50px;
+  bottom: 50px;
+  z-index: -1;
+}
+
+div.step-tab {
+  height: 20px;
+  width: 50%;
+  background-color: #2FA4E7;
+  position: absolute;
+  top: 40px;
+  z-index: -1;  
+}
+
+.good-steps div.step-tab {
+  left: 0px;
+}
+
+.bad-steps div.step-tab {
+  right: 0px;
+}
+
+.steps .span6 .row {
+  padding-top: 40px;
+}
+
+.steps .span2, .steps .span6 .row .span2 {
+  text-align: center;
+  position: relative;
 }
 
 

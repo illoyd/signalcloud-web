@@ -1,13 +1,150 @@
 ---
-title: API - SignalCloud
-description: SignalCloud's Application Program Interface (API)
+title: Package Delivery
+description: Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
+head_icon: /images/icon-inspiration.png
+lead: Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. <strong>SignalCloud</strong> can help contact your customers about a delivery, or help reschedule if they won't be there.
 
 ---
 
-%body
+- render 'navbar' do
+  %ul.nav
+    %li
+      %a{href:'/#whatwedo'}
+        %i.icon-question-sign.icon-large
+        What?
+    %li
+      %a{href:'/#inspiration'}
+        %i.icon-lightbulb.icon-large
+        Inspiration?
+    %li
+      %a{href:'/#howitworks'}
+        %i.icon-wrench.icon-large
+        How?
+    %li
+      %a{href:'/#getstarted'}
+        %i.icon-road.icon-large
+        Ready?
+    %li
+      %a{href:'/#contact'}
+        %i.icon-envelope-alt.icon-large
+        Questions?
+  %ul.nav.pull-right
+    %li.dropdown
+      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
+        %i.icon-bolt.icon-large
+        For Devs
+        %b.caret
+      %ul.dropdown-menu
+        %li= link_to 'API', '/api'
+        %li= link_to 'Security & Privacy', '/tos'
+        %li= link_to 'Platform', '/platforms'
 
-  %p.failed{style:'text-align:center; font-size:400px;'}
-    %i.icon-warning-sign
 
-  %p{style:'text-align:center; font-size:100px;'}
-    Coming Soon
+/ Header area
+- render 'header' do
+  .btn-toolbar
+    %a.btn.btn-info{href: '/ideas/iap'}
+      %i.icon-mobile-phone
+      %i.icon-tablet
+      In-app purchases
+    %a.btn.btn-info{href: '/ideas/cards'}
+      %i.icon-credit-card
+      Card fraud
+    %a.btn.btn-success{href: '/ideas/packages'}
+      %i.icon-gift
+      Package delivery
+    %a.btn.btn-info{href: '/ideas/appointments'}
+      %i.icon-stethoscope
+      Doctor's visit
+
+/ Main content
+.container
+  .featurette
+    / %h2 How does <strong>SignalCloud</strong> work for package delivery?
+    %p.lead At-home delivery has become a great new business model for many small groceries, helping them compete with supermarket giants by providing personal, local attention and service. But missing a delivery can be costly, as you've spend time and money on picking, packing, and delivering when no one is available to collect. How could <strong>SignalCloud</strong> help?
+
+    .steps
+      .step-strip
+      / Shared steps
+      .row
+        .span2.offset5
+          %img{src: '/images/idea-package-delivery.png', height: 100, width: 100}
+        .span5 Coming soon!
+  
+      / Divergent steps
+      .row
+        / 'Bad' steps
+        .span6.bad-steps
+          .row
+            .span4 Coming soon!
+            .span2
+              %img{src: '/images/idea-thumbs-down.png', height: 100, width: 100}
+              .step-tab
+        
+        / 'Good' steps
+        .span6.good-steps
+          .row
+            .span2
+              %img{src: '/images/idea-thumbs-up.png', height: 100, width: 100}
+              .step-tab
+            .span4 Coming soon!
+
+      / Closing steps
+      .row
+        .span2.offset5
+          %img{src: '/images/logo-small.png', height: 100, width: 100}
+
+  %hr#more.featurette-divider/
+  .featurette
+    %h3 Need some more inspiration?
+    %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+
+    / Ideas
+    .row
+      .span4.idea
+        %h3<
+          %i.icon-mobile-phone.icon-3x
+          %i.icon-tablet.icon-3x
+          %br
+          In-app purchases
+        %p
+          In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
+          = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
+          = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
+          = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
+          all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
+        %p SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
+
+      .span4.idea
+        %h3<
+          %i.icon-credit-card.icon-3x
+          %br
+          Card fraud
+        %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
+        %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
+
+      .span4.idea
+        %h3<
+          %i.icon-stethoscope.icon-3x
+          %br
+          Doctor's visit
+        %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
+        %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+
+    .row{style:'text-align:center'}
+      .span4
+        %a{:href => "/ideas/iap"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+      .span4
+        %a{:href => "/ideas/cards"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+      .span4
+        %a{:href => "/ideas/appointments"}
+          See how SignalCloud could help
+          %i.icon-circle-arrow-right
+
+
+/ Footer
+= render 'footer'

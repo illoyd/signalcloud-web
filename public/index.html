@@ -2,7 +2,9 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>SignalCloud</title>
+    <title>
+      SignalCloud
+    </title>
     <link href='//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css' rel='stylesheet'>
     <link href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css' rel='stylesheet'>
     <link href='/css/style.css' rel='stylesheet'>
@@ -14,22 +16,21 @@
     <meta content='author' name='Ian Lloyd'>
   </head>
   <body data-spy='scroll'>
+    <!-- Navigation -->
     <div class='container'>
-    <div class='container affix' style='z-index:100'>
-      <div class='navbar'>
-        <div class='navbar-inner'>
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
-          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
-            <i class='icon-reorder'></i>
-          </button>
-          <!-- Brand -->
-          <a class='brand' href='/'>
-            <!-- = render 'logo' -->
-            <!-- SignalCloud -->
-            <img class='logo' src='images/logo-big.png'>
-          </a>
-          <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
-          <div class='nav-collapse collapse'>
+      <div class='container affix' style='z-index:100'>
+        <div class='navbar'>
+          <div class='navbar-inner'>
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
+            <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+              <i class='icon-reorder'></i>
+            </button>
+            <!-- Brand -->
+            <a class='brand' href='/'>
+              <img class='logo' src='/images/logo-navbar.png'>
+            </a>
+            <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
+            <div class='nav-collapse collapse'>
               <ul class='nav'>
                 <li>
                   <a href='#whatwedo'>
@@ -66,7 +67,7 @@
                 <li class='dropdown'>
                   <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
                     <i class='icon-bolt icon-large'></i>
-                    Developers
+                    For Devs
                     <b class='caret'></b>
                   </a>
                   <ul class='dropdown-menu'>
@@ -76,28 +77,27 @@
                   </ul>
                 </li>
               </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
+    <!-- Header -->
     <!-- Header Area -->
     <div class='header'>
       <div class='container'>
         <div class='row'>
           <div class='span3'>
-            <span class='logo'>
-              <img src='/images/logo-big.png'>
-            </span>
+            <img alt='SignalCloud' src='/images/logo-big.png'>
           </div>
           <div class='span9'>
             <h1>SignalCloud</h1>
             <p class='lead'>Introducing <strong>SignalCloud</strong>, a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.</p>
-            <a class='btn btn-large btn-primary' href='#getstarted'>
+            <a class='btn btn-large btn-warning' href='#getstarted'>
               <i class='icon-plus icon-large'></i>
               Sign up today
             </a>
-            <a class='btn btn-large btn-info' href='#inspiration'>
+            <a class='btn btn-large btn-success' href='#inspiration'>
               <i class='icon-lightbulb icon-large'></i>
               Get some ideas
             </a>
@@ -112,7 +112,7 @@
       <div class='featurette'>
         <div class='row'>
           <div class='span3 featurette-icon'>
-            <i class='icon-question-sign icon-3x'></i>
+            <img src='/images/icon-whatwedo.png'>
           </div>
           <div class='span9'>
             <h2 class='featurette-heading'>
@@ -216,7 +216,7 @@
       <div class='featurette'>
         <div class='row'>
           <div class='span3 featurette-icon'>
-            <i class='icon-lightbulb icon-3x'></i>
+            <img src='/images/icon-inspiration.png'>
           </div>
           <div class='span9'>
             <h2 class='featurette-heading'>
@@ -246,7 +246,7 @@
             <p>
               SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
               <br>
-              <a href='ideas/iap'>
+              <a href='/ideas/iap'>
                 See how SignalCloud could help
                 <i class='icon-circle-arrow-right'></i>
               </a>
@@ -279,19 +279,19 @@
         </div>
         <div class='row' style='text-align:center'>
           <div class='span4'>
-            <a href='ideas/cards'>
+            <a href='/ideas/cards'>
               See how SignalCloud could help
               <i class='icon-circle-arrow-right'></i>
             </a>
           </div>
           <div class='span4'>
-            <a href='ideas/packages'>
+            <a href='/ideas/packages'>
               See how SignalCloud could help
               <i class='icon-circle-arrow-right'></i>
             </a>
           </div>
           <div class='span4'>
-            <a href='ideas/appointments'>
+            <a href='/ideas/appointments'>
               See how SignalCloud could help
               <i class='icon-circle-arrow-right'></i>
             </a>
@@ -314,7 +314,7 @@
       <div class='featurette'>
         <div class='row'>
           <div class='span3 featurette-icon'>
-            <i class='icon-wrench icon-3x pull-left'></i>
+            <img src='/images/icon-howitworks.png'>
           </div>
           <div class='span9'>
             <h2 class='featurette-heading'>
@@ -381,7 +381,7 @@
       <div class='featurette'>
         <div class='row'>
           <div class='span3 featurette-icon'>
-            <i class='icon-road icon-3x pull-left'></i>
+            <img src='/images/icon-getstarted.png'>
           </div>
           <div class='span9'>
             <h2 class='featurette-heading'>
@@ -389,7 +389,7 @@
               <span class='muted'>Get started.</span>
             </h2>
             <p class='lead'>
-              We're still building the service, making certain it is rock-solid for everyone. Once its ready we'll open up registration. In the meantime, register your interest by
+              We're still building the service, making certain it is rock-solid for everyone. Once it's ready we'll open up registration. In the meantime, register your interest by
               <a href="#contact">getting in touch.</a>
             </p>
           </div>
@@ -411,7 +411,7 @@
       <div class='featurette'>
         <div class='row'>
           <div class='span3 featurette-icon'>
-            <i class='icon-envelope-alt icon-3x pull-left'></i>
+            <img src='/images/icon-contactus.png'>
           </div>
           <div class='span9'>
             <h2 class='featurette-heading'>
@@ -419,7 +419,7 @@
               <span class='muted'>We're here.</span>
             </h2>
             <p class='lead'>
-              Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to let us know your thoughts? We're listening!
+              Wondering how SignalCloud could work for you? Need to get some technical answers? Just want to tell us something? We're listening!
               <br>
               <script>
                 document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'l'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'%'+
@@ -467,15 +467,18 @@
         </div>
       </div>
     </div>
+    <!-- Footer -->
     <div class='footer'>
       <div class='container'>
         <div class='row'>
           <div class='span3'>
             <h2>About Us</h2>
-            <p>SignalCloud is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.</p>
+            <p><strong>SignalCloud</strong> is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.</p>
             <p>
-              &copy; 2013 SignalCloud, llc. ·
-              <a href='/privacy-and-terms'>Privacy & Terms</a>
+              &copy; 2013 SignalCloud, llc.
+            </p>
+            <p>
+              <a href='/tos'>Privacy & Terms</a>
             </p>
           </div>
           <div class='span9'>
@@ -484,20 +487,20 @@
               <div class='span3'>
                 <ul>
                   <li><a href="/">Hello</a></li>
-                  <li><a href="#whatwedo">What we do</a></li>
-                  <li><a href="#inspiration">Inspiration</a></li>
-                  <li><a href="#howitworks">How it works</a></li>
-                  <li><a href="#getstarted">Get started</a></li>
-                  <li><a href="#contact">Contact us</a></li>
+                  <li><a href="/#whatwedo">What we do</a></li>
+                  <li><a href="/#inspiration">Inspiration</a></li>
+                  <li><a href="/#howitworks">How it works</a></li>
+                  <li><a href="/#getstarted">Get started</a></li>
+                  <li><a href="/#contact">Contact us</a></li>
                 </ul>
               </div>
               <div class='span3'>
-                <p>Ideas</p>
+                <p>Inspiration</p>
                 <ul>
-                  <li><a href="/ideas/iap">In-App Purchases</a></li>
-                  <li><a href="/ideas/cards">What we do</a></li>
-                  <li><a href="/ideas/packages">Inspiration</a></li>
-                  <li><a href="/ideas/appointments">How it works</a></li>
+                  <li><a href="/ideas/iap">In-app purchases</a></li>
+                  <li><a href="/ideas/cards">Fraud prevention</a></li>
+                  <li><a href="/ideas/packages">Package delivery</a></li>
+                  <li><a href="/ideas/appointments">Doctor's visit</a></li>
                 </ul>
               </div>
               <div class='span3'>
@@ -518,7 +521,7 @@
         $(function(){
           // carousel demo
           // $('#myCarousel').carousel()
-          // $('#tools').affix($('#tools').position)
+          // $('#tools').affix($('#tools').position) 
         })
       }(window.jQuery)
     </script>
