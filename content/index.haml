@@ -43,10 +43,10 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
 
 / Header
 - render 'header' do
-  %a.btn.btn-large.btn-warning{:href => "#getstarted"}
+  %a.btn.btn-large.btn-warning{href: "#getstarted"}
     %i.icon-plus.icon-large
     Sign up today
-  %a.btn.btn-large.btn-success{:href => "#inspiration"}
+  %a.btn.btn-large.btn-success{href: "#inspiration"}
     %i.icon-lightbulb.icon-large
     Get some ideas
 
@@ -164,8 +164,8 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
           all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
         %p
           SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
-          %br
-          %a{:href => "/ideas/iap"}
+        %p
+          %a.btn.btn-primary{href: "/ideas/iap"}
             See how SignalCloud could help
             %i.icon-circle-arrow-right
 
@@ -175,7 +175,8 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
         %h3<
           %i.icon-credit-card.icon-3x
           %br
-          Card fraud
+          %a{href: "/ideas/cards", style: 'color: #317EAC'}
+            Card fraud
         %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
         %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
 
@@ -183,7 +184,8 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
         %h3<
           %i.icon-gift.icon-3x
           %br
-          Package delivery
+          %a{href: "/ideas/packages", style: 'color: #317EAC'}
+            Package delivery
         %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
         %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
 
@@ -191,21 +193,22 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
         %h3<
           %i.icon-stethoscope.icon-3x
           %br
-          Doctor's visit
+          %a{href: "/ideas/appointments", style: 'color: #317EAC'}
+            Doctor's visit
         %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
         %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
 
     .row{style:'text-align:center'}
       .span4
-        %a{:href => "/ideas/cards"}
+        %a.btn.btn-primary{href: "/ideas/cards"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
       .span4
-        %a{:href => "/ideas/packages"}
+        %a.btn.btn-primary{href: "/ideas/packages"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
       .span4
-        %a{:href => "/ideas/appointments"}
+        %a.btn.btn-primary{href: "/ideas/appointments"}
           See how SignalCloud could help
           %i.icon-circle-arrow-right
 
