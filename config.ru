@@ -27,6 +27,9 @@ use Rack::Rewrite do
     rewrite "/#{key}", "/#{key}/index.html"
     rewrite "/#{key}/", "/#{key}/index.html"
   end
+
+  moved_permanently   '/cwp', '/ian_lloyd_capitalism_without_profit.pdf'
+  moved_permanently   '/cwp.pdf', '/ian_lloyd_capitalism_without_profit.pdf'
   
 end
 
