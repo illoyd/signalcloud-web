@@ -22,7 +22,11 @@
 # end
 
 passthrough '/js/*/'
-passthrough '/css/*/'
+passthrough '/css/*.css/'
+
+compile '/css/*' do
+  filter :less
+end
 
 compile '/static/*' do
   # Do not filter
@@ -33,6 +37,11 @@ route '/static/*' do
   item.identifier[7..-2]
 end
 
+compile '/' do
+  filter :haml
+  layout 'start'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -40,6 +49,10 @@ compile '*' do
     filter :haml
     layout 'default'
   end
+end
+
+route '/css/*' do
+  item.identifier.chop + '.css'
 end
 
 route '*' do

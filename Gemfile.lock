@@ -12,6 +12,7 @@ GEM
     kgio (2.8.0)
     less (2.3.1)
       commonjs (~> 0.2.6)
+    libv8 (3.11.8.17)
     listen (0.7.3)
     maruku (0.6.1)
       syntax (>= 1.0.0)
@@ -22,7 +23,11 @@ GEM
     raindrops (0.10.0)
     rainpress (1.0)
     rb-fsevent (0.9.3)
+    ref (1.0.5)
     syntax (1.0.0)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     tilt (1.3.7)
     unicorn (4.6.2)
       kgio (~> 2.6)
@@ -43,4 +48,5 @@ DEPENDENCIES
   rack-rewrite
   rainpress
   rb-fsevent
+  therubyracer
   unicorn

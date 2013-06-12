@@ -4,6 +4,7 @@ gem 'rack-rewrite'
 gem 'unicorn'
 
 group :development do
+  gem 'therubyracer'
   gem 'nanoc'
   gem 'listen'
   gem 'rb-fsevent'

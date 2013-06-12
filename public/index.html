@@ -5,59 +5,117 @@
     <title>
       SignalCloud
     </title>
-    <link href='//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css' rel='stylesheet'>
-    <link href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css' rel='stylesheet'>
-    <link href='/css/style.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='/css/start.css' rel='stylesheet'>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
-    <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js' type='text/javascript'></script>
+    <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js' type='text/javascript'></script>
     <meta content='nanoc 3.6.2' name='generator'>
     <meta content='viewport' name='width=device-width, initial-scale=1.0'>
     <meta content='description' name='Introducing a new way to connect and engage with your customers, your staff, or just about anybody using a mobile phone. SignalCloud makes it easy to communicate with anyone to ask a question, get a response, and take action.'>
     <meta content='author' name='Ian Lloyd'>
   </head>
   <body data-spy='scroll'>
+    <!-- Cool photos and places -->
+    <div class='carousel slide' id='myCarousel'>
+      <ol class='carousel-indicators'>
+        <li class='active' data-slide-to='0' data-target='#myCarousel'></li>
+        <li data-slide-to='1' data-target='#myCarousel'></li>
+        <li data-slide-to='2' data-target='#myCarousel'></li>
+        <li data-slide-to='3' data-target='#myCarousel'></li>
+        <li data-slide-to='4' data-target='#myCarousel'></li>
+        <li data-slide-to='5' data-target='#myCarousel'></li>
+      </ol>
+      <!-- Carousel items -->
+      <div class='carousel-inner'>
+        <div class='item active machupicchu'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Machu+Picchu&amp;z=18' target='_blank'>Machu Picchu, Peru</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+        <div class='item playablanca'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Playa+Blanca,+Cartagena+De+Indias+(Distrito+Turístico+Y+Cultural),+Bolivar,+Colombia&amp;z=18' target='_blank'>Playa Blanca, Colombia</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+        <div class='item varanasi'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Varanasi,+India&amp;z=18' target='_blank'>Varanasi, India</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+        <div class='item sevensisters'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Seven+Sisters,+United+Kingdom&amp;z=18' target='_blank'>Seven Sisters, United Kingdom</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+        <div class='item cusco'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Cusco,+Peru&amp;z=18' target='_blank'>Cusco, Peru</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+        <div class='item stockholm'>
+          <div class='geotag'>
+            <a href='https://maps.google.com/maps?q=Stockholm,+Sweden&amp;z=18' target='_blank'>Stockholm, Sweden</a>
+          </div>
+          <div class='marker'></div>
+          <div class='tagline'>Ask. Answer. Even here.</div>
+        </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class='carousel-control left' data-slide='prev' href='#myCarousel'>‹</a>
+      <a class='carousel-control right' data-slide='next' href='#myCarousel'>›</a>
+    </div>
     <!-- Navigation -->
-    <div class='container'>
-      <div class='container affix' style='z-index:100'>
-        <div class='navbar'>
-          <div class='navbar-inner'>
+    <div id='navbar_wedge'>
+      <div class='navbar navbar-static-top' data-offset-top='400' data-spy='affix' id='myNavbar' style='z-index:100'>
+        <div class='navbar-inner'>
+          <div class='container'>
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
             <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
               <i class='icon-reorder'></i>
             </button>
             <!-- Brand -->
-            <a class='brand' href='/'>
-              <img class='logo' src='/images/logo-navbar.png'>
-            </a>
+            <a class='brand' href='/index.html'>SignalCloud</a>
+            <!-- %img.logo{src: '/images/logo-navbar.png'} -->
             <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
             <div class='nav-collapse collapse'>
               <ul class='nav'>
                 <li>
-                  <a href='#whatwedo'>
+                  <a class='whatwedo' href='#whatwedo'>
                     <i class='icon-question-sign icon-large'></i>
                     What?
                   </a>
                 </li>
                 <li>
-                  <a href='#inspiration'>
+                  <a class='inspiration' href='#inspiration'>
                     <i class='icon-lightbulb icon-large'></i>
                     Inspiration?
                   </a>
                 </li>
                 <li>
-                  <a href='#howitworks'>
+                  <a class='howitworks' href='#howitworks'>
                     <i class='icon-wrench icon-large'></i>
                     How?
                   </a>
                 </li>
                 <li>
-                  <a href='#getstarted'>
+                  <a class='getstarted' href='#getstarted'>
                     <i class='icon-road icon-large'></i>
                     Ready?
                   </a>
                 </li>
                 <li>
-                  <a href='#contact'>
+                  <a class='contact' href='#contact'>
                     <i class='icon-envelope-alt icon-large'></i>
                     Questions?
                   </a>

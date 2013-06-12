@@ -6,39 +6,97 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to connect and engage 
 
 ---
 
+/ Cool photos and places
+#myCarousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "4", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "5", "data-target" => "#myCarousel"}
+  / Carousel items
+  .carousel-inner
+    .item.active.machupicchu
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Machu+Picchu&z=18', target: '_blank'} Machu Picchu, Peru
+      .marker
+      .tagline Ask. Answer. Even here.
+    .item.playablanca
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Playa+Blanca,+Cartagena+De+Indias+(Distrito+Turístico+Y+Cultural),+Bolivar,+Colombia&z=18', target: '_blank'} Playa Blanca, Colombia
+      .marker
+      .tagline Ask. Answer. Even here.
+    .item.varanasi
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Varanasi,+India&z=18', target: '_blank'} Varanasi, India
+      .marker
+      .tagline Ask. Answer. Even here.
+    .item.sevensisters
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Seven+Sisters,+United+Kingdom&z=18', target: '_blank'} Seven Sisters, United Kingdom
+      .marker
+      .tagline Ask. Answer. Even here.
+    .item.cusco
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Cusco,+Peru&z=18', target: '_blank'} Cusco, Peru
+      .marker
+      .tagline Ask. Answer. Even here.
+    .item.stockholm
+      .geotag
+        %a{href: 'https://maps.google.com/maps?q=Stockholm,+Sweden&z=18', target: '_blank'} Stockholm, Sweden
+      .marker
+      .tagline Ask. Answer. Even here.
+  / Carousel nav
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+
 / Navigation
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'#whatwedo'}
-        %i.icon-question-sign.icon-large
-        What?
-    %li
-      %a{href:'#inspiration'}
-        %i.icon-lightbulb.icon-large
-        Inspiration?
-    %li
-      %a{href:'#howitworks'}
-        %i.icon-wrench.icon-large
-        How?
-    %li
-      %a{href:'#getstarted'}
-        %i.icon-road.icon-large
-        Ready?
-    %li
-      %a{href:'#contact'}
-        %i.icon-envelope-alt.icon-large
-        Questions?
-  %ul.nav.pull-right
-    %li.dropdown
-      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-        %i.icon-bolt.icon-large
-        For Devs
-        %b.caret
-      %ul.dropdown-menu
-        %li= link_to 'API', '/api'
-        %li= link_to 'Security & Privacy', '/security'
-        %li= link_to 'Platform', '/platforms'
+#navbar_wedge
+  #myNavbar.navbar.navbar-static-top{ style: 'z-index:100', 'data-spy' => "affix", "data-offset-top" => 400 }
+    .navbar-inner
+      .container
+        / Responsive Navbar Part 1: Button for triggering responsive navbar
+        %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %i.icon-reorder
+        
+        / Brand
+        %a.brand{:href => "/index.html"} SignalCloud
+        / %img.logo{src: '/images/logo-navbar.png'}
+      
+        / Responsive Navbar Part 2: Collapsable navbar contents
+        .nav-collapse.collapse
+          %ul.nav
+            %li
+              %a.whatwedo{href:'#whatwedo'}
+                %i.icon-question-sign.icon-large
+                What?
+            %li
+              %a.inspiration{href:'#inspiration'}
+                %i.icon-lightbulb.icon-large
+                Inspiration?
+            %li
+              %a.howitworks{href:'#howitworks'}
+                %i.icon-wrench.icon-large
+                How?
+            %li
+              %a.getstarted{href:'#getstarted'}
+                %i.icon-road.icon-large
+                Ready?
+            %li
+              %a.contact{href:'#contact'}
+                %i.icon-envelope-alt.icon-large
+                Questions?
+          %ul.nav.pull-right
+            %li.dropdown
+              %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
+                %i.icon-bolt.icon-large
+                For Devs
+                %b.caret
+              %ul.dropdown-menu
+                %li= link_to 'API', '/api'
+                %li= link_to 'Security & Privacy', '/security'
+                %li= link_to 'Platform', '/platforms'
 
 
 / Header

@@ -1,0 +1,126 @@
+@import url(//fonts.googleapis.com/css?family=Antic);
+
+body {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.text-tag {
+  position: absolute;
+  display: inline-block;
+  padding: 8px;
+}
+
+.marker-tag-left( @x, @y ) {
+  .marker { top: @x; left: @y; }
+  .tagline { top: @x; left: @y + 40px; }
+}
+
+.marker-tag-right( @x, @y ) {
+  .marker { top: @x; right: @y; }
+  .tagline { top: @x; right: @y + 40px; }
+}
+
+.marker-tag-right2( @x, @y ) {
+  .marker { top: @x; right: @y; }
+  .tagline { top: @x; right: @y - 193px; }
+}
+
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+#myCarousel {
+  background-color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+  
+  .item {
+    font-family: 'Antic';
+    height: 400px;
+    width: 100%;
+    
+    .geotag {
+      .text-tag();
+      background-color: rgba( 0, 0, 0, 33% );
+      color: #CCC;
+      bottom: 0px;
+      right: 0px;
+      
+      a {
+        color: #EEE;
+        &:hover {
+          color: #EEE;
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        background-color: rgba( 0, 0, 200, 44% );
+      }
+      
+      .container {
+        position: relative;
+      }
+    }
+    
+    .marker {
+      background-image: url( '/images/marker-white-small.png' );
+      position: absolute;
+      height: 40px;
+      width: 33px;
+    }
+    
+    .tagline {
+      .text-tag();
+      .border-radius(3px);
+      background-color: rgba( 255, 255, 255, 33% );
+      color: #FFF;
+      font-size: 120%;
+    }
+  }
+  
+  .item.cusco {
+    background-image: url( '/carousel/cusco.jpg' );
+    background-position: right bottom;
+    .marker-tag-right( 208px, 273px );
+  }
+  .item.machupicchu {
+    background-image: url( '/carousel/machupicchu.jpg' );
+    background-position: left bottom;
+    .marker-tag-left( 213px, 363px );
+  }
+  .item.playablanca {
+    background-image: url( '/carousel/playablanca.jpg' );
+    background-position: right bottom;
+    .marker-tag-right( 185px, 105px );
+  }
+  .item.sevensisters {
+    background-image: url( '/carousel/sevensisters.jpg' );
+    background-position: right bottom;
+    .marker-tag-right2( 78px, 505px );
+  }
+  .item.stockholm {
+    background-image: url( '/carousel/stockholm.jpg' );
+    background-position: right bottom;
+    .marker-tag-right( 250px, 425px );
+  }
+  .item.varanasi {
+    background-image: url( '/carousel/varanasi.jpg' );
+    background-position: right bottom;
+    .marker-tag-right2( 265px, 825px );
+  }
+}
+
+#myNavbar.affix {
+  width: 100%;
+  top: 0px;
+}
+
+#navbar_wedge { height: 100px; }
+
+.navbar a:hover {
+  background-color: red;
+}

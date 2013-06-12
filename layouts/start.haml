@@ -1,0 +1,21 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title
+      - unless @item[:title].nil? || @item[:title] == 'SignalCloud'
+        #{@item[:title]}
+        \-
+      SignalCloud
+      
+    %link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "/css/start.css", :rel => "stylesheet"}/
+    %script{:type => "text/javascript", :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+    %script{:type => "text/javascript", :src  => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"}
+    %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}/
+    %meta{:content => "viewport", :name => "width=device-width, initial-scale=1.0"}/
+    %meta{:content => "description", :name => "#{@item[:description]}"}/
+    %meta{:content => "author", :name => "Ian Lloyd"}/
+
+  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target]}= yield

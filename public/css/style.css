@@ -1,49 +1,67 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-
 body {
   padding-top: 15px;
   padding-bottom: 0px;
 }
-
-.confirmed { color: #73A839 }
-.denied    { color: #C71C22 }
-.failed    { color: #DD5600 }
-.timedout  { color: #F7B42C }
-i.solid    { opacity: 1.0 }
-
-span.logo { position: relative; opacity: 1.0 }
-span.logo i.icon-cloud { opacity: 0.8 }
-span.logo i.icon-bolt { position: absolute; top: 0px; left: 25%; color: yellow; opacity: 1.0 }
-.header span.logo i.icon-bolt { text-shadow: 1px 1px 2px rgba(165,165,165,0.75); }
-
-ul#toc.affix { top: 80px; width: 140px }
-
+.confirmed {
+  color: #73a839;
+}
+.denied {
+  color: #c71c22;
+}
+.failed {
+  color: #dd5600;
+}
+.timedout {
+  color: #f7b42c;
+}
+i.solid {
+  opacity: 1;
+}
+span.logo {
+  position: relative;
+  opacity: 1;
+}
+span.logo i.icon-cloud {
+  opacity: 0.8;
+}
+span.logo i.icon-bolt {
+  position: absolute;
+  top: 0px;
+  left: 25%;
+  color: yellow;
+  opacity: 1;
+}
+.header span.logo i.icon-bolt {
+  text-shadow: 1px 1px 2px rgba(165, 165, 165, 0.75);
+}
+ul#toc.affix {
+  top: 80px;
+  width: 140px;
+}
 div.booklet h2 {
   padding-top: 75px;
 }
-
-div.booklet > :first-child { padding-top: 0px; margin-top: 0px; }
-
-
+div.booklet > :first-child {
+  padding-top: 0px;
+  margin-top: 0px;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
 a.brand {
   position: relative;
   width: 80px;
 }
-
 a.brand img.logo {
   position: absolute;
   top: -10px;
-/*   left: -40px; */
+  /*   left: -40px; */
+
   max-height: 80px;
   max-width: 80px;
 }
-
-
 /* Header
 -------------------------------------------------- */
 .header {
@@ -55,37 +73,31 @@ a.brand img.logo {
   background-repeat: repeat-x;
   background-color: #A9E3FF;
 }
-
 .header h1 {
-/*   margin-top: 115px; */
+  /*   margin-top: 115px; */
+
   color: #fff;
   font-size: 80px;
 }
-
 .header .lead {
   line-height: 1.25;
-/*   margin-top: 85px; */
-  background-color: rgba(255,255,255,0.4);
+  /*   margin-top: 85px; */
+
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   padding: 8px;
 }
-
 .header .btn {
   margin-top: 10px;
 }
-
 .glow {
   text-shadow: 0px 0px 15px #3057ab;
 }
-
 .threed {
   text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 }
-
-
 /* Footer
 -------------------------------------------------- */
-
 .footer {
   padding-top: 87px;
   padding-bottom: 40px;
@@ -95,34 +107,28 @@ a.brand img.logo {
   background-color: #033C73;
   color: white;
 }
-
 .footer h2 {
   font-size: 20px;
   color: white;
 }
-
 .footer h2 + p {
   margin-top: 20px;
 }
-
 /*
 .footer .span4:not(:first-child) {
   border-left: 1px solid white;
 }
 */
-
-
 /* Featurettes
 -------------------------------------------------- */
-
 .featurette {
   padding-bottom: 120px;
 }
-
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
 
+}
 /* Thin out the marketing headings */
 .featurette-heading {
   font-size: 50px;
@@ -130,48 +136,40 @@ a.brand img.logo {
   line-height: 1;
   letter-spacing: -1px;
 }
-
 .featurette .featurette-icon {
   color: #317EAC;
   text-align: center;
   font-size: 50px;
   font-weight: 300;
 }
-
 /* Center align the text within the three columns below the carousel */
 .featurette .idea h3 {
   text-align: center;
   font-weight: normal;
 }
-
 .featurette .idea p {
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
 }
-
 .response-types {
   background-color: #cec7fa;
   border-radius: 5px;
 }
-
 .featurette p.jump-to-next {
   text-align: right;
   margin-top: 20px;
 }
-
-
 /* Inspiration Steps
 -------------------------------------------------- */
-
 .steps {
   position: relative;
   margin-top: 25px;
 }
-
 div.step-strip {
   width: 20px;
-/*   height: 100%; */
+  /*   height: 100%; */
+
   background-color: #2FA4E7;
   position: absolute;
   left: 460px;
@@ -179,48 +177,40 @@ div.step-strip {
   bottom: 50px;
   z-index: -1;
 }
-
 div.step-tab {
   height: 20px;
   width: 50%;
   background-color: #2FA4E7;
   position: absolute;
   top: 40px;
-  z-index: -1;  
+  z-index: -1;
 }
-
 .good-steps div.step-tab {
   left: 0px;
 }
-
 .bad-steps div.step-tab {
   right: 0px;
 }
-
 .steps .span6 .row {
   padding-top: 40px;
 }
-
-.steps .span2, .steps .span6 .row .span2 {
+.steps .span2,
+.steps .span6 .row .span2 {
   text-align: center;
   position: relative;
 }
-
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
 @media (max-width: 979px) {
-
   .container.navbar-wrapper {
     margin-bottom: 0;
     width: auto;
   }
   .navbar-inner {
     border-radius: 0;
-/*     margin: -20px 0; */
+    /*     margin: -20px 0; */
+  
   }
-
   .carousel .item {
     height: 500px;
   }
@@ -228,7 +218,6 @@ div.step-tab {
     width: auto;
     height: 500px;
   }
-
   .featurette {
     height: auto;
     padding: 0;
@@ -241,23 +230,16 @@ div.step-tab {
     margin: 0 auto 20px;
   }
 }
-
-
 @media (max-width: 767px) {
-
-/*
-  .navbar-inner {
-    margin-top: -20px;
-    margin-bottom: -20px;
-  }
-*/
-
+  /*
+    .navbar-inner {
+      margin-top: -20px;
+      margin-bottom: -20px;
+    }
+  */
   .carousel {
     margin-left: -20px;
     margin-right: -20px;
-  }
-  .carousel .container {
-
   }
   .carousel .item {
     height: 300px;
@@ -277,11 +259,9 @@ div.step-tab {
   .carousel-caption .btn {
     font-size: 18px;
   }
-
   .marketing .span4 + .span4 {
     margin-top: 40px;
   }
-
   .featurette-heading {
     font-size: 30px;
   }
@@ -289,5 +269,4 @@ div.step-tab {
     font-size: 18px;
     line-height: 1.5;
   }
-
 }

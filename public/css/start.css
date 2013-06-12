@@ -1,0 +1,141 @@
+@import url(//fonts.googleapis.com/css?family=Antic);
+body {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.text-tag {
+  position: absolute;
+  display: inline-block;
+  padding: 8px;
+}
+#myCarousel {
+  background-color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#myCarousel .item {
+  font-family: 'Antic';
+  height: 400px;
+  width: 100%;
+}
+#myCarousel .item .geotag {
+  position: absolute;
+  display: inline-block;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.33);
+  color: #CCC;
+  bottom: 0px;
+  right: 0px;
+}
+#myCarousel .item .geotag a {
+  color: #EEE;
+}
+#myCarousel .item .geotag a:hover {
+  color: #EEE;
+  text-decoration: none;
+}
+#myCarousel .item .geotag:hover {
+  background-color: rgba(0, 0, 200, 0.44);
+}
+#myCarousel .item .geotag .container {
+  position: relative;
+}
+#myCarousel .item .marker {
+  background-image: url('/images/marker-white-small.png');
+  position: absolute;
+  height: 40px;
+  width: 33px;
+}
+#myCarousel .item .tagline {
+  position: absolute;
+  display: inline-block;
+  padding: 8px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.33);
+  color: #FFF;
+  font-size: 120%;
+}
+#myCarousel .item.cusco {
+  background-image: url('/carousel/cusco.jpg');
+  background-position: right bottom;
+}
+#myCarousel .item.cusco .marker {
+  top: 208px;
+  right: 273px;
+}
+#myCarousel .item.cusco .tagline {
+  top: 208px;
+  right: 313px;
+}
+#myCarousel .item.machupicchu {
+  background-image: url('/carousel/machupicchu.jpg');
+  background-position: left bottom;
+}
+#myCarousel .item.machupicchu .marker {
+  top: 213px;
+  left: 363px;
+}
+#myCarousel .item.machupicchu .tagline {
+  top: 213px;
+  left: 403px;
+}
+#myCarousel .item.playablanca {
+  background-image: url('/carousel/playablanca.jpg');
+  background-position: right bottom;
+}
+#myCarousel .item.playablanca .marker {
+  top: 185px;
+  right: 105px;
+}
+#myCarousel .item.playablanca .tagline {
+  top: 185px;
+  right: 145px;
+}
+#myCarousel .item.sevensisters {
+  background-image: url('/carousel/sevensisters.jpg');
+  background-position: right bottom;
+}
+#myCarousel .item.sevensisters .marker {
+  top: 78px;
+  right: 505px;
+}
+#myCarousel .item.sevensisters .tagline {
+  top: 78px;
+  right: 312px;
+}
+#myCarousel .item.stockholm {
+  background-image: url('/carousel/stockholm.jpg');
+  background-position: right bottom;
+}
+#myCarousel .item.stockholm .marker {
+  top: 250px;
+  right: 425px;
+}
+#myCarousel .item.stockholm .tagline {
+  top: 250px;
+  right: 465px;
+}
+#myCarousel .item.varanasi {
+  background-image: url('/carousel/varanasi.jpg');
+  background-position: right bottom;
+}
+#myCarousel .item.varanasi .marker {
+  top: 265px;
+  right: 825px;
+}
+#myCarousel .item.varanasi .tagline {
+  top: 265px;
+  right: 632px;
+}
+#myNavbar.affix {
+  width: 100%;
+  top: 0px;
+}
+#navbar_wedge {
+  height: 100px;
+}
+.navbar a:hover {
+  background-color: red;
+}
