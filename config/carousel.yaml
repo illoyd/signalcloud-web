@@ -1,0 +1,35 @@
+- id: machupicchu
+  label: Machu Picchu, Peru
+  latitude: 0
+  longitude: 0
+  google_map_search: Machu Picchu
+
+- id: playablanca
+  label: Playa Blanca, Colombia
+  latitude: 0
+  longitude: 0
+  google_map_search: Playa+Blanca, Cartagena De Indias (Distrito Turístico Y Cultural), Bolivar, Colombia
+
+- id: varanasi
+  label: Varanasi, India
+  latitude: 0
+  longitude: 0
+  google_map_search: Varanasi, India
+
+- id: sevensisters
+  label: Seven Sisters, United Kingdom
+  latitude: 0
+  longitude: 0
+  google_map_search: Seven Sisters, United Kingdom
+
+- id: cusco
+  label: Cusco, Peru
+  latitude: 0
+  longitude: 0
+  google_map_search: Cusco, Peru
+
+- id: stockholm
+  label: Stockholm, Sweden
+  latitude: 0
+  longitude: 0
+  google_map_search: Stockholm, Sweden

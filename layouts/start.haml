@@ -18,4 +18,11 @@
     %meta{:content => "description", :name => "#{@item[:description]}"}/
     %meta{:content => "author", :name => "Ian Lloyd"}/
 
-  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target]}= yield
+  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target]}
+    = yield
+    :javascript
+      $(document).ready(function() {
+        $("a[rel=popover]").popover();
+        $(".tooltip").tooltip();
+        $("a[rel=tooltip]").tooltip();
+      });

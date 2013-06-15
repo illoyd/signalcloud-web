@@ -1,9 +1,55 @@
+@import "../../less/mixins.less";
+@import "../../less/variables.less";
 @import url(//fonts.googleapis.com/css?family=Antic);
+
+
+@teal   : rgb( 92, 197, 177 );
+@red    : rgb( 240, 0, 126 );
+@green  : rgb( 170, 202, 106 );
+@purple : rgb( 182, 70, 151 );
+@orange : rgb( 248, 161, 60 );
+@blue   : rgb( 15, 191, 235 );
+@yellow : rgb( 243, 13, 70 );
+
+
+@whatwedo    : @blue;
+@inspiration : @red;
+@howitworks  : @green;
+@getstarted  : @purple;
+@contactus   : @teal;
+
+.subtle( @color ) {
+  #gradient.vertical( @color, darken(@color, 12%) );
+}
+
+.box-align( @mode ) {
+  /* Internet Explorer 10 */
+  display:-ms-flexbox;
+  -ms-flex-pack: @mode;
+  -ms-flex-align: @mode;
+  
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack: @mode;
+  -moz-box-align: @mode;
+  
+  /* Safari, Opera, and Chrome */
+  display:-webkit-box;
+  -webkit-box-pack: @mode;
+  -webkit-box-align: @mode;
+  
+  /* W3C */
+  display:box;
+  box-pack: @mode;
+  box-align: @mode;
+}
 
 body {
   margin-top: 0px;
   padding-top: 0px;
 }
+
+// h1, h2, h3, h4, h5, h6, h7 { font-family: 'Antic', 'Helvetica Heue', 'Helvetica', 'Arial', sans-serif; }
 
 .text-tag {
   position: absolute;
@@ -24,12 +70,6 @@ body {
 .marker-tag-right2( @x, @y ) {
   .marker { top: @x; right: @y; }
   .tagline { top: @x; right: @y - 193px; }
-}
-
-.border-radius(@radius: 5px) {
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
 }
 
 #myCarousel {
@@ -58,7 +98,7 @@ body {
         }
       }
       &:hover {
-        background-color: rgba( 0, 0, 200, 44% );
+        background-color: rgba( 64, 64, 64, 44% );
       }
       
       .container {
@@ -76,7 +116,7 @@ body {
     .tagline {
       .text-tag();
       .border-radius(3px);
-      background-color: rgba( 255, 255, 255, 33% );
+      // background-color: rgba( 255, 255, 255, 33% );
       color: #FFF;
       font-size: 120%;
     }
@@ -121,6 +161,84 @@ body {
 
 #navbar_wedge { height: 100px; }
 
-.navbar a:hover {
-  background-color: red;
+
+// Navigation edits
+.navbar-link( @name, @color ) {
+  .navbar .nav {
+    a.@{name}:hover,
+    > .active > a.@{name},
+    > .active > a.@{name}:hover,
+    > .active > a.@{name}:focus { .subtle(@color); }
+  }  
+}
+
+.navbar-link( whatwedo,    @whatwedo );
+.navbar-link( inspiration, @inspiration );
+.navbar-link( howitworks,  @howitworks );
+.navbar-link( getstarted,  @getstarted );
+.navbar-link( contact,     @contactus );
+
+
+// Features
+.featurette-section( @name, @color ) {
+  #@{name} {
+    margin-top: 100px;
+    padding-top: 40px;
+    .header {
+      .subtle(@color);
+      p { color: lighten(@color, 40%); }
+    }
+    h2 span.muted {
+      color: lighten(@color, 30%);
+    }
+  }
+}
+
+.featurettes {
+  .featurette-section( whatwedo,    @whatwedo );
+  .featurette-section( inspiration, @inspiration );
+  .featurette-section( howitworks,  @howitworks );
+  .featurette-section( getstarted,  @getstarted );
+  .featurette-section( contact,     @contactus );
+  hr { color: transparent; padding-top: 45px; }
+}
+
+.featurettes {
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    h2 {
+      color: white;
+      //span.muted { color: darken(white, 20%); }
+    }
+    
+    a { color: white; }
+    
+    .featurette-icon {
+      color: white;
+      font-size: 180px;
+      text-align: center;
+    }
+    
+    p {
+      color: white;
+    }
+  }
+  
+  .featurette {
+    margin-top: 40px;
+    
+    .jump-to-next {
+      padding-top: 20px;
+      text-align: right;
+    }
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: black;
+  p { color: white; }
+  h2 { color: #999999; font-size: 120%; }
 }
