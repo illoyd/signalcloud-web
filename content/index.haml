@@ -78,14 +78,20 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
 
 
 / Header
-- render 'header' do
-  %a.btn.btn-large.btn-warning{href: "#getstarted"}
-    %i.icon-plus.icon-large
-    Sign up today
-  %a.btn.btn-large.btn-success{href: "#inspiration"}
-    %i.icon-lightbulb.icon-large
-    Get some ideas
-
+.header
+  / { style: 'min-height: 500px;'}
+  .container
+    .row
+      .span12{ style: 'text-align: center' }
+        %img{ src: '/images/logo-black-big.png', alt: 'SignalCloud' }
+        %h1 #{@item[:title]}
+        %p.lead #{@item[:lead]}
+        %a.btn.btn-large.btn-warning{href: "#getstarted"}
+          %i.icon-plus.icon-large
+          Sign up today
+        %a.btn.btn-large.btn-success{href: "#inspiration"}
+          %i.icon-lightbulb.icon-large
+          Get some ideas
 
 / Featurettes
 .featurettes
@@ -101,8 +107,8 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
             %h2
               What do we do?
               %span.muted We connect.
-            %p.lead SignalCloud is a service to connect you to just about anyone with a mobile phone to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so that you can take intelligent, informed action.
-            / %p.lead Think of it as a quick way to authorise a one-time action or event, like charging a credit card, running a business report, or confirming an appointment.
+            %p.lead SignalCloud is a service to ask a question and get an answer, just about anywhere. We connect you to just about anyone with a mobile phone to ask them a question you need an answer to. We listen for their answer, understand their response, and get back to you quickly so that you can take intelligent, informed action.
+            / %p.lead Think of it as a quick and painless way to authorise a one-time action or event, like charging a credit card, running a business report, or confirming an appointment.
   
     .container.featurette
       %p SignalCloud is an effective and simply way to build interactivity into your business workflows. Wherever you need to human confirmation of an action or event in your automated business proceses, SignalCloud can contact just about anyone, just about anywhere, quickly and efficiently.
@@ -189,77 +195,22 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %span.muted Here's a few.
             %p.lead Our tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, staff, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
 
-    / Big Ideas
+    / Ideas
     .container.featurette
       .row
-        .span3.idea
-          %h3{style:'text-align:right'}
-            %i.icon-mobile-phone.icon-3x
-            %i.icon-tablet.icon-3x
-        .span9 
-          %h3 In-app purchases
-          %p
-            In-app purchasing has opened up a whole new revenue stream for small developers, but it's not without its challenges. With
-            = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
-            = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
-            = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
-            all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
-          %p
-            SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
-          %p
-            %a.btn.btn-primary{href: "/ideas/iap"}
-              See how SignalCloud could help
-              %i.icon-circle-arrow-right
-  
-      / Ideas
+        .span12
+          %ul.thumbnails
+            = render 'idea-iap'
+            = render 'idea-cards'
+            = render 'idea-packages'
+            = render 'idea-appointments'
       .row
-        .span4.idea
-          %h3<
-            %i.icon-credit-card.icon-3x
-            %br
-            %a{href: "/ideas/cards", style: 'color: #317EAC'}
-              Card fraud
-          %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
-          %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
-  
-        .span4.idea
-          %h3<
-            %i.icon-gift.icon-3x
-            %br
-            %a{href: "/ideas/packages", style: 'color: #317EAC'}
-              Package delivery
-          %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
-          %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
-  
-        .span4.idea
-          %h3<
-            %i.icon-stethoscope.icon-3x
-            %br
-            %a{href: "/ideas/appointments", style: 'color: #317EAC'}
-              Doctor's visit
-          %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
-          %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
-  
-      .row{style:'text-align:center'}
-        .span4
-          %a.btn.btn-primary{href: "/ideas/cards"}
-            See how SignalCloud could help
-            %i.icon-circle-arrow-right
-        .span4
-          %a.btn.btn-primary{href: "/ideas/packages"}
-            See how SignalCloud could help
-            %i.icon-circle-arrow-right
-        .span4
-          %a.btn.btn-primary{href: "/ideas/appointments"}
-            See how SignalCloud could help
-            %i.icon-circle-arrow-right
-  
-      %p.jump-to-next
-        How does the plumbing work?
-        %a{href:'#howitworks'}
-          Check it out.
-          %i.icon-circle-arrow-right
-
+        .span12
+          %p.lead.jump-to-next
+            How does the plumbing work?
+            %a{href:'#howitworks'}
+              Check it out.
+              %i.icon-circle-arrow-right
 
   / How it works
   #howitworks
@@ -284,7 +235,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
             %strong= link_to 'Scalable platforms.', '/platforms'
             We use best-in-class platforms to provide a seamless technical solution.
             Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
-            Our providers average 99.98% uptime.
+            On average, our providers average 99.98% uptime, which means that our service should be available whenever you need it.
             = link_to 'Read more.', '/platforms'
             
       .row

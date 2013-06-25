@@ -1,6 +1,6 @@
 @import "../../less/mixins.less";
 @import "../../less/variables.less";
-@import url(//fonts.googleapis.com/css?family=Antic);
+@import url(//fonts.googleapis.com/css?family=Shadows+Into+Light);
 
 
 @teal   : rgb( 92, 197, 177 );
@@ -79,7 +79,7 @@ body {
   
   
   .item {
-    font-family: 'Antic';
+    font-family: 'Shadows into Light';
     height: 400px;
     width: 100%;
     
@@ -210,6 +210,7 @@ body {
 
     h2 {
       color: white;
+      font-family: 'Shadows into Light', 'Helvetica Neue', 'Helvetica', serif;
       //span.muted { color: darken(white, 20%); }
     }
     
@@ -228,6 +229,8 @@ body {
   
   .featurette {
     margin-top: 40px;
+    min-height: 300px;
+
     
     .jump-to-next {
       padding-top: 20px;
@@ -236,9 +239,31 @@ body {
   }
 }
 
+/*
+#inspiration {
+  h3 a, p a {
+    color: lighten(@inspiration,15%);
+  }
+}
+*/
+
+.thumbnail {
+  h3 {
+    text-align: center;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+
 .footer {
   margin-top: 100px;
   background-color: black;
   p { color: white; }
   h2 { color: #999999; font-size: 120%; }
+  a { color: darken(white,15%); }
 }

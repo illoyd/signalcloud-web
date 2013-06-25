@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Antic);
+@import url(//fonts.googleapis.com/css?family=Shadows+Into+Light);
 .clearfix {
   *zoom: 1;
 }
@@ -41,7 +41,7 @@ body {
   margin-bottom: 0px;
 }
 #myCarousel .item {
-  font-family: 'Antic';
+  font-family: 'Shadows into Light';
   height: 400px;
   width: 100%;
 }
@@ -337,6 +337,7 @@ body {
 }
 .featurettes .header h2 {
   color: white;
+  font-family: 'Shadows into Light', 'Helvetica Neue', 'Helvetica', serif;
 }
 .featurettes .header a {
   color: white;
@@ -351,10 +352,28 @@ body {
 }
 .featurettes .featurette {
   margin-top: 40px;
+  min-height: 300px;
 }
 .featurettes .featurette .jump-to-next {
   padding-top: 20px;
   text-align: right;
+}
+/*
+#inspiration {
+  h3 a, p a {
+    color: lighten(@inspiration,15%);
+  }
+}
+*/
+.thumbnail h3 {
+  text-align: center;
+}
+.thumbnail h3 a {
+  display: block;
+  text-decoration: none;
+}
+.thumbnail p {
+  text-align: center;
 }
 .footer {
   margin-top: 100px;
@@ -366,4 +385,7 @@ body {
 .footer h2 {
   color: #999999;
   font-size: 120%;
+}
+.footer a {
+  color: #d9d9d9;
 }
