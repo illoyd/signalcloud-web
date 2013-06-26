@@ -13,9 +13,9 @@
 
 
 @whatwedo    : @blue;
-@inspiration : @red;
+@inspiration : @purple;
 @howitworks  : @green;
-@getstarted  : @purple;
+@getstarted  : @orange;
 @contactus   : @teal;
 
 .subtle( @color ) {
@@ -48,6 +48,10 @@ body {
   margin-top: 0px;
   padding-top: 0px;
 }
+
+.navbar .brand { font-family: 'Shadows into Light'; }
+
+.header h1 { font-family: 'Shadows into Light'; }
 
 // h1, h2, h3, h4, h5, h6, h7 { font-family: 'Antic', 'Helvetica Heue', 'Helvetica', 'Arial', sans-serif; }
 
@@ -161,6 +165,17 @@ body {
 
 #navbar_wedge { height: 100px; }
 
+a.circled {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  height: 80px;
+  width: 80px;
+  line-height: 100px;
+  .border-radius(500px);
+}
+
 
 // Navigation edits
 .navbar-link( @name, @color ) {
@@ -184,23 +199,33 @@ body {
   #@{name} {
     margin-top: 100px;
     padding-top: 40px;
+
     .header {
       .subtle(@color);
       p { color: lighten(@color, 40%); }
+      a { color: lighten(@color, 30%); font-weight: bold; }
+      a:hover { color: darken(white, 15%); }
     }
+
     h2 span.muted {
       color: lighten(@color, 30%);
     }
-  }
-}
+    
+    a {
+      color: @color;
+      &:hover {
+        color: darken(@color, 15%);
+      }
+    }
 
-.featurettes {
-  .featurette-section( whatwedo,    @whatwedo );
-  .featurette-section( inspiration, @inspiration );
-  .featurette-section( howitworks,  @howitworks );
-  .featurette-section( getstarted,  @getstarted );
-  .featurette-section( contact,     @contactus );
-  hr { color: transparent; padding-top: 45px; }
+    a.icon-stack {
+      text-decoration: none;
+      i.icon-stack-top {
+        color: white;
+      }
+    }
+
+  }
 }
 
 .featurettes {
@@ -211,10 +236,10 @@ body {
     h2 {
       color: white;
       font-family: 'Shadows into Light', 'Helvetica Neue', 'Helvetica', serif;
-      //span.muted { color: darken(white, 20%); }
     }
     
     a { color: white; }
+    a:hover { color: darken(white, 15%); }
     
     .featurette-icon {
       color: white;
@@ -227,25 +252,46 @@ body {
     }
   }
   
+  .featurette-section( whatwedo,    @whatwedo );
+  .featurette-section( inspiration, @inspiration );
+  .featurette-section( howitworks,  @howitworks );
+  .featurette-section( getstarted,  @getstarted );
+  .featurette-section( contact,     @contactus );
+  hr { color: transparent; padding-top: 45px; }
+
   .featurette {
     margin-top: 40px;
     min-height: 300px;
 
-    
     .jump-to-next {
       padding-top: 20px;
       text-align: right;
     }
+    
+    .media > a.icon-stack {
+      font-size: 50px;
+    }
+    
+    .idea-card {
+      h3 {
+        text-align: center;
+        margin-top: 0px;
+      }
+      p.icons {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+    }
   }
 }
 
-/*
-#inspiration {
-  h3 a, p a {
-    color: lighten(@inspiration,15%);
-  }
+#whatwedo {
+  i.icon-circle { color: @whatwedo; }
+  i.icon-circle.muted { color: lighten(@whatwedo,25%); }
+  i.icon-circle-blank.muted { color: lighten(@whatwedo,25%); }
 }
-*/
+
 
 .thumbnail {
   h3 {
