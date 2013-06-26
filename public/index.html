@@ -96,18 +96,31 @@
                     What?
                   </a>
                 </li>
-                <li>
+                <li class='dropdown-split-left'>
                   <a class='inspiration' href='#inspiration'>
                     <i class='icon-lightbulb icon-large'></i>
                     Inspiration?
                   </a>
                 </li>
-                <li>
+                <li class='dropdown dropdown-split-right'><a class='inspiration dropdown-toggle' data-toggle='dropdown' href='#'><b class='caret'></b></a>
+                <ul class='dropdown-menu'>
+                  <li><a href="/ideas/iap">In-app Purchases</a></li>
+                  <li><a href="/ideas/cards">Card fraud</a></li>
+                  <li><a href="/ideas/packages">Package delivery</a></li>
+                  <li><a href="/ideas/appointments">Doctor's visit</a></li>
+                </ul></li>
+                <li class='dropdown-split-left'>
                   <a class='howitworks' href='#howitworks'>
                     <i class='icon-wrench icon-large'></i>
                     How?
                   </a>
                 </li>
+                <li class='dropdown dropdown-split-right'><a class='howitworks dropdown-toggle' data-toggle='dropdown' href='#'><b class='caret'></b></a>
+                <ul class='dropdown-menu'>
+                  <li><a href="/api">API</a></li>
+                  <li><a href="/security">Security & Privacy</a></li>
+                  <li><a href="/platforms">Platform</a></li>
+                </ul></li>
                 <li>
                   <a class='getstarted' href='#getstarted'>
                     <i class='icon-road icon-large'></i>
@@ -119,20 +132,6 @@
                     <i class='icon-envelope-alt icon-large'></i>
                     Questions?
                   </a>
-                </li>
-              </ul>
-              <ul class='nav pull-right'>
-                <li class='dropdown'>
-                  <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-                    <i class='icon-bolt icon-large'></i>
-                    For Devs
-                    <b class='caret'></b>
-                  </a>
-                  <ul class='dropdown-menu'>
-                    <li><a href="/api">API</a></li>
-                    <li><a href="/security">Security & Privacy</a></li>
-                    <li><a href="/platforms">Platform</a></li>
-                  </ul>
                 </li>
               </ul>
             </div>
@@ -147,15 +146,18 @@
           <div class='span12' style='text-align: center'>
             <img alt='SignalCloud' height='300' src='/images/marker.png' width='249'>
             <h1>SignalCloud</h1>
-            <p class='lead'>Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from just about anyone with a mobile phone.</p>
-            <a class='btn btn-large btn-warning' href='#getstarted'>
-              <i class='icon-plus icon-large'></i>
-              Sign up today
-            </a>
-            <a class='btn btn-large btn-success' href='#inspiration'>
-              <i class='icon-lightbulb icon-large'></i>
-              Get some ideas
-            </a>
+            <p class='lead'>Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from anyone with a mobile phone, world-wide.</p>
+            <p class='lead' style="font-family: 'Shadows into Light';">Ask. Answer. Just about anywhere.</p>
+            <!--
+              <a class='btn btn-large btn-success' href='#inspiration'>
+                <i class='icon-lightbulb icon-large'></i>
+                Get some ideas
+              </a>
+              <a class='btn btn-large btn-warning' href='#getstarted'>
+                <i class='icon-plus icon-large'></i>
+                Sign up today
+              </a>
+            -->
           </div>
         </div>
       </div>
@@ -442,7 +444,7 @@
                 <a class='icon-stack pull-left' href='/platforms'><i class='icon-circle icon-stack-base icon-4x'></i>
                 <i class='icon-dashboard icon-stack-top icon-4x'></i></a>
                 <div class='media-body'>
-                  <h4 class='media-heading'>Scalable platforms</h4>
+                  <h4 class='media-heading'><a href="/platforms">Scalable platforms</a></h4>
                   <p>
                     We use best-in-class platforms to provide a seamless technical solution.
                     Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
@@ -455,7 +457,7 @@
                 <a class='icon-stack pull-left' href='/security'><i class='icon-circle icon-4x icon-stack-base'></i>
                 <i class='icon-lock icon-4x icon-stack-top'></i></a>
                 <div class='media-body'>
-                  <h4 class='media-heading'>Secure solutions</h4>
+                  <h4 class='media-heading'><a href="/security">Secure solutions</a></h4>
                   <p>
                     Every layer of our solution is protected with industry-grade encryption, from initial API requests through to the database itself.
                     We use SSL to protect all communication between you and our servers, while all customer data is securely encrypted and stored in our database.
@@ -468,7 +470,7 @@
                 <a class='icon-stack pull-left' href='/api'><i class='icon-circle icon-4x icon-stack-base'></i>
                 <i class='icon-bolt icon-4x icon-stack-top'></i></a>
                 <div class='media-body'>
-                  <h4 class='media-heading'>Accessible API</h4>
+                  <h4 class='media-heading'><a href="/api">Accessible API</a></h4>
                   <p>
                     Our automated Application Program Interface is simple and easy to use, allowing you to rapidly integrate our solution into your business processes.
                   </p>

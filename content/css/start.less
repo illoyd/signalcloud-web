@@ -50,6 +50,8 @@ body {
 }
 
 .navbar .brand { font-family: 'Shadows into Light'; }
+.navbar .nav>li.dropdown-split-left>a{ padding-right:7px; }
+.navbar .nav>li.dropdown-split-right>a{ padding-left:0px; }
 
 .header h1 { font-family: 'Shadows into Light'; }
 
@@ -192,7 +194,6 @@ a.circled {
 .navbar-link( howitworks,  @howitworks );
 .navbar-link( getstarted,  @getstarted );
 .navbar-link( contact,     @contactus );
-
 
 // Features
 .featurette-section( @name, @color ) {

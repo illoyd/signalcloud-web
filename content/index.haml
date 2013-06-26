@@ -2,7 +2,7 @@
 title: SignalCloud
 description: Introducing a new way to ask a question and get an answer, from just about anyone, anywhere.
 head_icon: /images/logo-big.png
-lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from just about anyone with a mobile phone.
+lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from anyone with a mobile phone, world-wide.
 
 ---
 
@@ -49,14 +49,29 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %a.whatwedo{href:'#whatwedo'}
                 %i.icon-question-sign.icon-large
                 What?
-            %li
+            %li.dropdown-split-left
               %a.inspiration{href:'#inspiration'}
                 %i.icon-lightbulb.icon-large
                 Inspiration?
-            %li
+            %li.dropdown.dropdown-split-right<
+              %a.inspiration.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}<
+                %b.caret
+              %ul.dropdown-menu
+                %li= link_to 'In-app Purchases', '/ideas/iap'
+                %li= link_to 'Card fraud', '/ideas/cards'
+                %li= link_to 'Package delivery', '/ideas/packages'
+                %li= link_to 'Doctor\'s visit', '/ideas/appointments'
+            %li.dropdown-split-left
               %a.howitworks{href:'#howitworks'}
                 %i.icon-wrench.icon-large
                 How?
+            %li.dropdown.dropdown-split-right<
+              %a.howitworks.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}<
+                %b.caret
+              %ul.dropdown-menu
+                %li= link_to 'API', '/api'
+                %li= link_to 'Security & Privacy', '/security'
+                %li= link_to 'Platform', '/platforms'
             %li
               %a.getstarted{href:'#getstarted'}
                 %i.icon-road.icon-large
@@ -65,17 +80,6 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %a.contact{href:'#contact'}
                 %i.icon-envelope-alt.icon-large
                 Questions?
-          %ul.nav.pull-right
-            %li.dropdown
-              %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-                %i.icon-bolt.icon-large
-                For Devs
-                %b.caret
-              %ul.dropdown-menu
-                %li= link_to 'API', '/api'
-                %li= link_to 'Security & Privacy', '/security'
-                %li= link_to 'Platform', '/platforms'
-
 
 / Header
 .header
@@ -85,12 +89,14 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
         %img{ src: '/images/marker.png', alt: 'SignalCloud', height: 300, width: 249 }
         %h1 #{@item[:title]}
         %p.lead #{@item[:lead]}
-        %a.btn.btn-large.btn-warning{href: "#getstarted"}
-          %i.icon-plus.icon-large
-          Sign up today
-        %a.btn.btn-large.btn-success{href: "#inspiration"}
-          %i.icon-lightbulb.icon-large
-          Get some ideas
+        %p.lead{ style: "font-family: 'Shadows into Light';" } Ask. Answer. Just about anywhere.
+        /
+          %a.btn.btn-large.btn-success{href: "#inspiration"}
+            %i.icon-lightbulb.icon-large
+            Get some ideas
+          %a.btn.btn-large.btn-warning{href: "#getstarted"}
+            %i.icon-plus.icon-large
+            Sign up today
 
 / Featurettes
 .featurettes
@@ -247,7 +253,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %i.icon-dashboard.icon-stack-top.icon-4x
                 
             .media-body
-              %h4.media-heading Scalable platforms
+              %h4.media-heading= link_to 'Scalable platforms', '/platforms'
               %p
                 We use best-in-class platforms to provide a seamless technical solution.
                 Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do.
@@ -258,7 +264,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %i.icon-circle.icon-4x.icon-stack-base
               %i.icon-lock.icon-4x.icon-stack-top
             .media-body
-              %h4.media-heading Secure solutions
+              %h4.media-heading= link_to 'Secure solutions', '/security'
               %p
                 Every layer of our solution is protected with industry-grade encryption, from initial API requests through to the database itself.
                 We use SSL to protect all communication between you and our servers, while all customer data is securely encrypted and stored in our database.
@@ -269,7 +275,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %i.icon-circle.icon-4x.icon-stack-base
               %i.icon-bolt.icon-4x.icon-stack-top
             .media-body
-              %h4.media-heading Accessible API
+              %h4.media-heading= link_to 'Accessible API', '/api'
               %p
                 Our automated Application Program Interface is simple and easy to use, allowing you to rapidly integrate our solution into your business processes.
               %p= link_to 'Read more.', '/api'
