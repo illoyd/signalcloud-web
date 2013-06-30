@@ -118,3 +118,84 @@ ul#toc.api.affix {
   }
   a { text-decoration: none; }
 }
+
+.steps {
+  .with-signalcloud h3, .without-signalcloud h3 {
+    text-align: center;
+  }
+  
+  .start {
+    text-align: center;
+    margin-top: 40px;
+    .icon {
+      color: @blue;
+    }
+  }
+  
+  .flow {
+    margin-bottom: 20px;
+    .clearfix();
+    
+    i {
+      width: 100px;
+      display: block;
+      text-align: center;
+      font-size: 40px;
+    }
+  }
+
+  .with-signalcloud {
+    .icon {
+      color: @teal;
+    }
+    .icon-stack-top2 {
+      color: @teal;
+      font-size: 80%;
+    }
+    .flow {
+      color: @teal;
+      i { float: right; }
+    }
+  }
+  
+  .without-signalcloud {
+    .icon {
+      color: @orange;
+    }
+    .icon-stack-top2 {
+      color: @orange;
+      font-size: 80%;
+    }
+    .flow {
+      color: @orange;
+      i { float: left; }
+    }
+  }
+
+  .icon {
+    font-size: 50px;
+  }
+
+  .popover {
+    position:relative;
+    display:block;
+    z-index: 1;
+    max-width: 460px;
+    
+    &.top {
+      margin: 0px auto 15px auto;
+    }
+    
+    &.bottom {
+      margin: 0px auto 15px auto;
+    }
+    
+    &.left {
+      margin: 0px 20px 20px 0px;
+    }
+    
+    &.right {
+      margin: 0px 0px 20px 20px;
+    }
+  }
+}

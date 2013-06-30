@@ -20,3 +20,12 @@ module ToolKitHelper
     "<span class='icon-stack'><i class='icon-#{base} icon-stack-base'></i><i class='icon-stack-top'>#{number}</i></span>"
   end
 end
+
+def icon_stack( base, top, top2=nil )
+  top_icon = top2 ? "<i class='icon-#{top2} icon-stack-top2'></i>" : ''
+  "<span class='icon-stack'><i class='icon-#{base} icon-stack-base'></i><i class='icon-#{top} icon-stack-top'></i>#{top_icon}</span>"
+end
+
+def number_icon( number, base='circle' )
+  "<span class='icon-stack'><i class='icon-#{base} icon-stack-base'></i><i class='icon-stack-top'>#{number}</i></span>"
+end

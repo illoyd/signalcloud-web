@@ -174,6 +174,22 @@
 .footer a {
   color: #d9d9d9;
 }
+.icon-rotate-45::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+}
+.icon-rotate-315::before {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+}
 body {
   margin-top: 40px;
 }
@@ -299,4 +315,81 @@ ul#toc.api.affix {
 }
 .idea-card a {
   text-decoration: none;
+}
+.steps .with-signalcloud h3,
+.steps .without-signalcloud h3 {
+  text-align: center;
+}
+.steps .start {
+  text-align: center;
+  margin-top: 40px;
+}
+.steps .start .icon {
+  color: #0fbfeb;
+}
+.steps .flow {
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+.steps .flow:before,
+.steps .flow:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.steps .flow:after {
+  clear: both;
+}
+.steps .flow i {
+  width: 100px;
+  display: block;
+  text-align: center;
+  font-size: 40px;
+}
+.steps .with-signalcloud .icon {
+  color: #5cc5b1;
+}
+.steps .with-signalcloud .icon-stack-top2 {
+  color: #5cc5b1;
+  font-size: 80%;
+}
+.steps .with-signalcloud .flow {
+  color: #5cc5b1;
+}
+.steps .with-signalcloud .flow i {
+  float: right;
+}
+.steps .without-signalcloud .icon {
+  color: #f8a13c;
+}
+.steps .without-signalcloud .icon-stack-top2 {
+  color: #f8a13c;
+  font-size: 80%;
+}
+.steps .without-signalcloud .flow {
+  color: #f8a13c;
+}
+.steps .without-signalcloud .flow i {
+  float: left;
+}
+.steps .icon {
+  font-size: 50px;
+}
+.steps .popover {
+  position: relative;
+  display: block;
+  z-index: 1;
+  max-width: 460px;
+}
+.steps .popover.top {
+  margin: 0px auto 15px auto;
+}
+.steps .popover.bottom {
+  margin: 0px auto 15px auto;
+}
+.steps .popover.left {
+  margin: 0px 20px 20px 0px;
+}
+.steps .popover.right {
+  margin: 0px 0px 20px 20px;
 }

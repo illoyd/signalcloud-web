@@ -14,7 +14,7 @@ body_class: inspiration
   .container
     .row
       .span3.feature-icon
-        %i.icon-cogs
+        %i.icon-tablet
       .span9
         %h1
           In-app purchases.
@@ -24,70 +24,97 @@ body_class: inspiration
 / Main content
 .container
 
-  .featurette
-    / %h2 How does it work for in-app purchases?
-    %p.lead In-App Purchasing has driven the growth of free-to-try applications while...
-    %p.lead However, IAP can result in surprise bills at the end of the month as each small transaction adds up. 
+  %p.lead 
 
-    .steps
-      .step-strip
-      / Shared steps
-      .row
-        .span2.offset5
-          %img{src: '/images/idea-iap.png', height: 100, width: 100}
-        .span5 Children can learn a lot through tablet devices. Textbooks, interactive encyclopaedias, video tutorials, and so much more can be found with just a few taps. And of course a few simple games can help many kids pass the time. Letting a young person use a tablet is the new normal.
-  
-      / Divergent steps
-      .row
-        / 'Bad' steps
-        .span6.bad-steps
-          .row
-            .span4 Of course, the IAP virtual store is also just a few taps away. It can be scarily easy how quickly a few taps can lead to purchased virtual goods. Without SignalCloud, there is usually no immediate notice to the device owner that a purchase has been made.
-            .span2
-              %img{src: '/images/idea-bad-stuff.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 Each of those purchases can add up, leading to huge bills at the end of the month for unsuspecting users.  Sometimes thousands of dollars in a matter of minutes.
-            .span2
-              %img{src: '/images/idea-bad-money.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 This leads to irate customers who blame the tablet maker, creating harmful publicity and tarnishing the brand.
-            .span2
-              %img{src: '/images/idea-thumbs-down.png', height: 100, width: 100}
-              .step-tab
+  %h2 How does it work for in-app purchases?
+  %p In-App Purchasing (IAP) has driven the growth of free-to-try applications, allowing even the smallest software developers to gain users and market share with little marketing investment. However, the free-to-use, buy-to-upgrade model can open up a whole new set of challenges for managing user expectations. This is especially problematic for apps targeted at children and young users who might not realise that in-app purchases cost real-world money.
+  %p IAP can result in surprise bills at the end of the month as each small transaction adds up. 
+
+  .row.steps
+    .offset3.span6.start
+    
+      .popover.top
+        .arrow
+        .popover-content Children can learn a lot through tablet devices. Textbooks, interactive encyclopaedias, video tutorials, and so much more can be found with just a few taps. And of course a few simple games can help many kids pass the time. Letting a young person use a tablet is the new normal.
+      .icon= icon_stack 'circle', 'tablet'
+
+  .row.steps
+    .span5.with-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-45
+      %h3
+        %i.icon-ok-sign
+        <em>With</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-right= icon_stack 'circle', 'comment', 'question'
+        .media-body
+          .popover.left
+            .arrow
+            .popover-content With SignalCloud, attempts to purchase something from a virtual store triggers an immediate alert to the tablet's owner, asking for confirmation before authorising the purchase. In this case, SignalCloud might ask the owner to respond with the amount of the purchase, as a second reminder that this was a real purchase with real money.
+
+        .flow
+          %i.icon-arrow-down
+
+        / Step two
+        .icon.pull-right= icon_stack 'circle', 'comment', 'ok'
+        .media-body
+          .popover.left
+            .arrow
+            .popover-content The tablet owner has a few minutes to respond with a 'yes' or 'no' answer. With a 'yes' the purchase is completed and unlocked on the device. With a 'no' answer, the purchase is cancelled - giving the tablet owner peace of mind that they won't be charged.
         
-        / 'Good' steps
-        .span6.good-steps
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-ask.png', height: 100, width: 100}
-              .step-tab
-            .span4 With SignalCloud, attempts to purchase something from a virtual store triggers an immediate alert to the tablet's owner, asking for confirmation before authorising the purchase. In this case, SignalCloud might ask the owner to respond with the amount of the purchase, as a second reminder that this was a real purchase with real money.
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-yes.png', height: 100, width: 100}
-              .step-tab
-            .span4 The tablet owner has a few minutes to respond with a 'yes' or 'no' answer. With a 'yes' the purchase is completed and unlocked on the device. With a 'no' answer, the purchase is cancelled - giving the tablet owner peace of mind that they won't be charged.
-          .row
-            .span2
-              %img{src: '/images/idea-thumbs-up.png', height: 100, width: 100}
-              .step-tab
-            .span4 This helps prevent huge surprise bills, and helps protect the brand from potentially ridiculous accusations and lawsuits. All thanks to SignalCloud's simple two-factor authorisation!
+        .flow
+          %i.icon-arrow-down
 
-      / Closing steps
-      .row
-        .span2.offset5
-          %img{src: '/images/logo-small.png', height: 100, width: 100}
+        / Step three
+        .icon.pull-right= icon_stack 'circle',  'thumbs-up'
+        .media-body
+          .popover.left
+            .arrow
+            .popover-content This helps prevent huge surprise bills, and helps protect the brand from potentially ridiculous accusations and lawsuits. All thanks to SignalCloud's simple two-factor authorisation!
+
+    .offset2.span5.without-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-315
+      %h3
+        %i.icon-remove-sign
+        <em>Without</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-left= icon_stack 'circle', 'trophy'
+        .media-body
+          .popover.right
+            .arrow
+            .popover-content Of course, the IAP virtual store is also just a few taps away. It can be scarily easy how quickly a few taps can lead to purchased virtual goods. Without SignalCloud, there is usually no immediate notice to the device owner that a purchase has been made.
+
+        .flow
+          %i.icon-arrow-down
+
+        / Step two
+        .icon.pull-left= icon_stack 'circle', 'money'
+        .media-body
+          .popover.right
+            .arrow
+            .popover-content Each of those purchases can add up, leading to huge bills at the end of the month for unsuspecting users.  Sometimes thousands of dollars in a matter of minutes.
+        
+        .flow
+          %i.icon-arrow-down
+
+        / Step three
+        .icon.pull-left= icon_stack 'circle',  'thumbs-down'
+        .media-body
+          .popover.right
+            .arrow
+            .popover-content This leads to irate customers who blame the tablet maker, creating harmful publicity and tarnishing the brand.
 
 
-  %hr#more.featurette-divider/
-  .featurette
-    %h3 Need some more inspiration?
-    %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+  %h2 Need some more inspiration?
+  %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
 
-    .row{style:'text-align:center'}
-      / .span4= render 'idea-iap'
-      .span4= render 'idea-cards'
-      .span4= render 'idea-packages'
-      .span4= render 'idea-appointments'
+  .row{style:'text-align:center'}
+    / .span4= render 'idea-iap'
+    .span4= render 'idea-cards'
+    .span4= render 'idea-packages'
+    .span4= render 'idea-appointments'
