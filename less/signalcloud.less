@@ -1,4 +1,66 @@
-@import "../bootstrap/less/bootstrap.less";
-@import "custom-variables.less";
-@import "custom-other.less";
-@import "../bootstrap/less/utilities.less";
+// -----------------------------------------------------------------------------
+// Primary, basic colours
+@teal   : rgb( 92, 197, 177 );
+@red    : rgb( 240, 0, 126 );
+@green  : rgb( 170, 202, 106 );
+@purple : rgb( 182, 70, 151 );
+@orange : rgb( 248, 161, 60 );
+@blue   : rgb( 15, 191, 235 );
+@yellow : rgb( 243, 13, 70 );
+
+
+// -----------------------------------------------------------------------------
+// Colours assigned to content areas
+@whatwedo    : @blue;
+@inspiration : @purple;
+@howitworks  : @green;
+@getstarted  : @orange;
+@contactus   : @teal;
+
+
+// -----------------------------------------------------------------------------
+// Various mixins and stuff
+
+// Subtle gradient mixin
+.subtle( @color ) {
+  #gradient.vertical( @color, darken(@color, 12%) );
+}
+
+// Navigation link mixin - change colour of link background
+.navbar-link( @name, @color ) {
+  .navbar .nav {
+    > .active_section > a.@{name} {
+      color: darken(white,20%);
+      .subtle( #666 );
+    }
+
+    a.@{name}:hover,
+    > .active > a.@{name},
+    > .active > a.@{name}:hover,
+    > .active > a.@{name}:focus { color: white; .subtle(@color); }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Navigation Bar
+.navbar .brand { font-family: 'Shadows into Light'; }
+.navbar .nav>li.dropdown-split-left>a{ padding-right:7px; }
+.navbar .nav>li.dropdown-split-right>a{ padding-left:0px; }
+
+.navbar-link( whatwedo,    @whatwedo );
+.navbar-link( inspiration, @inspiration );
+.navbar-link( howitworks,  @howitworks );
+.navbar-link( getstarted,  @getstarted );
+.navbar-link( contact,     @contactus );
+
+
+// -----------------------------------------------------------------------------
+// Footer section
+.footer {
+  margin-top: 100px;
+  background-color: black;
+  p { color: white; }
+  h2 { color: #999999; font-size: 120%; }
+  a { color: darken(white,15%); }
+}

@@ -1,0 +1,35 @@
+/ Navigation
+#myNavbar.navbar.navbar-inverse.navbar-fixed-top{ style: 'z-index:100', 'data-spy' => "affix", "data-offset-top" => 0 }
+  .navbar-inner
+    .container
+      / Responsive Navbar Part 1: Button for triggering responsive navbar
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+        %i.icon-reorder
+      
+      / Brand
+      %a.brand{:href => "/index.html"} SignalCloud
+    
+      / Responsive Navbar Part 2: Collapsable navbar contents
+      .nav-collapse.collapse
+        %ul.nav
+          %li
+            %a.whatwedo{href:'/index.html#whatwedo'}
+              %i.icon-question-sign.icon-large
+          %li.active_section
+            %a.inspiration{href:'/index.html#inspiration'}
+              %i.icon-lightbulb.icon-large
+              Inspiration?
+          %li.active_section= link_to 'In-app purchases', '/ideas/iap', class: 'inspiration'
+          %li.active_section= link_to 'Card fraud', '/ideas/cards', class: 'inspiration'
+          %li.active_section= link_to 'Package delivery', '/ideas/packages', class: 'inspiration'
+          %li.active_section= link_to 'Doctor\'s visit', '/ideas/appointments', class: 'inspiration'
+
+          %li
+            %a.howitworks{href:'/index.html#howitworks'}
+              %i.icon-wrench.icon-large
+          %li
+            %a.getstarted{href:'/index.html#getstarted'}
+              %i.icon-road.icon-large
+          %li
+            %a.contact{href:'/index.html#contact'}
+              %i.icon-envelope-alt.icon-large

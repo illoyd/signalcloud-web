@@ -21,13 +21,24 @@
 #   item.identifier.chop + '.css'
 # end
 
+##
+# Javascript
 passthrough '/js/*/'
+
+##
+# CSS & Less
 passthrough '/css/*.css/'
 
 compile '/css/*' do
   filter :less
 end
 
+route '/css/*' do
+  item.identifier.chop + '.css'
+end
+
+##
+# Static assets
 compile '/static/*' do
   # Do not filter
 end
@@ -37,11 +48,15 @@ route '/static/*' do
   item.identifier[7..-2]
 end
 
+##
+# Home page
 compile '/' do
   filter :haml
   layout 'start'
 end
 
+##
+# Everything else
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -49,10 +64,6 @@ compile '*' do
     filter :haml
     layout 'default'
   end
-end
-
-route '/css/*' do
-  item.identifier.chop + '.css'
 end
 
 route '*' do

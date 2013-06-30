@@ -8,22 +8,25 @@
         \-
       SignalCloud
       
-    %link{:href => "//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css", :rel => "stylesheet"}/
-    %link{:href => "/css/style.css", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", :rel => "stylesheet"}/
+    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "/css/main.css", :rel => "stylesheet"}/
     %script{:type => "text/javascript", :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
-    %script{:type => "text/javascript", :src  => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"}
-
-    -#
-      %link{:href => "/css/bootstrap.min.css", :rel => "stylesheet"}/
-      %link{:href => "/css/font-awesome.min.css", :rel => "stylesheet"}/
-      %link{:href => "/css/style.css", :rel => "stylesheet"}/
-      %script{:type => "text/javascript", :src  => "/js/jquery.js"}
-      %script{:type => "text/javascript", :src  => "/js/bootstrap.js"}
-
+    %script{:type => "text/javascript", :src  => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"}
     %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}/
     %meta{:content => "viewport", :name => "width=device-width, initial-scale=1.0"}/
     %meta{:content => "description", :name => "#{@item[:description]}"}/
     %meta{:content => "author", :name => "Ian Lloyd"}/
 
-  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target]}= yield
+  %body{'data-spy'=>"scroll", 'data-target'=>@item[:data_spy_target], class: @item[:body_class]}
+    = yield
+
+    / Footer
+    = render 'footer'
+
+    :javascript
+      $(document).ready(function() {
+        $("a[rel=popover]").popover();
+        $(".tooltip").tooltip();
+        $("a[rel=tooltip]").tooltip();
+      });

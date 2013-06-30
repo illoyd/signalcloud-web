@@ -2,73 +2,24 @@
 title: In-App Purchases
 description: In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. SignalCloud can help your customer's manage their in-app purchases.
 head_icon: /images/icon-inspiration.png
-lead: In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. <strong>SignalCloud</strong> can help your customer's manage their in-app purchases.
+lead: In-app purchasing has created up a whole way for small software developers to publish great new applications while still earning a living, but it is not without its challenges. <strong>SignalCloud</strong> can help your customer's manage their in-app purchases.
+body_class: inspiration
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/#whatwedo'}
-        %i.icon-question-sign.icon-large
-        What?
-    %li
-      %a{href:'/#inspiration'}
-        %i.icon-lightbulb.icon-large
-        Inspiration?
-    %li
-      %a{href:'/#howitworks'}
-        %i.icon-wrench.icon-large
-        How?
-    %li
-      %a{href:'/#getstarted'}
-        %i.icon-road.icon-large
-        Ready?
-    %li
-      %a{href:'/#contact'}
-        %i.icon-envelope-alt.icon-large
-        Questions?
-  %ul.nav.pull-right
-    %li.dropdown
-      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-        %i.icon-bolt.icon-large
-        For Devs
-        %b.caret
-      %ul.dropdown-menu
-        %li= link_to 'API', '/api'
-        %li= link_to 'Security & Privacy', '/tos'
-        %li= link_to 'Platform', '/platforms'
+= render 'navbar_inspiration'
 
-
-/ Header area
-- render 'header' do
-  .btn-toolbar
-    %a.btn.btn-success{href: '/ideas/iap'}
-      %i.icon-mobile-phone
-      %i.icon-tablet
-      In-app purchases
-    %a.btn.btn-info{href: '/ideas/cards'}
-      %i.icon-credit-card
-      Card fraud
-    %a.btn.btn-info{href: '/ideas/packages'}
-      %i.icon-gift
-      Package delivery
-    %a.btn.btn-info{href: '/ideas/appointments'}
-      %i.icon-stethoscope
-      Doctor's visit
-
--#
-  .container.header
-    %h1.glow
-      = render 'logo'
-      SignalCloud API
-    %p.lead
-      In-app purchasing has created up a whole way for small developers to publish great new applications while still earning a living, but it is not without its challenges. With
-      = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
-      = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
-      = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
-      all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to reign in these costly mistakes.
-
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-cogs
+      .span9
+        %h1
+          In-app purchases.
+          %span.muted A branding nightmare?
+        %p.lead= @item[:lead]
 
 / Main content
 .container
@@ -135,46 +86,8 @@ lead: In-app purchasing has created up a whole way for small developers to publi
     %h3 Need some more inspiration?
     %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
 
-    / Ideas
-    .row
-      .span4.idea
-        %h3<
-          %i.icon-credit-card.icon-3x
-          %br
-          Card fraud
-        %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
-        %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
-
-      .span4.idea
-        %h3<
-          %i.icon-gift.icon-3x
-          %br
-          Package delivery
-        %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
-        %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
-
-      .span4.idea
-        %h3<
-          %i.icon-stethoscope.icon-3x
-          %br
-          Doctor's visit
-        %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
-        %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
-
     .row{style:'text-align:center'}
-      .span4
-        %a{:href => "/ideas/cards"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/packages"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/appointments"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-
-
-/ Footer
-= render 'footer'
+      / .span4= render 'idea-iap'
+      .span4= render 'idea-cards'
+      .span4= render 'idea-packages'
+      .span4= render 'idea-appointments'

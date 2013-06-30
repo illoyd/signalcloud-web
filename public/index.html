@@ -7,7 +7,7 @@
     </title>
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css' rel='stylesheet'>
     <link href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css' rel='stylesheet'>
-    <link href='/css/start.css' rel='stylesheet'>
+    <link href='/css/home.css' rel='stylesheet'>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
     <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js' type='text/javascript'></script>
     <meta content='nanoc 3.6.4' name='generator'>
@@ -15,7 +15,7 @@
     <meta content='description' name='Introducing a new way to ask a question and get an answer, from just about anyone, anywhere.'>
     <meta content='author' name='Ian Lloyd'>
   </head>
-  <body data-spy='scroll'>
+  <body class='home' data-spy='scroll'>
     <!-- Cool photos and places -->
     <div class='carousel slide' id='myCarousel'>
       <ol class='carousel-indicators'>
@@ -29,46 +29,34 @@
       <!-- Carousel items -->
       <div class='carousel-inner'>
         <div class='item active machupicchu'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Machu Picchu' target='_blank'>Machu Picchu, Peru</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Machu Picchu' target='_blank'>Machu Picchu, Peru</a>
+          <div class='marker'></div>
         </div>
         <div class='item  playablanca'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Playa+Blanca, Cartagena De Indias (Distrito Turístico Y Cultural), Bolivar, Colombia' target='_blank'>Playa Blanca, Colombia</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Playa+Blanca, Cartagena De Indias (Distrito Turístico Y Cultural), Bolivar, Colombia' target='_blank'>Playa Blanca, Colombia</a>
+          <div class='marker'></div>
         </div>
         <div class='item  varanasi'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Varanasi, India' target='_blank'>Varanasi, India</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Varanasi, India' target='_blank'>Varanasi, India</a>
+          <div class='marker'></div>
         </div>
         <div class='item  sevensisters'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Seven Sisters, United Kingdom' target='_blank'>Seven Sisters, United Kingdom</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Seven Sisters, United Kingdom' target='_blank'>Seven Sisters, United Kingdom</a>
+          <div class='marker'></div>
         </div>
         <div class='item  cusco'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Cusco, Peru' target='_blank'>Cusco, Peru</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Cusco, Peru' target='_blank'>Cusco, Peru</a>
+          <div class='marker'></div>
         </div>
         <div class='item  stockholm'>
-          <div class='geotag'>
-            <a href='https://maps.google.com/maps?q=Stockholm, Sweden' target='_blank'>Stockholm, Sweden</a>
-          </div>
-          <div class='marker'></div>
           <div class='tagline'>Ask. Answer. Even here.</div>
+          <a class='geotag' href='https://maps.google.com/maps?q=Stockholm, Sweden' target='_blank'>Stockholm, Sweden</a>
+          <div class='marker'></div>
         </div>
       </div>
       <!-- Carousel navigation -->
@@ -104,7 +92,7 @@
                 </li>
                 <li class='dropdown dropdown-split-right'><a class='inspiration dropdown-toggle' data-toggle='dropdown' href='#'><b class='caret'></b></a>
                 <ul class='dropdown-menu'>
-                  <li><a href="/ideas/iap">In-app Purchases</a></li>
+                  <li><a href="/ideas/iap">In-app purchases</a></li>
                   <li><a href="/ideas/cards">Card fraud</a></li>
                   <li><a href="/ideas/packages">Package delivery</a></li>
                   <li><a href="/ideas/appointments">Doctor's visit</a></li>
@@ -118,7 +106,7 @@
                 <li class='dropdown dropdown-split-right'><a class='howitworks dropdown-toggle' data-toggle='dropdown' href='#'><b class='caret'></b></a>
                 <ul class='dropdown-menu'>
                   <li><a href="/api">API</a></li>
-                  <li><a href="/security">Security & Privacy</a></li>
+                  <li><a href="/security">Security & privacy</a></li>
                   <li><a href="/platforms">Platform</a></li>
                 </ul></li>
                 <li>
@@ -141,25 +129,21 @@
     </div>
     <!-- Header -->
     <div class='header'>
-      <div class='container'>
-        <div class='row'>
-          <div class='span12' style='text-align: center'>
-            <img alt='SignalCloud' height='300' src='/images/marker.png' width='249'>
-            <h1>SignalCloud</h1>
-            <p class='lead'>Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from anyone with a mobile phone, world-wide.</p>
-            <p class='lead' style="font-family: 'Shadows into Light';">Ask. Answer. Just about anywhere.</p>
-            <!--
-              <a class='btn btn-large btn-success' href='#inspiration'>
-                <i class='icon-lightbulb icon-large'></i>
-                Get some ideas
-              </a>
-              <a class='btn btn-large btn-warning' href='#getstarted'>
-                <i class='icon-plus icon-large'></i>
-                Sign up today
-              </a>
-            -->
-          </div>
-        </div>
+      <div class='container' style='text-align: center'>
+        <img alt='SignalCloud' height='300' src='/images/marker.png' width='249'>
+        <h1>SignalCloud</h1>
+        <p class='lead'>Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from anyone with a mobile phone, world-wide.</p>
+        <p class='lead' style="font-family: 'Shadows into Light';">Ask. Answer. Just about anywhere.</p>
+        <!--
+          <a class='btn btn-large btn-success' href='#inspiration'>
+            <i class='icon-lightbulb icon-large'></i>
+            Get some ideas
+          </a>
+          <a class='btn btn-large btn-warning' href='#getstarted'>
+            <i class='icon-plus icon-large'></i>
+            Sign up today
+          </a>
+        -->
       </div>
     </div>
     <!-- Featurettes -->
@@ -646,15 +630,6 @@
         </div>
       </div>
     </div>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          // $('#myCarousel').carousel()
-          // $('#tools').affix($('#tools').position) 
-        })
-      }(window.jQuery)
-    </script>
     <script>
       $(document).ready(function() {
         $("a[rel=popover]").popover();

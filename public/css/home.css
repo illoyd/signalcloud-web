@@ -26,10 +26,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  margin-top: 0px;
-  padding-top: 0px;
-}
 .navbar .brand {
   font-family: 'Shadows into Light';
 }
@@ -38,13 +34,6 @@ body {
 }
 .navbar .nav > li.dropdown-split-right > a {
   padding-left: 0px;
-}
-#myNavbar.affix {
-  width: 100%;
-  top: 0px;
-}
-#navbar_wedge {
-  height: 100px;
 }
 .navbar .nav > .active_section > a.whatwedo {
   color: #cccccc;
@@ -170,6 +159,31 @@ body {
   background-image: linear-gradient(to bottom, #5cc5b1, #3ca893);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cc5b1', endColorstr='#ff3ca893', GradientType=0);
+}
+.footer {
+  margin-top: 100px;
+  background-color: black;
+}
+.footer p {
+  color: white;
+}
+.footer h2 {
+  color: #999999;
+  font-size: 120%;
+}
+.footer a {
+  color: #d9d9d9;
+}
+body {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+#myNavbar.affix {
+  width: 100%;
+  top: 0px;
+}
+#navbar_wedge {
+  height: 100px;
 }
 .header h1 {
   font-family: 'Shadows into Light';

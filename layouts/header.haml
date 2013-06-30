@@ -3,7 +3,9 @@
   .container
     .row
       .span3
-        %img{src: @item[:head_icon] || '/images/logo-big.png', alt: @item[:title]}
+        %span.icon-stack{ style: 'font-size: 100px;' }
+          %i.icon-circle.icon-stack-base.icon-size-4x
+          %i.icon-stack-top.icon-size-4x{ style: 'color: white;', class: "icon-#{@item[:head_icon]}" }
       .span9
         %h1 #{@item[:title]}
         %p.lead #{@item[:lead]}

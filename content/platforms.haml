@@ -1,40 +1,60 @@
 ---
 title: Platforms
-description: SignalCloud's Application Program Interface (API)
-lead: Coming Soon!
+description: SignalCloud's Platform
+lead: We use best-in-class platforms to provide a seamless technical solution. Our providers are as dedicated as we are to providing you with a highly available, highly scalable service, ready to grow as you do. On average, our providers average 99.98% uptime, which means that our service should be available whenever you need it.
+body_class: howitworks
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/'}
-        %i.icon-home.icon-large
-        Home
-  %ul.nav.pull-right
-    %li
-      %p.navbar-text For Developers
-    %li
-      %a{href:'/api'}
-        %i.icon-book.icon-large
-        API
-    %li.active
-      %a{href:'/platforms'}
-        %i.icon-dashboard.icon-large
-        Platforms
-    %li
-      %a{href:'/security'}
-        %i.icon-lock.icon-large
-        Security
+= render 'navbar_howitworks'
 
-/ Header
-= render 'header'
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-dashboard
+      .span9
+        %h1
+          Platforms.
+          %span.muted The building blocks of our service.
+        %p.lead= @item[:lead]
 
-%p.failed{style:'text-align:center; font-size:400px;'}
-  %i.icon-warning-sign
-
-%p{style:'text-align:center; font-size:100px;'}
-  Coming Soon
-
-/ Footer
-= render 'footer'
+/ Main content
+.container
+  .row
+    .span6
+      %h2
+        Heroku
+        %small Servers
+      %p SignalCloud runs on the cutting-edge Heroku computing service, providing a fault-tolerant, self-healing foundation for maximising availability. This means that the SignalCloud service benefits from the Heroku's constantly evolving service and the experience of countless hours of use by some of the biggest brands in the world.
+      %p
+        For more details about how Heroku works, visit their website at 
+        %a{href: 'http://www.heroku.com'} heroku.com
+    .span6
+      %h2
+        Twilio
+        %small Communication
+      %p Communication powers business. Twilio powers communication. Or so they say on their website. SignaCloud builds upon the Twilio communication framework to power our SMS pipeline, reaching an audience of billions easily and painlessly.
+      %p
+        For more details about how Twilio works, visit their website at 
+        %a{href: 'http://www.twilio.com'} twilio.com
+  .row
+    .span6
+      %h2
+        FreshBooks
+        %small Invoicing
+      %p SignalCloud is proud to use the FreshBooks accounting and invoice tool to power our billing systems. FreshBooks provides award-winning billing tools for numerous small- and medium-sized organisations around the world.
+      %p
+        For more details about how FreshBooks works, visit their website at 
+        %a{href: 'http://www.freshbooks.com'} freshbooks.com
+    .span6
+      %h2
+        Braintree
+        %small Billing
+      %p SignalCloud incorporates Braintree's excellent billing solution to power our credit card collection system.
+      %p
+        %em Automatic billing will be introduced soon.
+      %p
+        For more details about how Twilio works, visit their website at 
+        %a{href: 'http://www.braintreepayments.com'} braintreepayments.com

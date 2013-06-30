@@ -1,0 +1,120 @@
+@import "../../less/mixins.less";
+@import "../../less/variables.less";
+@import "../../less/signalcloud.less";
+@import url(//fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+
+// General body formatting
+body {
+  margin-top: 40px;
+}
+
+.page( @name, @color ) {
+  body.@{name} {
+  
+    // Heading
+    .heading {
+      .subtle(@color);
+      p { color: lighten(@color, 40%); }
+      a { color: lighten(@color, 30%); font-weight: bold; }
+      a:hover { color: darken(white, 15%); }
+    }
+
+    // General muted color
+    span.muted {
+      color: lighten(@color, 30%);
+    }
+
+    // Links
+    a {
+      color: @color;
+      &:hover {
+        color: darken(@color, 15%);
+      }
+    }
+
+    h2 {
+      color: darken( @color, 15% );
+    }
+
+    h3 {
+      color: gray;
+    }
+
+  }
+}
+
+h2 {
+  margin-top: 0px;
+  padding-top: 60px;
+}
+
+.page( howitworks, @howitworks );
+.page( inspiration, @inspiration );
+
+
+.icon-stack {
+  .icon-stack-top {
+    color: white;
+  }
+}
+  
+
+// Features
+.heading {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  h1 {
+    color: white;
+    font-family: 'Shadows into Light', 'Helvetica Neue', 'Helvetica', serif;
+  }
+
+  .feature-icon {
+    color: white;
+    font-size: 180px;
+    text-align: center;
+  }
+}
+
+
+ul#toc.api {
+  margin-top: 40px;
+}
+
+ul#toc.api.affix {
+  width: 170px;
+  top: 40px;
+}
+
+
+.workflow {
+  text-align: center;
+  color: @howitworks;
+  
+  .node {
+    font-size: 75px;
+  }
+  
+  .link {
+    font-size: 40px;
+  }
+  
+  .comments {
+    color: #CCCCCC;
+    font-size: 20px;
+  }
+
+}
+.idea-card {
+  h3 {
+    text-align: center;
+    margin-top: 0px;
+  }
+  p.icons {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  a { text-decoration: none; }
+}

@@ -1,62 +1,29 @@
 @import "../../less/mixins.less";
 @import "../../less/variables.less";
+@import "../../less/signalcloud.less";
 @import url(//fonts.googleapis.com/css?family=Shadows+Into+Light);
 
 
-@teal   : rgb( 92, 197, 177 );
-@red    : rgb( 240, 0, 126 );
-@green  : rgb( 170, 202, 106 );
-@purple : rgb( 182, 70, 151 );
-@orange : rgb( 248, 161, 60 );
-@blue   : rgb( 15, 191, 235 );
-@yellow : rgb( 243, 13, 70 );
-
-
-@whatwedo    : @blue;
-@inspiration : @purple;
-@howitworks  : @green;
-@getstarted  : @orange;
-@contactus   : @teal;
-
-.subtle( @color ) {
-  #gradient.vertical( @color, darken(@color, 12%) );
-}
-
-.box-align( @mode ) {
-  /* Internet Explorer 10 */
-  display:-ms-flexbox;
-  -ms-flex-pack: @mode;
-  -ms-flex-align: @mode;
-  
-  /* Firefox */
-  display:-moz-box;
-  -moz-box-pack: @mode;
-  -moz-box-align: @mode;
-  
-  /* Safari, Opera, and Chrome */
-  display:-webkit-box;
-  -webkit-box-pack: @mode;
-  -webkit-box-align: @mode;
-  
-  /* W3C */
-  display:box;
-  box-pack: @mode;
-  box-align: @mode;
-}
-
+// General body formatting
 body {
   margin-top: 0px;
   padding-top: 0px;
 }
 
-.navbar .brand { font-family: 'Shadows into Light'; }
-.navbar .nav>li.dropdown-split-left>a{ padding-right:7px; }
-.navbar .nav>li.dropdown-split-right>a{ padding-left:0px; }
+#myNavbar.affix {
+  width: 100%;
+  top: 0px;
+}
 
+#navbar_wedge { height: 100px; }
+
+
+
+// Header
 .header h1 { font-family: 'Shadows into Light'; }
 
-// h1, h2, h3, h4, h5, h6, h7 { font-family: 'Antic', 'Helvetica Heue', 'Helvetica', 'Arial', sans-serif; }
 
+// Carousel configuration
 .text-tag {
   position: absolute;
   display: inline-block;
@@ -83,35 +50,26 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   
-  
+  // Slides in the carousel
   .item {
     font-family: 'Shadows into Light';
     height: 400px;
     width: 100%;
     
-    .geotag {
+    // Link to 'where'
+    a.geotag {
       .text-tag();
-      background-color: rgba( 0, 0, 0, 33% );
-      color: #CCC;
       bottom: 0px;
       right: 0px;
-      
-      a {
-        color: #EEE;
-        &:hover {
-          color: #EEE;
-          text-decoration: none;
-        }
-      }
+
+      color: #EEE;
+      background-color: rgba( 0, 0, 0, 33% );
+      text-decoration: none;
       &:hover {
-        background-color: rgba( 64, 64, 64, 44% );
-      }
-      
-      .container {
-        position: relative;
+        background-color: rgba( 32, 32, 32, 33% );
       }
     }
-    
+
     .marker {
       background-image: url( '/images/marker-white-small.png' );
       position: absolute;
@@ -122,7 +80,6 @@ body {
     .tagline {
       .text-tag();
       .border-radius(3px);
-      // background-color: rgba( 255, 255, 255, 33% );
       color: #FFF;
       font-size: 120%;
     }
@@ -160,40 +117,6 @@ body {
   }
 }
 
-#myNavbar.affix {
-  width: 100%;
-  top: 0px;
-}
-
-#navbar_wedge { height: 100px; }
-
-a.circled {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  height: 80px;
-  width: 80px;
-  line-height: 100px;
-  .border-radius(500px);
-}
-
-
-// Navigation edits
-.navbar-link( @name, @color ) {
-  .navbar .nav {
-    a.@{name}:hover,
-    > .active > a.@{name},
-    > .active > a.@{name}:hover,
-    > .active > a.@{name}:focus { .subtle(@color); }
-  }  
-}
-
-.navbar-link( whatwedo,    @whatwedo );
-.navbar-link( inspiration, @inspiration );
-.navbar-link( howitworks,  @howitworks );
-.navbar-link( getstarted,  @getstarted );
-.navbar-link( contact,     @contactus );
 
 // Features
 .featurette-section( @name, @color ) {
@@ -229,6 +152,7 @@ a.circled {
   }
 }
 
+
 .featurettes {
   .header {
     padding-top: 15px;
@@ -258,6 +182,7 @@ a.circled {
   .featurette-section( howitworks,  @howitworks );
   .featurette-section( getstarted,  @getstarted );
   .featurette-section( contact,     @contactus );
+
   hr { color: transparent; padding-top: 45px; }
 
   .featurette {
@@ -294,23 +219,40 @@ a.circled {
 }
 
 
-.thumbnail {
-  h3 {
-    text-align: center;
-    a {
-      display: block;
-      text-decoration: none;
-    }
-  }
-  p {
-    text-align: center;
-  }
-}
-
+// Footer section
 .footer {
   margin-top: 100px;
   background-color: black;
   p { color: white; }
   h2 { color: #999999; font-size: 120%; }
   a { color: darken(white,15%); }
+}
+
+
+/*
+.content( @color ) {
+  margin-top: 40px;
+  .header {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
+
+body.inspiration { .content(@inspiration); }
+body.howitworks { .content(@howitworks); }
+*/
+
+body.content {
+  margin-top: 40px;
+  
+  h2 { padding-top: 40px; }
+}
+
+ul#toc {
+  margin-top: 40px;
+}
+
+ul#toc.affix {
+  width: 170px;
+  top: 80px;
 }

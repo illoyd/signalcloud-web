@@ -2,34 +2,25 @@
 title: API
 description: SignalCloud's Application Program Interface (API)
 data_spy_target: #toc
-lead: The SignalCloud API provides a simple to use, secure, and robust toolkit for interacting with the service.
+lead: Not only can you ask and answer from just about anywhere, but you can connect with SignalCloud from just about anywhere too.
+head_icon: cogs
+body_class: howitworks
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/'}
-        %i.icon-home.icon-large
-        Home
-  %ul.nav.pull-right
-    %li
-      %p.navbar-text For Developers
-    %li.active
-      %a{href:'/api'}
-        %i.icon-book.icon-large
-        API
-    %li
-      %a{href:'/platforms'}
-        %i.icon-dashboard.icon-large
-        Platforms
-    %li
-      %a{href:'/security'}
-        %i.icon-lock.icon-large
-        Security
+= render 'navbar_howitworks'
 
-/ Header area
-= render 'header'
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-cogs
+      .span9
+        %h1
+          Application Program Interface.
+          %span.muted AKA? API.
+        %p.lead= @item[:lead]
 
 / Main content
 .container
@@ -37,7 +28,7 @@ lead: The SignalCloud API provides a simple to use, secure, and robust toolkit f
 
     / Navigation bar
     .span2
-      %ul#toc.nav.nav-tabs.nav-stacked{'data-spy'=>'affix', 'data-offset-top'=>445}
+      %ul#toc.api.nav.nav-tabs.nav-stacked{'data-spy'=>'affix', 'data-offset-top'=>193}
         %li= link_to 'Basics', '#basics'
         %li= link_to 'Security', '#security'
         %li= link_to 'Templates', '#templates'
@@ -97,6 +88,3 @@ lead: The SignalCloud API provides a simple to use, secure, and robust toolkit f
       %p Mumblecore occaecat quinoa pug. Ugh bespoke actually you probably haven't heard of them, squid thundercats high life pickled nisi etsy readymade qui tofu raw denim. Pariatur elit mixtape, readymade mollit church-key cliche dolore. Austin gentrify et, selvage pickled mustache swag. Ugh next level fashion axe, ethical pariatur butcher PBR vero fixie cray ad pug. Ennui sed chambray, raw denim placeat jean shorts cardigan high life consectetur. Post-ironic est pork belly tousled, aesthetic fanny pack consectetur high life biodiesel next level four loko polaroid.
       %p Et meggings banh mi hoodie eiusmod. Mumblecore intelligentsia carles, leggings eu banjo brooklyn fixie marfa accusamus. Enim YOLO duis ut PBR proident. Pork belly try-hard +1 irure VHS, deep v craft beer officia vegan. Enim lo-fi echo park ut, single-origin coffee viral trust fund nostrud. Pug ugh proident, quinoa tonx fanny pack jean shorts american apparel blog echo park stumptown. Hoodie laboris post-ironic mixtape gastropub godard lo-fi id church-key.
       %p Mcsweeney's qui aliqua ad letterpress. Lo-fi wes anderson nisi, ennui aute high life kogi. Flannel single-origin coffee qui truffaut, VHS butcher ethical pork belly tousled ugh pitchfork freegan cliche readymade. Fingerstache tempor tousled lo-fi wolf selvage aliquip. Quis master cleanse lomo, accusamus sartorial iphone bicycle rights next level flexitarian freegan williamsburg qui. Brooklyn labore aesthetic, swag authentic vero sriracha mustache odd future. Artisan occaecat authentic, portland nisi dreamcatcher meggings neutra dolor.
-
-/ Footer
-= render 'footer'

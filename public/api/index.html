@@ -7,78 +7,77 @@
       -
       SignalCloud
     </title>
-    <link href='//netdna.bootstrapcdn.com/bootswatch/2.3.1/cerulean/bootstrap.min.css' rel='stylesheet'>
-    <link href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css' rel='stylesheet'>
-    <link href='/css/style.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='/css/main.css' rel='stylesheet'>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
-    <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js' type='text/javascript'></script>
+    <script src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js' type='text/javascript'></script>
     <meta content='nanoc 3.6.4' name='generator'>
     <meta content='viewport' name='width=device-width, initial-scale=1.0'>
     <meta content='description' name="SignalCloud's Application Program Interface (API)">
     <meta content='author' name='Ian Lloyd'>
   </head>
-  <body data-spy='scroll'>
-    <div class='container'>
-      <div class='container affix' style='z-index:100'>
-        <div class='navbar'>
-          <div class='navbar-inner'>
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
-            <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
-              <i class='icon-reorder'></i>
-            </button>
-            <!-- Brand -->
-            <a class='brand' href='/'>
-              <img class='logo' src='/images/logo-navbar.png'>
-            </a>
-            <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
-            <div class='nav-collapse collapse'>
-              <ul class='nav'>
-                <li>
-                  <a href='/'>
-                    <i class='icon-home icon-large'></i>
-                    Home
-                  </a>
-                </li>
-              </ul>
-              <ul class='nav pull-right'>
-                <li>
-                  <p class='navbar-text'>For Developers</p>
-                </li>
-                <li class='active'>
-                  <a href='/api'>
-                    <i class='icon-book icon-large'></i>
-                    API
-                  </a>
-                </li>
-                <li>
-                  <a href='/platforms'>
-                    <i class='icon-dashboard icon-large'></i>
-                    Platforms
-                  </a>
-                </li>
-                <li>
-                  <a href='/security'>
-                    <i class='icon-lock icon-large'></i>
-                    Security
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <body class='howitworks' data-spy='scroll'>
+    <!-- Navigation -->
+    <div class='navbar navbar-inverse navbar-fixed-top' data-offset-top='0' data-spy='affix' id='myNavbar' style='z-index:100'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <i class='icon-reorder'></i>
+          </button>
+          <!-- Brand -->
+          <a class='brand' href='/index.html'>SignalCloud</a>
+          <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li>
+                <a class='whatwedo' href='/index.html#whatwedo'>
+                  <i class='icon-question-sign icon-large'></i>
+                </a>
+              </li>
+              <li>
+                <a class='inspiration' href='/index.html#inspiration'>
+                  <i class='icon-lightbulb icon-large'></i>
+                </a>
+              </li>
+              <li class='active_section'>
+                <a class='howitworks' href='/index.html#howitworks'>
+                  <i class='icon-wrench icon-large'></i>
+                  How?
+                </a>
+              </li>
+              <li class='active_section'><a class="howitworks" href="/api">API</a></li>
+              <li class='active_section'><a class="howitworks" href="/security">Security & privacy</a></li>
+              <li class='active_section'><a class="howitworks" href="/platforms">Platform</a></li>
+              <li>
+                <a class='getstarted' href='/index.html#getstarted'>
+                  <i class='icon-road icon-large'></i>
+                </a>
+              </li>
+              <li>
+                <a class='contact' href='/index.html#contact'>
+                  <i class='icon-envelope-alt icon-large'></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- Header area -->
-    <!-- Header Area -->
-    <div class='header'>
+    <!-- Heading -->
+    <div class='heading'>
       <div class='container'>
         <div class='row'>
-          <div class='span3'>
-            <img alt='API' src='/images/logo-big.png'>
+          <div class='span3 feature-icon'>
+            <i class='icon-cogs'></i>
           </div>
           <div class='span9'>
-            <h1>API</h1>
-            <p class='lead'>The SignalCloud API provides a simple to use, secure, and robust toolkit for interacting with the service.</p>
+            <h1>
+              Application Program Interface.
+              <span class='muted'>AKA? API.</span>
+            </h1>
+            <p class='lead'>Not only can you ask and answer from just about anywhere, but you can connect with SignalCloud from just about anywhere too.</p>
           </div>
         </div>
       </div>
@@ -88,7 +87,7 @@
       <div class='row'>
         <!-- Navigation bar -->
         <div class='span2'>
-          <ul class='nav nav-tabs nav-stacked' data-offset-top='445' data-spy='affix' id='toc'>
+          <ul class='api nav nav-tabs nav-stacked' data-offset-top='193' data-spy='affix' id='toc'>
             <li><a href="#basics">Basics</a></li>
             <li><a href="#security">Security</a></li>
             <li><a href="#templates">Templates</a></li>
@@ -193,5 +192,12 @@
         </div>
       </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        $("a[rel=popover]").popover();
+        $(".tooltip").tooltip();
+        $("a[rel=tooltip]").tooltip();
+      });
+    </script>
   </body>
 </html>

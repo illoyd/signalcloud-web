@@ -1,40 +1,113 @@
 ---
-title: Security
-description: SignalCloud's Application Program Interface (API)
-lead: Coming Soon!
+title: Security & Privacy
+description: SignalCloud's Security & Privacy
+lead: We've baked security and privacy into every element of SignalCloud so that you can rest easy knowing we protect your valuable customer and contact data.
+body_class: howitworks
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/'}
-        %i.icon-home.icon-large
-        Home
-  %ul.nav.pull-right
-    %li
-      %p.navbar-text For Developers
-    %li
-      %a{href:'/api'}
-        %i.icon-book.icon-large
-        API
-    %li
-      %a{href:'/platforms'}
-        %i.icon-dashboard.icon-large
-        Platforms
-    %li.active
-      %a{href:'/security'}
-        %i.icon-lock.icon-large
-        Security
+= render 'navbar_howitworks'
 
-/ Header
-= render 'header'
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-lock
+      .span9
+        %h1
+          Security & privacy.
+          %span.muted Vitaly important.
+        %p.lead= @item[:lead]
 
-%p.failed{style:'text-align:center; font-size:400px;'}
-  %i.icon-warning-sign
+/ Main content
+.container
 
-%p{style:'text-align:center; font-size:100px;'}
-  Coming Soon
+  / Communication workflow
+  %table.workflow{ style: 'margin: 40px auto 0px auto;' }
+    %tr
+      %td.comments You
+      %td
+      %td.comments SignalCloud
+      %td
+      %td.comments Telecomms
+      %td
+      %td.comments Customers
+    %tr
+      %td.node= ToolKitHelper.icon_stack 'circle', 'home'
+      %td.link
+        %i.icon-arrow-left
+        %i.icon-arrow-right
+      %td.node
+        %span.icon-stack
+          %i.icon-circle.icon-stack-base
+          %i.icon-stack-top
+            %img{src: '/images/marker-white.png', height: 90, width: 75}
+      %td.link
+        %i.icon-arrow-left
+        %i.icon-arrow-right
+      %td.node= ToolKitHelper.icon_stack 'circle', 'phone'
+      %td.link
+        %i.icon-arrow-left
+        %i.icon-arrow-right
+      %td.node= ToolKitHelper.icon_stack 'circle', 'user'
 
-/ Footer
-= render 'footer'
+    %tr
+      %td
+      %td.comments= ToolKitHelper.number_icon 1
+      %td.comments
+        = ToolKitHelper.number_icon 2
+        = ToolKitHelper.number_icon 3
+      %td.comments= ToolKitHelper.number_icon 1
+      %td
+      %td.comments= ToolKitHelper.number_icon 4
+      %td
+
+  .row
+    .offset2.span8
+      :maruku
+        ## End-to-end communication lifecycle
+        
+        Security is built in to every facet of the communication lifecycle, starting from when you first contact us all the way through to when we contact your customers.
+        
+        ### 1. In *and* out communication
+        SignalCloud uses industry-standard SSL protection for all communication to and from the SignalCloud service. This is the same kind and level of protection major banks use to protect their online banking services.
+        SignalCloud also encrypts all communication to and from our [platform providers](/platforms). This means that your data is protected whenever it comes into or leaves SignalCloud.
+        
+        ### 2. Internal security
+        All sensitive information in our database is encrypted using either industry standard AES-256 symmetric encryption or strong one-way encryption such as BCrypt. These are the same technologies that banks and your computer's
+        operating system use to protect your data and your accounts. This means that your data is protected while it resides in the SignalCloud. We also offer a range of data retention policies, configurable by you. This means that your customer data is only available in our system, either actively accessible or archived in a backup, for a short time.
+
+        Finally, we follow rigid processes for managing the service and never access or use your customer data except in very limited, aggregate ways to measure the performance of the service. Your customer data is yours and yours alone!
+        
+        ### 3. Payments & PCI compliance
+        SignalCloud uses [Braintree](http://www.braintreepayments.com) to power our payments solution, including credit card storage and processing. Braintree is PCI Level 1 compliant, and all sensitive payment data is stored in their systems.
+        We never store your credit card or other payment details in our system.
+
+        ### 4. Contacting your customers
+        Unfortunately we can neither control nor guarantee the security and privacy of your data once it passes to the telecommunication providers via Short Messaging Service (SMS). SMS is inherintely not a secure communication medium and is subject to decryption and interception. 
+
+  .row
+    .offset2.span8
+      %h2 When and when not to use SignalCloud
+      %p While we think SignalCloud is great for a lot of situations, there are a few where we strongy recommend you <em>not</em> use it.
+
+  .row
+    .offset2.span4
+      %h3
+        %i.icon-ok-sign
+        Do...
+      :maruku
+        1. ...manage appointments and diaries.
+        1. ...coordinate time-limited actions.
+        1. ...support one-time identity recognition.
+        1. ...use simple questions and answers.
+    .span4
+      %h3
+        %i.icon-remove-sign
+        Do not
+      :maruku
+        1. ...launch a space shuttle.
+        1. ...coordinate Secret Squirrel options.
+        1. ...control a nuclear reactor.
+        1. ...ask for personal data such as passwords or Social Security Numbers.

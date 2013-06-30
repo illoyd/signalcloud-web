@@ -3,6 +3,7 @@ title: SignalCloud
 description: Introducing a new way to ask a question and get an answer, from just about anyone, anywhere.
 head_icon: /images/logo-big.png
 lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and get an answer, from just about anyone, anywhere. Our tools make it easy to take intelligent, informed actions based on input from anyone with a mobile phone, world-wide.
+body_class: home
 
 ---
 
@@ -20,10 +21,9 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
   .carousel-inner
     - carousel_data.each_with_index do |entry, index|
       %div{class: [ 'item', (index == 0 ? 'active' : ''), entry['id'] ] }
-        .geotag
-          %a{href: "https://maps.google.com/maps?q=#{entry['google_map_search']}", target: '_blank' }= entry['label']
-        .marker
         .tagline Ask. Answer. Even here.
+        %a.geotag{href: "https://maps.google.com/maps?q=#{entry['google_map_search']}", target: '_blank' }= entry['label']
+        .marker
   / Carousel navigation
   %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
   %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
@@ -57,7 +57,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %a.inspiration.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}<
                 %b.caret
               %ul.dropdown-menu
-                %li= link_to 'In-app Purchases', '/ideas/iap'
+                %li= link_to 'In-app purchases', '/ideas/iap'
                 %li= link_to 'Card fraud', '/ideas/cards'
                 %li= link_to 'Package delivery', '/ideas/packages'
                 %li= link_to 'Doctor\'s visit', '/ideas/appointments'
@@ -70,7 +70,7 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
                 %b.caret
               %ul.dropdown-menu
                 %li= link_to 'API', '/api'
-                %li= link_to 'Security & Privacy', '/security'
+                %li= link_to 'Security & privacy', '/security'
                 %li= link_to 'Platform', '/platforms'
             %li
               %a.getstarted{href:'#getstarted'}
@@ -83,20 +83,18 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
 
 / Header
 .header
-  .container
-    .row
-      .span12{ style: 'text-align: center' }
-        %img{ src: '/images/marker.png', alt: 'SignalCloud', height: 300, width: 249 }
-        %h1 #{@item[:title]}
-        %p.lead #{@item[:lead]}
-        %p.lead{ style: "font-family: 'Shadows into Light';" } Ask. Answer. Just about anywhere.
-        /
-          %a.btn.btn-large.btn-success{href: "#inspiration"}
-            %i.icon-lightbulb.icon-large
-            Get some ideas
-          %a.btn.btn-large.btn-warning{href: "#getstarted"}
-            %i.icon-plus.icon-large
-            Sign up today
+  .container{ style: 'text-align: center' }
+    %img{ src: '/images/marker.png', alt: 'SignalCloud', height: 300, width: 249 }
+    %h1 #{@item[:title]}
+    %p.lead #{@item[:lead]}
+    %p.lead{ style: "font-family: 'Shadows into Light';" } Ask. Answer. Just about anywhere.
+    /
+      %a.btn.btn-large.btn-success{href: "#inspiration"}
+        %i.icon-lightbulb.icon-large
+        Get some ideas
+      %a.btn.btn-large.btn-warning{href: "#getstarted"}
+        %i.icon-plus.icon-large
+        Sign up today
 
 / Featurettes
 .featurettes
@@ -362,16 +360,3 @@ lead: Introducing <strong>SignalCloud</strong>, a new way to ask a question and 
               %li
                 %i.icon-github-sign
                 =link_to 'GitHub', 'https://github.com/illoyd'
-
-
-/ Footer
-= render 'footer'
-
-:javascript
-  !function ($) {
-    $(function(){
-      // carousel demo
-      // $('#myCarousel').carousel()
-      // $('#tools').affix($('#tools').position) 
-    })
-  }(window.jQuery)
