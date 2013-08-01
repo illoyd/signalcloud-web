@@ -1,18 +1,16 @@
 .footer
   .container
     .row
-      .span3
+      .span4
         %h2 About Us
         %p <strong>SignalCloud</strong> is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.
         %p
           &copy; 2013 SignalCloud, llc.
-        %p
-          %a{:href => "/tos"} Privacy & Terms
 
-      .span9
+      .span8
         %h2 More Info
         .row
-          .span3
+          .span2
             %ul
               %li= link_to 'Hello', '/'
               %li= link_to 'What we do', '/#whatwedo'
@@ -20,16 +18,24 @@
               %li= link_to 'How it works', '/#howitworks'
               %li= link_to 'Get started', '/#getstarted'
               %li= link_to 'Contact us', '/#contact'
-          .span3
+          .span2
             %p Inspiration
             %ul
               %li= link_to 'In-app purchases', '/ideas/iap'
               %li= link_to 'Fraud prevention', '/ideas/cards'
               %li= link_to 'Package delivery', '/ideas/packages'
               %li= link_to 'Doctor\'s visit', '/ideas/appointments'
-          .span3
-            %p For Developers
+          .span2
+            %p How it works
             %ul
-              %li= link_to 'API', '/api'
+              %li= link_to 'Developers', '/api'
               %li= link_to 'Security & Privacy', '/security'
               %li= link_to 'Platform', '/platforms'
+          .span2
+            %p Policies
+            %ul
+              %li= link_to 'Our Promise', '/policies/promise'
+              %li= link_to 'Terms of Service', '/policies/terms'
+              %li= link_to 'Privacy', '/policies/privacy'
+              %li= link_to 'Acceptance Use', '/policies/aup'
+              %li= link_to 'DMCA', '/policies/dmca'

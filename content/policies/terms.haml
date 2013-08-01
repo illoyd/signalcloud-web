@@ -1,0 +1,27 @@
+---
+title: Terms of Service
+description: SignalCloud's Terms of Service
+lead: The guidelines and policies we use to deliver our service in no nonesense (but still legalese!) language.
+body_class: whatwedo
+
+---
+
+= render 'navbar_whatwedo'
+
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-file
+      .span9
+        %h1
+          Our Terms.
+          %span.muted For our service.
+        %p.lead= @item[:lead]
+
+.container
+  .offset2.span8
+    %p.lead Please note that these Terms of Service are being reviewed and may be changed with little notice as SignalCloud incorporates.
+  
+    = render 'policies/terms-of-service' 

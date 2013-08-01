@@ -3,178 +3,106 @@ title: Package Delivery
 description: Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
 head_icon: /images/icon-inspiration.png
 lead: Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. <strong>SignalCloud</strong> can help contact your customers about a delivery, or help reschedule if they won't be there.
+body_class: inspiration
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/#whatwedo'}
-        %i.icon-question-sign.icon-large
-        What?
-    %li
-      %a{href:'/#inspiration'}
-        %i.icon-lightbulb.icon-large
-        Inspiration?
-    %li
-      %a{href:'/#howitworks'}
-        %i.icon-wrench.icon-large
-        How?
-    %li
-      %a{href:'/#getstarted'}
-        %i.icon-road.icon-large
-        Ready?
-    %li
-      %a{href:'/#contact'}
-        %i.icon-envelope-alt.icon-large
-        Questions?
-  %ul.nav.pull-right
-    %li.dropdown
-      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-        %i.icon-bolt.icon-large
-        For Devs
-        %b.caret
-      %ul.dropdown-menu
-        %li= link_to 'API', '/api'
-        %li= link_to 'Security & Privacy', '/tos'
-        %li= link_to 'Platform', '/platforms'
+= render 'navbar_inspiration'
 
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-truck
+      .span9
+        %h1
+          Package delivery.
+          %span.muted Leave it on the front step?
+        %p.lead= @item[:lead]
 
-/ Header area
-- render 'header' do
-  .btn-toolbar
-    %a.btn.btn-info{href: '/ideas/iap'}
-      %i.icon-mobile-phone
-      %i.icon-tablet
-      In-app purchases
-    %a.btn.btn-info{href: '/ideas/cards'}
-      %i.icon-credit-card
-      Card fraud
-    %a.btn.btn-success{href: '/ideas/packages'}
-      %i.icon-gift
-      Package delivery
-    %a.btn.btn-info{href: '/ideas/appointments'}
-      %i.icon-stethoscope
-      Doctor's visit
 
 / Main content
 .container
-  .featurette
-    / %h2 How does <strong>SignalCloud</strong> work for package delivery?
-    %p.lead At-home delivery is a growing business proposition, helping local small businesses compete with big box retailers by providing a friendlier, more convenient service. However, at-home deliveries carry their own challenges, distinct from anything anything small businesses have dealt with before. Trying to deliver when your customers aren't home can be a huge impact to your bottom line. How can <strong>SignalCloud</strong> help?
+  %h2
+    Leave it on the front step?
+    %small Or deliver right on time?
+  %p.lead At-home delivery is a growing business proposition, helping local small businesses compete with big box retailers by providing a friendlier, more convenient service. However, at-home deliveries carry their own challenges, distinct from anything anything small businesses have dealt with before. Trying to deliver when your customers are not home can be a huge impact to your bottom line. How can <strong>SignalCloud</strong> help?
 
-    .steps
-      .step-strip
-      / Shared steps
-      .row
-        .span2.offset5
-          %img{src: '/images/idea-package-delivery.png', height: 100, width: 100}
-        .span5 Your customer has placed an order and the package is ready to be delivered. You've  tentatively scheduled their delivery date. What's next?
-  
-      / Divergent steps
-      .row
-        / 'Bad' steps
-        .span6.bad-steps
-          .row
-            .span4 Calling or mailing your customers is one option, but is definitely time consuming and possibly expensive, and there is no guarantee your customer will get your message.
-            .span2
-              %img{src: '/images/idea-bad-contact.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 If you arrange a delivery without checking with your customer, they might not be at home to receive the package. You'll have to try again another time or day, and run the same risk.
-            .span2
-              %img{src: '/images/idea-bad-package-home.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 You could leave the package, but who knows what might happen. A valuable package could be stolen, while groceries or other perishables might become soiled or go bad.
-            .span2
-              %img{src: '/images/idea-bad-package-delivery.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 Either way, you've lost valuable time and money preparing packages and paying for failed deliveries. And your customers are upset because they haven't received their purchases.
-            .span2
-              %img{src: '/images/idea-thumbs-down.png', height: 100, width: 100}
-              .step-tab
-        
-        / 'Good' steps
-        .span6.good-steps
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-ask.png', height: 100, width: 100}
-              .step-tab
-            .span4 With SignalCloud, before your delivery date, you could send a reminder and ask your customer if they will be at home during a certain time. You might ask them to confirm with their postal code, just as an extra check.
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-yes.png', height: 100, width: 100}
-              .step-tab
-            .span4 If they respond with the right answer, you know they have confirmed they will be ready and waiting for your package to arrive.
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-no.png', height: 100, width: 100}
-              .step-tab
-            .span4 If they ask to reschedule, you can take steps right away to set up a new delivery date. This also let's you free up a delivery slot, and possible accept a new last-minute delivery request. And perishable deliveries like groceries won't spoil while waiting to be delivered.
-          .row
-            .span2
-              %img{src: '/images/idea-thumbs-up.png', height: 100, width: 100}
-              .step-tab
-            .span4 You've provided first class service to your customers and kept control over your book of deliveries, all while saving on the cost of packing and delivering to an empty household. And it's thanks to SignalCloud's easy to use service!
+  .row.steps
+    .offset3.span6.start
+      = popover 'top', "Your customer has placed an order and the package is ready to be delivered. You've  tentatively scheduled their delivery date. What's next?"
+      .icon= icon_stack 'circle', 'truck'
 
-      / Closing steps
-      .row
-        .span2.offset5
-          %img{src: '/images/logo-small.png', height: 100, width: 100}
+  .row.steps
+    / With SignalCloud steps
+    .span5.with-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-45
+      %h3
+        %i.icon-ok-sign
+        <em>With</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-right= icon_stack 'circle', 'comment', 'question'
+        .media-body= popover 'left', "With SignalCloud, before your delivery date, you could send a reminder and ask your customer if they will be at home during a certain time. You might ask them to confirm with their postal code, just as an extra check."
+        .flow
+          %i.icon-arrow-down
 
-  %hr#more.featurette-divider/
-  .featurette
-    %h3 Need some more inspiration?
-    %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+        / Step two-a
+        .icon.pull-right= icon_stack 'circle', 'comment', 'ok'
+        .media-body= popover 'left', "If they respond with the right answer, you know they have confirmed they will be ready and waiting for your package to arrive."
+        .flow
+          %i.icon-arrow-down
 
-    / Ideas
-    .row
-      .span4.idea
-        %h3<
-          %i.icon-mobile-phone.icon-3x
-          %i.icon-tablet.icon-3x
-          %br
-          In-app purchases
-        %p
-          In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
-          = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
-          = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
-          = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
-          all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
-        %p SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
+        / Step two-b
+        .icon.pull-right= icon_stack 'circle', 'comment', 'remove'
+        .media-body= popover 'left', "If they ask to reschedule, you can take steps right away to set up a new delivery date. This also let's you free up a delivery slot, and possible accept a new last-minute delivery request. And perishable deliveries like groceries won't spoil while waiting to be delivered."
+        .flow
+          %i.icon-arrow-down
 
-      .span4.idea
-        %h3<
-          %i.icon-credit-card.icon-3x
-          %br
-          Card fraud
-        %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
-        %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
+        / Bottom line
+        .icon.pull-right= icon_stack 'circle', 'thumbs-up'
+        .media-body= popover 'left', "You've provided first class service to your customers and kept control over your book of deliveries, all while saving on the cost of packing and delivering to an empty household. And it's thanks to SignalCloud's easy to use service!"
 
-      .span4.idea
-        %h3<
-          %i.icon-stethoscope.icon-3x
-          %br
-          Doctor's visit
-        %p Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.
-        %p SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+    / Without SignalCloud steps
+    .offset2.span5.without-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-315
+      %h3
+        %i.icon-remove-sign
+        <em>Without</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-left= icon_stack 'circle', 'phone'
+        .media-body= popover 'right', "Calling or mailing your customers is one option, but is definitely time consuming and possibly expensive, and there is no guarantee your customer will get your message."
+        .flow
+          %i.icon-arrow-down
 
-    .row{style:'text-align:center'}
-      .span4
-        %a{:href => "/ideas/iap"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/cards"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/appointments"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
+        / Step two
+        .icon.pull-left= icon_stack 'circle', 'home'
+        .media-body= popover 'right', "If you arrange a delivery without checking with your customer, they might not be at home to receive the package. You'll have to try again another time or day, and run the same risk."
+        .flow
+          %i.icon-arrow-down
+
+        / Step three
+        .icon.pull-left= icon_stack 'circle', 'gift'
+        .media-body= popover 'right', "You could leave the package, but who knows what might happen. A valuable package could be stolen, while groceries or other perishables might become soiled or go bad."
+        .flow
+          %i.icon-arrow-down
+
+        / Bottom line
+        .icon.pull-left= icon_stack 'circle', 'thumbs-down'
+        .media-body= popover 'right', "Either way, you've lost valuable time and money preparing packages and paying for failed deliveries. And your customers are upset because they haven't received their purchases."
 
 
-/ Footer
-= render 'footer'
+  %h2 Need more inspiration?
+  %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+
+  .row{style:'text-align:center'}
+    .span4= render 'idea-iap'
+    .span4= render 'idea-cards'
+    / .span4= render 'idea-packages'
+    .span4= render 'idea-appointments'

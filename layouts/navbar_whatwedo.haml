@@ -12,22 +12,25 @@
       / Responsive Navbar Part 2: Collapsable navbar contents
       .nav-collapse.collapse
         %ul.nav
-          %li
+          %li.active_section
+          %li.active_section
             %a.whatwedo{href:'/index.html#whatwedo'}
               %i.icon-question-sign.icon-large
+              What we do
+          %li.active_section= link_to 'Our Promise', '/policies/promise', class: 'whatwedo'
+          %li.active_section= link_to 'Terms', '/policies/terms', class: 'whatwedo'
+          %li.active_section= link_to 'Privacy', '/policies/privacy', class: 'whatwedo'
+          %li.active_section= link_to 'AUP', '/policies/aup', class: 'whatwedo'
+          %li.active_section= link_to 'DMCA', '/policies/dmca', class: 'whatwedo'
 
-          %li.active_section
+          %li
             %a.inspiration{href:'/index.html#inspiration'}
               %i.icon-lightbulb.icon-large
-              Inspiration?
-          %li.active_section= link_to 'In-app purchases', '/ideas/iap', class: 'inspiration'
-          %li.active_section= link_to 'Card fraud', '/ideas/cards', class: 'inspiration'
-          %li.active_section= link_to 'Package delivery', '/ideas/packages', class: 'inspiration'
-          %li.active_section= link_to 'Doctor\'s visit', '/ideas/appointments', class: 'inspiration'
 
           %li
             %a.howitworks{href:'/index.html#howitworks'}
               %i.icon-wrench.icon-large
+
           %li
             %a.getstarted{href:'/index.html#getstarted'}
               %i.icon-road.icon-large

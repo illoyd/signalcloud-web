@@ -76,4 +76,5 @@ route '*' do
   end
 end
 
+layout '/policies/terms-of-service/', :maruku
 layout '*', :haml

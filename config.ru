@@ -23,7 +23,7 @@ use Rack::Static,
 use Rack::Rewrite do
   rewrite '/', '/index.html'
   
-  %w{ tos api security platforms ideas/iap ideas/cards ideas/packages ideas/appointments }.each do |key|
+  %w{ api security platforms ideas/iap ideas/cards ideas/packages ideas/appointments policies/terms policies/privacy policies/promise policies/aup policies/dmca }.each do |key|
     rewrite "/#{key}", "/#{key}/index.html"
     rewrite "/#{key}/", "/#{key}/index.html"
   end

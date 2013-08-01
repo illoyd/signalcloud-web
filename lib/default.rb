@@ -29,3 +29,7 @@ end
 def number_icon( number, base='circle' )
   "<span class='icon-stack'><i class='icon-#{base} icon-stack-base'></i><i class='icon-stack-top'>#{number}</i></span>"
 end
+
+def popover( direction=nil, content=nil )
+  "<div class='popover #{direction}'><div class='arrow'></div><div class='popover-content'>#{content}</div></div>"
+end

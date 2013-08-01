@@ -197,6 +197,41 @@ h2 {
   margin-top: 0px;
   padding-top: 60px;
 }
+body.whatwedo .heading {
+  background-color: #0eacd4;
+  background-image: -moz-linear-gradient(top, #0fbfeb, #0b90b1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0fbfeb), to(#0b90b1));
+  background-image: -webkit-linear-gradient(top, #0fbfeb, #0b90b1);
+  background-image: -o-linear-gradient(top, #0fbfeb, #0b90b1);
+  background-image: linear-gradient(to bottom, #0fbfeb, #0b90b1);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0fbfeb', endColorstr='#ff0b90b1', GradientType=0);
+}
+body.whatwedo .heading p {
+  color: #caf2fc;
+}
+body.whatwedo .heading a {
+  color: #9ae6f9;
+  font-weight: bold;
+}
+body.whatwedo .heading a:hover {
+  color: #d9d9d9;
+}
+body.whatwedo span.muted {
+  color: #9ae6f9;
+}
+body.whatwedo a {
+  color: #0fbfeb;
+}
+body.whatwedo a:hover {
+  color: #0a85a3;
+}
+body.whatwedo h2 {
+  color: #0a85a3;
+}
+body.whatwedo h3 {
+  color: gray;
+}
 body.howitworks .heading {
   background-color: #9fc25a;
   background-image: -moz-linear-gradient(top, #aaca6a, #8fb641);

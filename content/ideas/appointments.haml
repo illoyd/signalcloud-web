@@ -3,173 +3,115 @@ title: Doctor's Visit
 description: Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone. SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
 head_icon: /images/icon-inspiration.png
 lead: Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone. <strong>SignalCloud</strong> can help remind your patients of upcoming appointments, or help reschedule if they can't make it.
+body_class: inspiration
 
 ---
 
-- render 'navbar' do
-  %ul.nav
-    %li
-      %a{href:'/#whatwedo'}
-        %i.icon-question-sign.icon-large
-        What?
-    %li
-      %a{href:'/#inspiration'}
-        %i.icon-lightbulb.icon-large
-        Inspiration?
-    %li
-      %a{href:'/#howitworks'}
-        %i.icon-wrench.icon-large
-        How?
-    %li
-      %a{href:'/#getstarted'}
-        %i.icon-road.icon-large
-        Ready?
-    %li
-      %a{href:'/#contact'}
-        %i.icon-envelope-alt.icon-large
-        Questions?
-  %ul.nav.pull-right
-    %li.dropdown
-      %a.dropdown-toggle{href:'#', 'data-toggle'=>'dropdown'}
-        %i.icon-bolt.icon-large
-        For Devs
-        %b.caret
-      %ul.dropdown-menu
-        %li= link_to 'API', '/api'
-        %li= link_to 'Security & Privacy', '/tos'
-        %li= link_to 'Platform', '/platforms'
+= render 'navbar_inspiration'
 
+/ Heading
+.heading
+  .container
+    .row
+      .span3.feature-icon
+        %i.icon-stethoscope
+      .span9
+        %h1
+          Doctor's visit.
+          %span.muted Messy diary &amp; no-shows?
+        %p.lead= @item[:lead]
 
-/ Header area
-- render 'header' do
-  .btn-toolbar
-    %a.btn.btn-info{href: '/ideas/iap'}
-      %i.icon-mobile-phone
-      %i.icon-tablet
-      In-app purchases
-    %a.btn.btn-info{href: '/ideas/cards'}
-      %i.icon-credit-card
-      Card fraud
-    %a.btn.btn-info{href: '/ideas/packages'}
-      %i.icon-gift
-      Package delivery
-    %a.btn.btn-success{href: '/ideas/appointments'}
-      %i.icon-stethoscope
-      Doctor's visit
 
 / Main content
 .container
-  .featurette
-    / %h2 How does <strong>SignalCloud</strong> work for a doctor's visit?
-    %p.lead Managing your appointment schedule can be tough. Even with appointments scheduled weeks in advance and reminders mailed out, appointment no-shows can be a big problem. And every no-show is a last minute appointment lost. How can <strong>SignalCloud</strong> help?
-
-    .steps
-      .step-strip
-      / Shared steps
-      .row
-        .span2.offset5
-          %img{src: '/images/idea-doctors-visit.png', height: 100, width: 100}
-        .span5 You've scheduled your back-to-back appointments and prepared for the day's meetings. Late patients - or worse, no-show patients - can disrupt your carefully planned day. What to do?
-  
-      / Divergent steps
-      .row
-        / 'Bad' steps
-        .span6.bad-steps
-          .row
-            .span4 The day before you can send letters in the mail or make robocalls, but you have no confirmation from the patients that they will attend their appointments. You could give everyone a phone call to reconfirm, but the time and cost are prohibitive for any large scale operation.
-            .span2
-              %img{src: '/images/idea-bad-contact.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 The day of the appointment, you can be fairly confident that at least one person will not show for his or her appointment. That time slot could have been given to a last minute appointment for someone else. To also possible someone knows they will be running late, showing up 15 minutes or more later than their appointment. By then, your appointment schedule is completely off.
-            .span2
-              %img{src: '/images/idea-bad-clock.png', height: 100, width: 100}
-              .step-tab
-          .row
-            .span4 Late appointments and no-shows have a material cost attached, as the United Kingdom's National Healthcare Service can attest. This leads to lower quality care, difficulties in getting access to doctors and nurses, and more.
-            .span2
-              %img{src: '/images/idea-bad-calendar.png', height: 100, width: 100}
-              .step-tab
-        
-        / 'Good' steps
-        .span6.good-steps
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-ask.png', height: 100, width: 100}
-              .step-tab
-            .span4 The day before, you could use SignalCloud to send out reminders to every patient - and ask them to reconfirm their appointments. Perhaps this time, you could ask patients to confirm with their postal code, or reply with a 'no' to reschedule their appointments.
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-yes.png', height: 100, width: 100}
-              .step-tab
-            .span4 For the patients who respond with a 'yes,' you can be very confident that they will make their appointments.
-          .row
-            .span2
-              %img{src: '/images/idea-good-conversation-no.png', height: 100, width: 100}
-              .step-tab
-            .span4 The small number who respond with a 'no', you can proactively reach out to them to reschedule.
-          .row
-            .span2
-              %img{src: '/images/idea-good-phone.png', height: 100, width: 100}
-              .step-tab
-            .span4 And for anyone that doesn't respond, you can give them a polite phone call. The volume of phone calls should be manageable even for very large organisations. And SignalCloud makes it all possible.
-
-      / Closing steps
-      .row
-        .span2.offset5
-          %img{src: '/images/logo-small.png', height: 100, width: 100}
-
-  %hr#more.featurette-divider/
-  .featurette
-    %h3 Need some more inspiration?
-    %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
-
-    / Ideas
-    .row
-      .span4.idea
-        %h3<
-          %i.icon-mobile-phone.icon-3x
-          %i.icon-tablet.icon-3x
-          %br
-          In-app purchases
-        %p
-          In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
-          = link_to 'recent', 'http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video'
-          = link_to 'news', 'http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html'
-          = link_to 'articles', 'http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html'
-          all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
-        %p SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.
-
-      .span4.idea
-        %h3<
-          %i.icon-credit-card.icon-3x
-          %br
-          Card fraud
-        %p Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.
-        %p SignalCloud can help seperate fraud from legit with our easy-to-use tools.
-
-      .span4.idea
-        %h3<
-          %i.icon-gift.icon-3x
-          %br
-          Package delivery
-        %p Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package.
-        %p SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.
-
-    .row{style:'text-align:center'}
-      .span4
-        %a{:href => "/ideas/iap"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/cards"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
-      .span4
-        %a{:href => "/ideas/packages"}
-          See how SignalCloud could help
-          %i.icon-circle-arrow-right
+  %h2
+    Messy diary &amp; no-shows?
+    %small Or better appointment management?
+    
+  %p.lead Managing your appointment schedule can be tough. Even with appointments scheduled weeks in advance and reminders mailed out, appointment no-shows can be a big problem. And every no-show is a last minute appointment lost. How can <strong>SignalCloud</strong> help?
 
 
-/ Footer
-= render 'footer'
+  .row.steps
+    .offset3.span6.start
+      = popover 'top', "You've scheduled your back-to-back appointments and prepared for the day's meetings. Late patients - or worse, no-show patients - can disrupt your carefully planned day. What to do?"
+      .icon= icon_stack 'circle', 'stethoscope'
+
+  .row.steps
+
+    / With SignalCloud steps
+    .span5.with-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-45
+      %h3
+        %i.icon-ok-sign
+        <em>With</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-right= icon_stack 'circle', 'comment', 'question'
+        .media-body= popover 'left', "The day before, you could use SignalCloud to send out reminders to every patient - and ask them to reconfirm their appointments. Perhaps this time, you could ask patients to confirm with their postal code, or reply with a 'no' to reschedule their appointments."
+        .flow
+          %i.icon-arrow-down
+
+        / Step two-a
+        .icon.pull-right= icon_stack 'circle', 'comment', 'ok'
+        .media-body= popover 'left', "For the patients who respond with a 'yes,' you can be confident that they will make their appointments."
+        .flow
+          %i.icon-arrow-down
+
+        / Step two-b
+        .icon.pull-right= icon_stack 'circle', 'comment', 'remove'
+        .media-body= popover 'left', "The small number who respond with a 'no', you can proactively reach out to them to reschedule."
+        .flow
+          %i.icon-arrow-down
+
+        / Step three
+        .icon.pull-right= icon_stack 'circle', 'thumbs-up'
+        .media-body= popover 'left', "And for anyone that doesn't respond, you can give them a polite phone call. The volume of phone calls should be manageable even for very large organisations."
+        .flow
+          %i.icon-arrow-down
+
+        / Bottom line
+        .icon.pull-right= icon_stack 'circle', 'thumbs-up'
+        .media-body= popover 'left', "Proactive reminders and simple to coordinate rescheduling leads to better time management and happier patients. And SignalCloud makes it all possible."
+
+    / Without SignalCloud steps
+    .offset2.span5.without-signalcloud
+      .flow
+        %i.icon-arrow-down.icon-rotate-315
+      %h3
+        %i.icon-remove-sign
+        <em>Without</em> SignalCloud
+      
+      .media
+        / Step one
+        .icon.pull-left= icon_stack 'circle', 'envelope'
+        .media-body= popover 'right', "The day before you can send letters in the mail or make robocalls, but you have no confirmation from the patients that they will attend their appointments. You could give everyone a phone call to reconfirm, but the time and cost are prohibitive for any large scale operation."
+        .flow
+          %i.icon-arrow-down
+
+        / Step two
+        .icon.pull-left= icon_stack 'circle', 'calendar'
+        .media-body= popover 'right', "The day of the appointment, you can be fairly confident that at least one person will not show for his or her appointment. That time slot could have been given to a last minute appointment for someone else."
+        .flow
+          %i.icon-arrow-down
+
+        / Step three
+        .icon.pull-left= icon_stack 'circle', 'time'
+        .media-body= popover 'right', "Sometimes someone knows they will be running late, showing up 15 minutes or more later than their appointment. By then, your appointment schedule is completely off."
+        .flow
+          %i.icon-arrow-down
+
+        / Step three
+        .icon.pull-left= icon_stack 'circle', 'thumbs-down'
+        .media-body= popover 'right', "Late appointments and no-shows have a material cost attached, as the United Kingdom's National Healthcare Service can attest. This leads to lower quality care, difficulties in getting access to doctors and nurses, and more. Everyone misses out."
+
+
+  %h2 Need more inspiration?
+  %p Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.
+
+  .row{style:'text-align:center'}
+    .span4= render 'idea-iap'
+    .span4= render 'idea-cards'
+    .span4= render 'idea-packages'
+    / .span4= render 'idea-appointments'

@@ -17,249 +17,228 @@
     <meta content='description' name="Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. SignalCloud can help contact your customers about a delivery, or help reschedule if they won't be there.">
     <meta content='author' name='Ian Lloyd'>
   </head>
-  <body data-spy='scroll'>
-    <div class='container'>
-      <div class='container affix' style='z-index:100'>
-        <div class='navbar'>
-          <div class='navbar-inner'>
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
-            <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
-              <i class='icon-reorder'></i>
-            </button>
-            <!-- Brand -->
-            <a class='brand' href='/'>
-              <img class='logo' src='/images/logo-navbar.png'>
-            </a>
-            <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
-            <div class='nav-collapse collapse'>
-              <ul class='nav'>
-                <li>
-                  <a href='/#whatwedo'>
-                    <i class='icon-question-sign icon-large'></i>
-                    What?
-                  </a>
-                </li>
-                <li>
-                  <a href='/#inspiration'>
-                    <i class='icon-lightbulb icon-large'></i>
-                    Inspiration?
-                  </a>
-                </li>
-                <li>
-                  <a href='/#howitworks'>
-                    <i class='icon-wrench icon-large'></i>
-                    How?
-                  </a>
-                </li>
-                <li>
-                  <a href='/#getstarted'>
-                    <i class='icon-road icon-large'></i>
-                    Ready?
-                  </a>
-                </li>
-                <li>
-                  <a href='/#contact'>
-                    <i class='icon-envelope-alt icon-large'></i>
-                    Questions?
-                  </a>
-                </li>
-              </ul>
-              <ul class='nav pull-right'>
-                <li class='dropdown'>
-                  <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-                    <i class='icon-bolt icon-large'></i>
-                    For Devs
-                    <b class='caret'></b>
-                  </a>
-                  <ul class='dropdown-menu'>
-                    <li><a href="/api">API</a></li>
-                    <li><a href="/tos">Security & Privacy</a></li>
-                    <li><a href="/platforms">Platform</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+  <body class='inspiration' data-spy='scroll'>
+    <!-- Navigation -->
+    <div class='navbar navbar-inverse navbar-fixed-top' data-offset-top='0' data-spy='affix' id='myNavbar' style='z-index:100'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar -->
+          <button class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse' type='button'>
+            <i class='icon-reorder'></i>
+          </button>
+          <!-- Brand -->
+          <a class='brand' href='/index.html'>SignalCloud</a>
+          <!-- Responsive Navbar Part 2: Collapsable navbar contents -->
+          <div class='nav-collapse collapse'>
+            <ul class='nav'>
+              <li>
+                <a class='whatwedo' href='/index.html#whatwedo'>
+                  <i class='icon-question-sign icon-large'></i>
+                </a>
+              </li>
+              <li class='active_section'>
+                <a class='inspiration' href='/index.html#inspiration'>
+                  <i class='icon-lightbulb icon-large'></i>
+                  Inspiration?
+                </a>
+              </li>
+              <li class='active_section'><a class="inspiration" href="/ideas/iap">In-app purchases</a></li>
+              <li class='active_section'><a class="inspiration" href="/ideas/cards">Card fraud</a></li>
+              <li class='active_section'><a class="inspiration" href="/ideas/packages">Package delivery</a></li>
+              <li class='active_section'><a class="inspiration" href="/ideas/appointments">Doctor's visit</a></li>
+              <li>
+                <a class='howitworks' href='/index.html#howitworks'>
+                  <i class='icon-wrench icon-large'></i>
+                </a>
+              </li>
+              <li>
+                <a class='getstarted' href='/index.html#getstarted'>
+                  <i class='icon-road icon-large'></i>
+                </a>
+              </li>
+              <li>
+                <a class='contact' href='/index.html#contact'>
+                  <i class='icon-envelope-alt icon-large'></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- Header area -->
-    <!-- Header Area -->
-    <div class='header'>
+    <!-- Heading -->
+    <div class='heading'>
       <div class='container'>
         <div class='row'>
-          <div class='span3'>
-            <span class='icon-stack' style='font-size: 100px;'>
-              <i class='icon-circle icon-stack-base icon-size-4x'></i>
-              <i class='icon-/images/icon-inspiration.png icon-size-4x icon-stack-top' style='color: white;'></i>
-            </span>
+          <div class='span3 feature-icon'>
+            <i class='icon-truck'></i>
           </div>
           <div class='span9'>
-            <h1>Package Delivery</h1>
+            <h1>
+              Package delivery.
+              <span class='muted'>Leave it on the front step?</span>
+            </h1>
             <p class='lead'>Knowing when to delivery a package can be tough, since your customers might be out of the office or home and can't accept the package. <strong>SignalCloud</strong> can help contact your customers about a delivery, or help reschedule if they won't be there.</p>
-            <div class='btn-toolbar'>
-              <a class='btn btn-info' href='/ideas/iap'>
-                <i class='icon-mobile-phone'></i>
-                <i class='icon-tablet'></i>
-                In-app purchases
-              </a>
-              <a class='btn btn-info' href='/ideas/cards'>
-                <i class='icon-credit-card'></i>
-                Card fraud
-              </a>
-              <a class='btn btn-success' href='/ideas/packages'>
-                <i class='icon-gift'></i>
-                Package delivery
-              </a>
-              <a class='btn btn-info' href='/ideas/appointments'>
-                <i class='icon-stethoscope'></i>
-                Doctor's visit
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Main content -->
     <div class='container'>
-      <div class='featurette'>
-        <!-- %h2 How does <strong>SignalCloud</strong> work for package delivery? -->
-        <p class='lead'>At-home delivery is a growing business proposition, helping local small businesses compete with big box retailers by providing a friendlier, more convenient service. However, at-home deliveries carry their own challenges, distinct from anything anything small businesses have dealt with before. Trying to deliver when your customers aren't home can be a huge impact to your bottom line. How can <strong>SignalCloud</strong> help?</p>
-        <div class='steps'>
-          <div class='step-strip'></div>
-          <!-- Shared steps -->
-          <div class='row'>
-            <div class='span2 offset5'>
-              <img height='100' src='/images/idea-package-delivery.png' width='100'>
-            </div>
-            <div class='span5'>Your customer has placed an order and the package is ready to be delivered. You've  tentatively scheduled their delivery date. What's next?</div>
+      <h2>
+        Leave it on the front step?
+        <small>Or deliver right on time?</small>
+      </h2>
+      <p class='lead'>At-home delivery is a growing business proposition, helping local small businesses compete with big box retailers by providing a friendlier, more convenient service. However, at-home deliveries carry their own challenges, distinct from anything anything small businesses have dealt with before. Trying to deliver when your customers are not home can be a huge impact to your bottom line. How can <strong>SignalCloud</strong> help?</p>
+      <div class='row steps'>
+        <div class='offset3 span6 start'>
+          <div class='popover top'><div class='arrow'></div><div class='popover-content'>Your customer has placed an order and the package is ready to be delivered. You've  tentatively scheduled their delivery date. What's next?</div></div>
+          <div class='icon'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-truck icon-stack-top'></i></span></div>
+        </div>
+      </div>
+      <div class='row steps'>
+        <!-- With SignalCloud steps -->
+        <div class='span5 with-signalcloud'>
+          <div class='flow'>
+            <i class='icon-arrow-down icon-rotate-45'></i>
           </div>
-          <!-- Divergent steps -->
-          <div class='row'>
-            <!-- 'Bad' steps -->
-            <div class='span6 bad-steps'>
-              <div class='row'>
-                <div class='span4'>Calling or mailing your customers is one option, but is definitely time consuming and possibly expensive, and there is no guarantee your customer will get your message.</div>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-bad-contact.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='span4'>If you arrange a delivery without checking with your customer, they might not be at home to receive the package. You'll have to try again another time or day, and run the same risk.</div>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-bad-package-home.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='span4'>You could leave the package, but who knows what might happen. A valuable package could be stolen, while groceries or other perishables might become soiled or go bad.</div>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-bad-package-delivery.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='span4'>Either way, you've lost valuable time and money preparing packages and paying for failed deliveries. And your customers are upset because they haven't received their purchases.</div>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-thumbs-down.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-              </div>
+          <h3>
+            <i class='icon-ok-sign'></i>
+            <em>With</em> SignalCloud
+          </h3>
+          <div class='media'>
+            <!-- Step one -->
+            <div class='icon pull-right'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-comment icon-stack-top'></i><i class='icon-question icon-stack-top2'></i></span></div>
+            <div class='media-body'><div class='popover left'><div class='arrow'></div><div class='popover-content'>With SignalCloud, before your delivery date, you could send a reminder and ask your customer if they will be at home during a certain time. You might ask them to confirm with their postal code, just as an extra check.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
             </div>
-            <!-- 'Good' steps -->
-            <div class='span6 good-steps'>
-              <div class='row'>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-good-conversation-ask.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-                <div class='span4'>With SignalCloud, before your delivery date, you could send a reminder and ask your customer if they will be at home during a certain time. You might ask them to confirm with their postal code, just as an extra check.</div>
-              </div>
-              <div class='row'>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-good-conversation-yes.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-                <div class='span4'>If they respond with the right answer, you know they have confirmed they will be ready and waiting for your package to arrive.</div>
-              </div>
-              <div class='row'>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-good-conversation-no.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-                <div class='span4'>If they ask to reschedule, you can take steps right away to set up a new delivery date. This also let's you free up a delivery slot, and possible accept a new last-minute delivery request. And perishable deliveries like groceries won't spoil while waiting to be delivered.</div>
-              </div>
-              <div class='row'>
-                <div class='span2'>
-                  <img height='100' src='/images/idea-thumbs-up.png' width='100'>
-                  <div class='step-tab'></div>
-                </div>
-                <div class='span4'>You've provided first class service to your customers and kept control over your book of deliveries, all while saving on the cost of packing and delivering to an empty household. And it's thanks to SignalCloud's easy to use service!</div>
-              </div>
+            <!-- Step two-a -->
+            <div class='icon pull-right'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-comment icon-stack-top'></i><i class='icon-ok icon-stack-top2'></i></span></div>
+            <div class='media-body'><div class='popover left'><div class='arrow'></div><div class='popover-content'>If they respond with the right answer, you know they have confirmed they will be ready and waiting for your package to arrive.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
             </div>
+            <!-- Step two-b -->
+            <div class='icon pull-right'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-comment icon-stack-top'></i><i class='icon-remove icon-stack-top2'></i></span></div>
+            <div class='media-body'><div class='popover left'><div class='arrow'></div><div class='popover-content'>If they ask to reschedule, you can take steps right away to set up a new delivery date. This also let's you free up a delivery slot, and possible accept a new last-minute delivery request. And perishable deliveries like groceries won't spoil while waiting to be delivered.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
+            </div>
+            <!-- Bottom line -->
+            <div class='icon pull-right'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-thumbs-up icon-stack-top'></i></span></div>
+            <div class='media-body'><div class='popover left'><div class='arrow'></div><div class='popover-content'>You've provided first class service to your customers and kept control over your book of deliveries, all while saving on the cost of packing and delivering to an empty household. And it's thanks to SignalCloud's easy to use service!</div></div></div>
           </div>
-          <!-- Closing steps -->
-          <div class='row'>
-            <div class='span2 offset5'>
-              <img height='100' src='/images/logo-small.png' width='100'>
+        </div>
+        <!-- Without SignalCloud steps -->
+        <div class='offset2 span5 without-signalcloud'>
+          <div class='flow'>
+            <i class='icon-arrow-down icon-rotate-315'></i>
+          </div>
+          <h3>
+            <i class='icon-remove-sign'></i>
+            <em>Without</em> SignalCloud
+          </h3>
+          <div class='media'>
+            <!-- Step one -->
+            <div class='icon pull-left'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-phone icon-stack-top'></i></span></div>
+            <div class='media-body'><div class='popover right'><div class='arrow'></div><div class='popover-content'>Calling or mailing your customers is one option, but is definitely time consuming and possibly expensive, and there is no guarantee your customer will get your message.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
             </div>
+            <!-- Step two -->
+            <div class='icon pull-left'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-home icon-stack-top'></i></span></div>
+            <div class='media-body'><div class='popover right'><div class='arrow'></div><div class='popover-content'>If you arrange a delivery without checking with your customer, they might not be at home to receive the package. You'll have to try again another time or day, and run the same risk.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
+            </div>
+            <!-- Step three -->
+            <div class='icon pull-left'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-gift icon-stack-top'></i></span></div>
+            <div class='media-body'><div class='popover right'><div class='arrow'></div><div class='popover-content'>You could leave the package, but who knows what might happen. A valuable package could be stolen, while groceries or other perishables might become soiled or go bad.</div></div></div>
+            <div class='flow'>
+              <i class='icon-arrow-down'></i>
+            </div>
+            <!-- Bottom line -->
+            <div class='icon pull-left'><span class='icon-stack'><i class='icon-circle icon-stack-base'></i><i class='icon-thumbs-down icon-stack-top'></i></span></div>
+            <div class='media-body'><div class='popover right'><div class='arrow'></div><div class='popover-content'>Either way, you've lost valuable time and money preparing packages and paying for failed deliveries. And your customers are upset because they haven't received their purchases.</div></div></div>
           </div>
         </div>
       </div>
-      <hr class='featurette-divider' id='more'>
-      <div class='featurette'>
-        <h3>Need some more inspiration?</h3>
-        <p>Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.</p>
-        <!-- Ideas -->
-        <div class='row'>
-          <div class='span4 idea'>
-            <h3><i class='icon-mobile-phone icon-3x'></i>
-            <i class='icon-tablet icon-3x'></i>
-            <br>
-            In-app purchases</h3>
+      <h2>Need more inspiration?</h2>
+      <p>Our handcrafted tools are simple, flexible, and intelligent. Use them whenever you need to connect with your customers, clients, teammates, patients, or just about anyone to ask a question, understand their response, and take intelligent action.</p>
+      <div class='row' style='text-align:center'>
+        <div class='span4'>
+          <div class='idea-card'>
+            <p class='icons'>
+              <a class='icon-stack' href='/ideas/iap'>
+                <i class='icon-circle icon-stack-base'></i>
+                <i class='icon-mobile-phone icon-stack-top'></i>
+              </a>
+              <a class='icon-stack' href='/ideas/iap'>
+                <i class='icon-circle icon-stack-base'></i>
+                <i class='icon-tablet icon-stack-top'></i>
+              </a>
+            </p>
+            <h3>
+              <a href='/ideas/iap'>In-app purchases</a>
+            </h3>
             <p>
-              In-app purchasing has opened up a whole new revenue stream for small developers, it is not without its challenges. With
+              In-app purchasing has opened up a whole new revenue stream for small developers, but it's not without its challenges. With
               <a href="http://www.guardian.co.uk/uk/video/2013/mar/01/five-1700-ipad-bill-video">recent</a>
               <a href="http://www.dailymail.co.uk/news/article-2292539/Doh-Eight-year-old-boy-runs-1-000-parents-iPad-buying-virtual-DONUTS-Simpsons-game.html">news</a>
               <a href="http://www.dailymail.co.uk/news/article-2298771/Policeman-Doug-Crossan-reports-13-year-old-son-Cameron-FRAUD-running-3-700-iPad.html">articles</a>
               all highlighting ridiculous charges for excessive in-app purchasing, there is a definite need to use something more than a password to stop these costly mistakes.
             </p>
             <p>SignalCloud can help protect against unexpected in-app purchases with an extra layer of authorisation.</p>
+            <p>
+              <a class='btn' href='/ideas/iap'>
+                See how SignalCloud could help
+                <i class='icon-circle-arrow-right'></i>
+              </a>
+            </p>
           </div>
-          <div class='span4 idea'>
-            <h3><i class='icon-credit-card icon-3x'></i>
-            <br>
-            Card fraud</h3>
+        </div>
+        <div class='span4'>
+          <div class='idea-card'>
+            <p class='icons'>
+              <a class='icon-stack' href='/ideas/cards'>
+                <i class='icon-circle icon-stack-base'></i>
+                <i class='icon-credit-card icon-stack-top'></i>
+              </a>
+            </p>
+            <h3>
+              <a href='/ideas/cards'>Card fraud</a>
+            </h3>
             <p>Protecting your customers against credit or debit card fraud is not easy. Too lax, and you allow fraud. Too stringent, and you upset legit customers.</p>
             <p>SignalCloud can help seperate fraud from legit with our easy-to-use tools.</p>
+            <p>
+              <a class='btn' href='/ideas/cards'>
+                See how SignalCloud could help
+                <i class='icon-circle-arrow-right'></i>
+              </a>
+            </p>
           </div>
-          <div class='span4 idea'>
-            <h3><i class='icon-stethoscope icon-3x'></i>
-            <br>
-            Doctor's visit</h3>
+        </div>
+        <!-- .span4= render 'idea-packages' -->
+        <div class='span4'>
+          <div class='idea-card'>
+            <p class='icons'>
+              <a class='icon-stack' href='/ideas/appointments'>
+                <i class='icon-circle icon-stack-base'></i>
+                <i class='icon-stethoscope icon-stack-top'></i>
+              </a>
+            </p>
+            <h3>
+              <a href='/ideas/appointments'>Doctor's visit</a>
+            </h3>
             <p>Missing an important doctor's appointment can derail a doctor's schedule, impact the cost of care, and reduce the quality of treatment for everyone.</p>
             <p>SignalCloud can help remind your patients of upcoming appointments, or help reschedule if they can't make it.</p>
-          </div>
-        </div>
-        <div class='row' style='text-align:center'>
-          <div class='span4'>
-            <a href='/ideas/iap'>
-              See how SignalCloud could help
-              <i class='icon-circle-arrow-right'></i>
-            </a>
-          </div>
-          <div class='span4'>
-            <a href='/ideas/cards'>
-              See how SignalCloud could help
-              <i class='icon-circle-arrow-right'></i>
-            </a>
-          </div>
-          <div class='span4'>
-            <a href='/ideas/appointments'>
-              See how SignalCloud could help
-              <i class='icon-circle-arrow-right'></i>
-            </a>
+            <p>
+              <a class='btn' href='/ideas/appointments'>
+                See how SignalCloud could help
+                <i class='icon-circle-arrow-right'></i>
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -268,20 +247,17 @@
     <div class='footer'>
       <div class='container'>
         <div class='row'>
-          <div class='span3'>
+          <div class='span4'>
             <h2>About Us</h2>
             <p><strong>SignalCloud</strong> is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.</p>
             <p>
               &copy; 2013 SignalCloud, llc.
             </p>
-            <p>
-              <a href='/tos'>Privacy & Terms</a>
-            </p>
           </div>
-          <div class='span9'>
+          <div class='span8'>
             <h2>More Info</h2>
             <div class='row'>
-              <div class='span3'>
+              <div class='span2'>
                 <ul>
                   <li><a href="/">Hello</a></li>
                   <li><a href="/#whatwedo">What we do</a></li>
@@ -291,7 +267,7 @@
                   <li><a href="/#contact">Contact us</a></li>
                 </ul>
               </div>
-              <div class='span3'>
+              <div class='span2'>
                 <p>Inspiration</p>
                 <ul>
                   <li><a href="/ideas/iap">In-app purchases</a></li>
@@ -300,61 +276,22 @@
                   <li><a href="/ideas/appointments">Doctor's visit</a></li>
                 </ul>
               </div>
-              <div class='span3'>
-                <p>For Developers</p>
+              <div class='span2'>
+                <p>How it works</p>
                 <ul>
-                  <li><a href="/api">API</a></li>
+                  <li><a href="/api">Developers</a></li>
                   <li><a href="/security">Security & Privacy</a></li>
                   <li><a href="/platforms">Platform</a></li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <div class='footer'>
-      <div class='container'>
-        <div class='row'>
-          <div class='span3'>
-            <h2>About Us</h2>
-            <p><strong>SignalCloud</strong> is supported by a small team dedicated to providing lovingly hand-crafted solutions to small and medium-sized businesses and organisations.</p>
-            <p>
-              &copy; 2013 SignalCloud, llc.
-            </p>
-            <p>
-              <a href='/tos'>Privacy & Terms</a>
-            </p>
-          </div>
-          <div class='span9'>
-            <h2>More Info</h2>
-            <div class='row'>
-              <div class='span3'>
+              <div class='span2'>
+                <p>Policies</p>
                 <ul>
-                  <li><a href="/">Hello</a></li>
-                  <li><a href="/#whatwedo">What we do</a></li>
-                  <li><a href="/#inspiration">Inspiration</a></li>
-                  <li><a href="/#howitworks">How it works</a></li>
-                  <li><a href="/#getstarted">Get started</a></li>
-                  <li><a href="/#contact">Contact us</a></li>
-                </ul>
-              </div>
-              <div class='span3'>
-                <p>Inspiration</p>
-                <ul>
-                  <li><a href="/ideas/iap">In-app purchases</a></li>
-                  <li><a href="/ideas/cards">Fraud prevention</a></li>
-                  <li><a href="/ideas/packages">Package delivery</a></li>
-                  <li><a href="/ideas/appointments">Doctor's visit</a></li>
-                </ul>
-              </div>
-              <div class='span3'>
-                <p>For Developers</p>
-                <ul>
-                  <li><a href="/api">API</a></li>
-                  <li><a href="/security">Security & Privacy</a></li>
-                  <li><a href="/platforms">Platform</a></li>
+                  <li><a href="/policies/promise">Our Promise</a></li>
+                  <li><a href="/policies/terms">Terms of Service</a></li>
+                  <li><a href="/policies/privacy">Privacy</a></li>
+                  <li><a href="/policies/aup">Acceptance Use</a></li>
+                  <li><a href="/policies/dmca">DMCA</a></li>
                 </ul>
               </div>
             </div>
