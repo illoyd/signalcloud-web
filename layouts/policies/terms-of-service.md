@@ -160,7 +160,7 @@ The Service was developed solely at private expense and is commercial computer s
 
 ### 16\. Miscellaneous.
 
-**16\.1 Notices.** All notices must be in writing and addressed to the other party's legal department and primary point of contact. The email address for notices being sent to SignalCloud's Legal Department is legal-notices@signalcloudapp.com. Notice will be treated as given: (a) on receipt as verified by written automated receipt or by electronic log (as applicable).
+**16\.1 Notices.** All notices must be in writing and addressed to the other party's legal department and primary point of contact. The email address for notices being sent to SignalCloud's Legal Department is [legal@signalcloudapp.com](legal@signalcloudapp.com). Notice will be treated as given: (a) on receipt as verified by written automated receipt or by electronic log (as applicable).
 
 **16\.2 Assignment.** Neither party may assign any part of this Agreement without the written consent of the other, except to an Affiliate where: (a) the assignee has agreed in writing to be bound by the terms of this Agreement; (b) the assigning party remains liable for obligations under the Agreement if the assignee defaults on them; and (c) the assigning party has notified the other party of the assignment. Any other attempt to assign is void.
 
